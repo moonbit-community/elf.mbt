@@ -1,0 +1,2 @@
+testdata/*.so binary
+testdata/*.x86_64 binary

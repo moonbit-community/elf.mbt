@@ -1,0 +1,3318 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "moonbit-community/elf"
+
+import {
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub const DF_1_CONFALT : Int64 = 0x00002000
+
+pub const DF_1_DIRECT : Int64 = 0x00000100
+
+pub const DF_1_DISPRELDNE : Int64 = 0x00008000
+
+pub const DF_1_DISPRELPND : Int64 = 0x00010000
+
+pub const DF_1_EDITED : Int64 = 0x00200000
+
+pub const DF_1_ENDFILTEE : Int64 = 0x00004000
+
+pub const DF_1_GLOBAL : Int64 = 0x00000002
+
+pub const DF_1_GLOBAUDIT : Int64 = 0x01000000
+
+pub const DF_1_GROUP : Int64 = 0x00000004
+
+pub const DF_1_IGNMULDEF : Int64 = 0x00040000
+
+pub const DF_1_INITFIRST : Int64 = 0x00000020
+
+pub const DF_1_INTERPOSE : Int64 = 0x00000400
+
+pub const DF_1_KMOD : Int64 = 0x10000000
+
+pub const DF_1_LOADFLTR : Int64 = 0x00000010
+
+pub const DF_1_NOCOMMON : Int64 = 0x40000000
+
+pub const DF_1_NODEFLIB : Int64 = 0x00000800
+
+pub const DF_1_NODELETE : Int64 = 0x00000008
+
+pub const DF_1_NODIRECT : Int64 = 0x00020000
+
+pub const DF_1_NODUMP : Int64 = 0x00001000
+
+pub const DF_1_NOHDR : Int64 = 0x00100000
+
+pub const DF_1_NOKSYMS : Int64 = 0x00080000
+
+pub const DF_1_NOOPEN : Int64 = 0x00000040
+
+pub const DF_1_NORELOC : Int64 = 0x00400000
+
+pub const DF_1_NOW : Int64 = 0x00000001
+
+pub const DF_1_ORIGIN : Int64 = 0x00000080
+
+pub const DF_1_PIE : Int64 = 0x08000000
+
+pub const DF_1_SINGLETON : Int64 = 0x02000000
+
+pub const DF_1_STUB : Int64 = 0x04000000
+
+pub const DF_1_SYMINTPOSE : Int64 = 0x00800000
+
+pub const DF_1_TRANS : Int64 = 0x00000200
+
+pub const DF_1_WEAKFILTER : Int64 = 0x20000000
+
+pub const DF_BIND_NOW : Int64 = 0x8
+
+pub const DF_ORIGIN : Int64 = 0x1
+
+pub const DF_P1_GROUPPERM : Int64 = 0x00000002
+
+pub const DF_P1_LAZYLOAD : Int64 = 0x00000001
+
+pub const DF_STATIC_TLS : Int64 = 0x10
+
+pub const DF_SYMBOLIC : Int64 = 0x2
+
+pub const DF_TEXTREL : Int64 = 0x4
+
+pub const DTF_1_CONFEXP : Int64 = 0x00000002
+
+pub const DTF_1_PARINIT : Int64 = 0x00000001
+
+pub const DT_AARCH64_BTI_PLT : Int64 = 0x70000001
+
+pub const DT_AARCH64_PAC_PLT : Int64 = 0x70000003
+
+pub const DT_AARCH64_VARIANT_PCS : Int64 = 0x70000005
+
+pub const DT_ARM_PREEMPTMAP : Int64 = 0x70000002
+
+pub const DT_ARM_SYMTABSZ : Int64 = 0x70000001
+
+pub const DT_AUDIT : Int64 = 0x6ffffefc
+
+pub const DT_BIND_NOW : Int64 = 24
+
+pub const DT_CHECKSUM : Int64 = 0x6ffffdf8
+
+pub const DT_CONFIG : Int64 = 0x6ffffefa
+
+pub const DT_DEBUG : Int64 = 21
+
+pub const DT_DEPAUDIT : Int64 = 0x6ffffefb
+
+pub const DT_FEATURE_1 : Int64 = 0x6ffffdfc
+
+pub const DT_FINI : Int64 = 13
+
+pub const DT_FINI_ARRAY : Int64 = 26
+
+pub const DT_FINI_ARRAYSZ : Int64 = 28
+
+pub const DT_FLAGS : Int64 = 30
+
+pub const DT_FLAGS_1 : Int64 = 0x6ffffffb
+
+pub const DT_GNU_CONFLICT : Int64 = 0x6ffffef8
+
+pub const DT_GNU_CONFLICTSZ : Int64 = 0x6ffffdf6
+
+pub const DT_GNU_HASH : Int64 = 0x6ffffef5
+
+pub const DT_GNU_LIBLIST : Int64 = 0x6ffffef9
+
+pub const DT_GNU_LIBLISTSZ : Int64 = 0x6ffffdf7
+
+pub const DT_GNU_PRELINKED : Int64 = 0x6ffffdf5
+
+pub const DT_GUILE_ENTRY : Int64 = 0x37146002
+
+pub const DT_GUILE_FRAME_MAPS : Int64 = 0x37146004
+
+pub const DT_GUILE_GC_ROOT : Int64 = 0x37146000
+
+pub const DT_GUILE_GC_ROOT_SZ : Int64 = 0x37146001
+
+pub const DT_GUILE_VM_VERSION : Int64 = 0x37146003
+
+pub const DT_HASH : Int64 = 4
+
+pub const DT_HIOS : Int64 = 0x6ffff000
+
+pub const DT_HIPROC : Int64 = 0x7fffffff
+
+pub const DT_INIT : Int64 = 12
+
+pub const DT_INIT_ARRAY : Int64 = 25
+
+pub const DT_INIT_ARRAYSZ : Int64 = 27
+
+pub const DT_JMPREL : Int64 = 23
+
+pub const DT_LOOS : Int64 = 0x6000000D
+
+pub const DT_LOPROC : Int64 = 0x70000000
+
+pub const DT_MIPS_AUX_DYNAMIC : UInt = 0x70000031
+
+pub const DT_MIPS_BASE_ADDRESS : UInt = 0x70000006
+
+pub const DT_MIPS_COMPACT_SIZE : UInt = 0x7000002f
+
+pub const DT_MIPS_CONFLICT : UInt = 0x70000008
+
+pub const DT_MIPS_CONFLICTNO : UInt = 0x7000000b
+
+pub const DT_MIPS_CXX_FLAGS : UInt = 0x70000022
+
+pub const DT_MIPS_DELTA_CLASS : UInt = 0x70000017
+
+pub const DT_MIPS_DELTA_CLASSSYM : UInt = 0x70000020
+
+pub const DT_MIPS_DELTA_CLASSSYM_NO : UInt = 0x70000021
+
+pub const DT_MIPS_DELTA_CLASS_NO : UInt = 0x70000018
+
+pub const DT_MIPS_DELTA_INSTANCE : UInt = 0x70000019
+
+pub const DT_MIPS_DELTA_INSTANCE_NO : UInt = 0x7000001a
+
+pub const DT_MIPS_DELTA_RELOC : UInt = 0x7000001b
+
+pub const DT_MIPS_DELTA_RELOC_NO : UInt = 0x7000001c
+
+pub const DT_MIPS_DELTA_SYM : UInt = 0x7000001d
+
+pub const DT_MIPS_DELTA_SYM_NO : UInt = 0x7000001e
+
+pub const DT_MIPS_DIRECT : UInt = 0x70000032
+
+pub const DT_MIPS_DYNSTR_ALIGN : UInt = 0x7000002b
+
+pub const DT_MIPS_FLAG : UInt = 0x70000005
+
+pub const DT_MIPS_GOTSYM : UInt = 0x70000013
+
+pub const DT_MIPS_GP_VALUE : UInt = 0x70000030
+
+pub const DT_MIPS_HIDDEN_GOTIDX : UInt = 0x70000027
+
+pub const DT_MIPS_HIPAGENO : UInt = 0x70000014
+
+pub const DT_MIPS_ICHECKSUM : UInt = 0x70000003
+
+pub const DT_MIPS_INTERFACE : UInt = 0x7000002a
+
+pub const DT_MIPS_INTERFACE_SIZE : UInt = 0x7000002c
+
+pub const DT_MIPS_IVERSION : UInt = 0x70000004
+
+pub const DT_MIPS_LIBLIST : UInt = 0x70000009
+
+pub const DT_MIPS_LIBLISTNO : UInt = 0x70000010
+
+pub const DT_MIPS_LOCALPAGE_GOTIDX : UInt = 0x70000025
+
+pub const DT_MIPS_LOCAL_GOTIDX : UInt = 0x70000026
+
+pub const DT_MIPS_LOCAL_GOTNO : UInt = 0x7000000a
+
+pub const DT_MIPS_MSYM : UInt = 0x70000007
+
+pub const DT_MIPS_OPTIONS : UInt = 0x70000029
+
+pub const DT_MIPS_PERF_SUFFIX : UInt = 0x7000002e
+
+pub const DT_MIPS_PIXIE_INIT : UInt = 0x70000023
+
+pub const DT_MIPS_PROTECTED_GOTIDX : UInt = 0x70000028
+
+pub const DT_MIPS_RLD_MAP : UInt = 0x70000016
+
+pub const DT_MIPS_RLD_OBJ_UPDATE : UInt = 0x70000033
+
+pub const DT_MIPS_RLD_TEXT_RESOLVE_ADDR : UInt = 0x7000002d
+
+pub const DT_MIPS_RLD_VERSION : UInt = 0x70000001
+
+pub const DT_MIPS_SYMBOL_LIB : UInt = 0x70000024
+
+pub const DT_MIPS_SYMTABNO : UInt = 0x70000011
+
+pub const DT_MIPS_TIME_STAMP : UInt = 0x70000002
+
+pub const DT_MIPS_UNREFEXTNO : UInt = 0x70000012
+
+pub const DT_MOVEENT : Int64 = 0x6ffffdfa
+
+pub const DT_MOVESZ : Int64 = 0x6ffffdfb
+
+pub const DT_MOVETAB : Int64 = 0x6ffffefe
+
+pub const DT_NEEDED : Int64 = 1
+
+pub const DT_NULL : Int64 = 0
+
+pub const DT_PLTGOT : Int64 = 3
+
+pub const DT_PLTPAD : Int64 = 0x6ffffefd
+
+pub const DT_PLTPADSZ : Int64 = 0x6ffffdf9
+
+pub const DT_PLTREL : Int64 = 20
+
+pub const DT_PLTRELSZ : Int64 = 2
+
+pub const DT_POSFLAG_1 : Int64 = 0x6ffffdfd
+
+pub const DT_PPC64_GLINK : Int64 = 0x70000000
+
+pub const DT_PPC64_OPD : Int64 = 0x70000001
+
+pub const DT_PPC64_OPDSZ : Int64 = 0x70000002
+
+pub const DT_PPC64_OPT : Int64 = 0x70000003
+
+pub const DT_PPC_GOT : Int64 = 0x70000000
+
+pub const DT_PPC_OPT : Int64 = 0x70000001
+
+pub const DT_PREINIT_ARRAY : Int64 = 32
+
+pub const DT_PREINIT_ARRAYSZ : Int64 = 33
+
+pub const DT_REL : Int64 = 17
+
+pub const DT_RELA : Int64 = 7
+
+pub const DT_RELACOUNT : Int64 = 0x6ffffff9
+
+pub const DT_RELAENT : Int64 = 9
+
+pub const DT_RELASZ : Int64 = 8
+
+pub const DT_RELCOUNT : Int64 = 0x6ffffffa
+
+pub const DT_RELENT : Int64 = 19
+
+pub const DT_RELSZ : Int64 = 18
+
+pub const DT_RISCV_VARIANT_CC : Int64 = 0x70000001
+
+pub const DT_RPATH : Int64 = 15
+
+pub const DT_RUNPATH : Int64 = 29
+
+pub const DT_SONAME : Int64 = 14
+
+pub const DT_STRSZ : Int64 = 10
+
+pub const DT_STRTAB : Int64 = 5
+
+pub const DT_SYMBOLIC : Int64 = 16
+
+pub const DT_SYMENT : Int64 = 11
+
+pub const DT_SYMINENT : Int64 = 0x6ffffdff
+
+pub const DT_SYMINFO : Int64 = 0x6ffffeff
+
+pub const DT_SYMINSZ : Int64 = 0x6ffffdfe
+
+pub const DT_SYMTAB : Int64 = 6
+
+pub const DT_SYMTAB_SHNDX : Int64 = 34
+
+pub const DT_TEXTREL : Int64 = 22
+
+pub const DT_TLSDESC_GOT : Int64 = 0x6ffffef7
+
+pub const DT_TLSDESC_PLT : Int64 = 0x6ffffef6
+
+pub const DT_VERDEF : Int64 = 0x6ffffffc
+
+pub const DT_VERDEFNUM : Int64 = 0x6ffffffd
+
+pub const DT_VERNEED : Int64 = 0x6ffffffe
+
+pub const DT_VERNEEDNUM : Int64 = 0x6fffffff
+
+pub const DT_VERSYM : Int64 = 0x6ffffff0
+
+pub const EF_ARM_ABI_FLOAT_HARD : UInt = 0x400
+
+pub const EF_ARM_ABI_FLOAT_SOFT : UInt = 0x200
+
+pub const EF_ARM_BE8 : UInt = 0x00800000
+
+pub const EF_ARM_EABIMASK : UInt = 0xFF000000
+
+pub const EF_ARM_EABI_UNKNOWN : UInt = 0x00000000
+
+pub const EF_ARM_EABI_VER1 : UInt = 0x01000000
+
+pub const EF_ARM_EABI_VER2 : UInt = 0x02000000
+
+pub const EF_ARM_EABI_VER3 : UInt = 0x03000000
+
+pub const EF_ARM_EABI_VER4 : UInt = 0x04000000
+
+pub const EF_ARM_EABI_VER5 : UInt = 0x05000000
+
+pub const EF_ARM_GCCMASK : UInt = 0x00400FFF
+
+pub const EF_ARM_SOFT_FLOAT : UInt = 0x200
+
+pub const EF_ARM_VFP_FLOAT : UInt = 0x400
+
+pub const EF_MIPS_32BITMODE : UInt = 0x00000100
+
+pub const EF_MIPS_64BIT_WHIRL : UInt = 0x00000010
+
+pub const EF_MIPS_ABI2 : UInt = 0x00000020
+
+pub const EF_MIPS_ABI_EABI32 : UInt = 0x00003000
+
+pub const EF_MIPS_ABI_EABI64 : UInt = 0x00004000
+
+pub const EF_MIPS_ABI_ON32 : UInt = 0x00000040
+
+pub const EF_MIPS_ARCH : UInt = 0xf0000000
+
+pub const EF_MIPS_ARCH_1 : UInt = 0x00000000
+
+pub const EF_MIPS_ARCH_2 : UInt = 0x10000000
+
+pub const EF_MIPS_ARCH_3 : UInt = 0x20000000
+
+pub const EF_MIPS_ARCH_32 : UInt = 0x50000000
+
+pub const EF_MIPS_ARCH_32R2 : UInt = 0x70000000
+
+pub const EF_MIPS_ARCH_32R6 : UInt = 0x90000000
+
+pub const EF_MIPS_ARCH_4 : UInt = 0x30000000
+
+pub const EF_MIPS_ARCH_5 : UInt = 0x40000000
+
+pub const EF_MIPS_ARCH_64 : UInt = 0x60000000
+
+pub const EF_MIPS_ARCH_64R2 : UInt = 0x80000000
+
+pub const EF_MIPS_ARCH_64R6 : UInt = 0xa0000000
+
+pub const EF_MIPS_ARCH_ASE : UInt = 0x0f000000
+
+pub const EF_MIPS_ARCH_ASE_M16 : UInt = 0x04000000
+
+pub const EF_MIPS_ARCH_ASE_MDMX : UInt = 0x08000000
+
+pub const EF_MIPS_ARCH_ASE_MICROMIPS : UInt = 0x02000000
+
+pub const EF_MIPS_CPIC : UInt = 0x00000004
+
+pub const EF_MIPS_FP64 : UInt = 0x00000200
+
+pub const EF_MIPS_MACH : UInt = 0x00FF0000
+
+pub const EF_MIPS_NAN2008 : UInt = 0x00000400
+
+pub const EF_MIPS_NOREORDER : UInt = 0x00000001
+
+pub const EF_MIPS_OPTIONS_FIRST : UInt = 0x00000080
+
+pub const EF_MIPS_PIC : UInt = 0x00000002
+
+pub const EF_MIPS_XGOT : UInt = 0x00000008
+
+pub const EF_PPC64_ABI : UInt = 3
+
+pub const EF_PPC_EMB : UInt = 0x80000000
+
+pub const EF_PPC_RELOCATABLE : UInt = 0x00010000
+
+pub const EF_PPC_RELOCATABLE_LIB : UInt = 0x00008000
+
+pub const EF_RISCV_FLOAT_ABI_DOUBLE : UInt = 0x0004
+
+pub const EF_RISCV_FLOAT_ABI_MASK : UInt = 0x0006
+
+pub const EF_RISCV_FLOAT_ABI_QUAD : UInt = 0x0006
+
+pub const EF_RISCV_FLOAT_ABI_SINGLE : UInt = 0x0002
+
+pub const EF_RISCV_FLOAT_ABI_SOFT : UInt = 0x0000
+
+pub const EF_RISCV_RVC : UInt = 0x0001
+
+pub const EF_RISCV_RVE : UInt = 0x0008
+
+pub const EF_RISCV_TSO : UInt = 0x0010
+
+pub const EI_ABIVERSION : Int = 8
+
+pub const EI_CLASS : Int = 4
+
+pub const EI_DATA : Int = 5
+
+pub const EI_MAG0 : Int = 0
+
+pub const EI_MAG1 : Int = 1
+
+pub const EI_MAG2 : Int = 2
+
+pub const EI_MAG3 : Int = 3
+
+pub const EI_NIDENT : Int = 16
+
+pub const EI_OSABI : Int = 7
+
+pub const EI_PAD : Int = 9
+
+pub const EI_VERSION : Int = 6
+
+pub const ELF32_EHDR_TAILSIZE : Int = 36
+
+pub const ELF64_EHDR_TAILSIZE : Int = 48
+
+pub const ELFCLASS32 : Byte = 1
+
+pub const ELFCLASS64 : Byte = 2
+
+pub const ELFCLASSNONE : Byte = 0
+
+pub const ELFCOMPRESS_HIOS : UInt = 0x6fffffff
+
+pub const ELFCOMPRESS_HIPROC : UInt = 0x7fffffff
+
+pub const ELFCOMPRESS_LOOS : UInt = 0x60000000
+
+pub const ELFCOMPRESS_LOPROC : UInt = 0x70000000
+
+pub const ELFCOMPRESS_ZLIB : UInt = 1
+
+pub const ELFCOMPRESS_ZSTD : UInt = 2
+
+pub const ELFDATA2LSB : Byte = 1
+
+pub const ELFDATA2MSB : Byte = 2
+
+pub const ELFDATANONE : Byte = 0
+
+pub const ELFMAG0 : Byte = 0x7f
+
+pub const ELFMAG1 : Byte = 0x45
+
+pub const ELFMAG2 : Byte = 0x4c
+
+pub const ELFMAG3 : Byte = 0x46
+
+pub const ELFMAGIC : Bytes = b"\x7fELF"
+
+pub const ELFOSABI_AIX : Byte = 7
+
+pub const ELFOSABI_AROS : Byte = 15
+
+pub const ELFOSABI_CLOUDABI : Byte = 17
+
+pub const ELFOSABI_FENIXOS : Byte = 16
+
+pub const ELFOSABI_FREEBSD : Byte = 9
+
+pub const ELFOSABI_GNU : Byte = 3
+
+pub const ELFOSABI_HPUX : Byte = 1
+
+pub const ELFOSABI_IRIX : Byte = 8
+
+pub const ELFOSABI_LINUX : Byte = 3
+
+pub const ELFOSABI_MODESTO : Byte = 11
+
+pub const ELFOSABI_NETBSD : Byte = 2
+
+pub const ELFOSABI_NONE : Byte = 0
+
+pub const ELFOSABI_NSK : Byte = 14
+
+pub const ELFOSABI_OPENBSD : Byte = 12
+
+pub const ELFOSABI_OPENVMS : Byte = 13
+
+pub const ELFOSABI_OPENVOS : Byte = 18
+
+pub const ELFOSABI_SOLARIS : Byte = 6
+
+pub const ELFOSABI_SYSV : Byte = 0
+
+pub const ELFOSABI_TRU64 : Byte = 10
+
+pub const ELF_NOTE_GNU : Bytes = b"GNU\x00"
+
+pub const ELF_NOTE_GNU_ABI_TAG_OS_FREEBSD : UInt = 3
+
+pub const ELF_NOTE_GNU_ABI_TAG_OS_GNU : UInt = 1
+
+pub const ELF_NOTE_GNU_ABI_TAG_OS_LINUX : UInt = 0
+
+pub const ELF_NOTE_GNU_ABI_TAG_OS_SOLARIS2 : UInt = 2
+
+pub const EM_386 : UInt16 = 3
+
+pub const EM_56800EX : UInt16 = 200
+
+pub const EM_68HC05 : UInt16 = 72
+
+pub const EM_68HC08 : UInt16 = 71
+
+pub const EM_68HC11 : UInt16 = 70
+
+pub const EM_68HC12 : UInt16 = 53
+
+pub const EM_68HC16 : UInt16 = 69
+
+pub const EM_68K : UInt16 = 4
+
+pub const EM_78KOR : UInt16 = 199
+
+pub const EM_8051 : UInt16 = 165
+
+pub const EM_860 : UInt16 = 7
+
+pub const EM_88K : UInt16 = 5
+
+pub const EM_960 : UInt16 = 19
+
+pub const EM_AARCH64 : UInt16 = 183
+
+pub const EM_ALPHA : UInt16 = 41
+
+pub const EM_ALTERA_NIOS2 : UInt16 = 113
+
+pub const EM_AMDGPU : UInt16 = 224
+
+pub const EM_ARC : UInt16 = 45
+
+pub const EM_ARCA : UInt16 = 109
+
+pub const EM_ARC_COMPACT : UInt16 = 93
+
+pub const EM_ARC_COMPACT2 : UInt16 = 195
+
+pub const EM_ARM : UInt16 = 40
+
+pub const EM_AVR : UInt16 = 83
+
+pub const EM_AVR32 : UInt16 = 185
+
+pub const EM_BA1 : UInt16 = 201
+
+pub const EM_BA2 : UInt16 = 202
+
+pub const EM_BLACKFIN : UInt16 = 106
+
+pub const EM_BPF : UInt16 = 247
+
+pub const EM_C166 : UInt16 = 116
+
+pub const EM_CDP : UInt16 = 215
+
+pub const EM_CE : UInt16 = 119
+
+pub const EM_CLOUDSHIELD : UInt16 = 192
+
+pub const EM_COGE : UInt16 = 216
+
+pub const EM_COLDFIRE : UInt16 = 52
+
+pub const EM_COOL : UInt16 = 217
+
+pub const EM_COREA_1ST : UInt16 = 193
+
+pub const EM_COREA_2ND : UInt16 = 194
+
+pub const EM_CR : UInt16 = 103
+
+pub const EM_CR16 : UInt16 = 177
+
+pub const EM_CRAYNV2 : UInt16 = 172
+
+pub const EM_CRIS : UInt16 = 76
+
+pub const EM_CRX : UInt16 = 114
+
+pub const EM_CSKY : UInt16 = 252
+
+pub const EM_CSR_KALIMBA : UInt16 = 219
+
+pub const EM_CUDA : UInt16 = 190
+
+pub const EM_CYPRESS_M8C : UInt16 = 161
+
+pub const EM_D10V : UInt16 = 85
+
+pub const EM_D30V : UInt16 = 86
+
+pub const EM_DSP24 : UInt16 = 136
+
+pub const EM_DSPIC30F : UInt16 = 118
+
+pub const EM_DXP : UInt16 = 112
+
+pub const EM_ECOG1 : UInt16 = 168
+
+pub const EM_ECOG16 : UInt16 = 176
+
+pub const EM_ECOG1X : UInt16 = 168
+
+pub const EM_ECOG2 : UInt16 = 134
+
+pub const EM_ETPU : UInt16 = 178
+
+pub const EM_EXCESS : UInt16 = 111
+
+pub const EM_F2MC16 : UInt16 = 104
+
+pub const EM_FIREPATH : UInt16 = 78
+
+pub const EM_FR20 : UInt16 = 37
+
+pub const EM_FR30 : UInt16 = 84
+
+pub const EM_FRV : UInt16 = 0x5441
+
+pub const EM_FT32 : UInt16 = 222
+
+pub const EM_FX66 : UInt16 = 66
+
+pub const EM_H8S : UInt16 = 48
+
+pub const EM_H8_300 : UInt16 = 46
+
+pub const EM_H8_300H : UInt16 = 47
+
+pub const EM_H8_500 : UInt16 = 49
+
+pub const EM_HUANY : UInt16 = 81
+
+pub const EM_IAMCU : UInt16 = 6
+
+pub const EM_IA_64 : UInt16 = 50
+
+pub const EM_INTEL205 : UInt16 = 205
+
+pub const EM_INTEL206 : UInt16 = 206
+
+pub const EM_INTEL207 : UInt16 = 207
+
+pub const EM_INTEL208 : UInt16 = 208
+
+pub const EM_INTEL209 : UInt16 = 209
+
+pub const EM_IP2K : UInt16 = 101
+
+pub const EM_JAVELIN : UInt16 = 77
+
+pub const EM_K10M : UInt16 = 181
+
+pub const EM_KM32 : UInt16 = 210
+
+pub const EM_KMX16 : UInt16 = 212
+
+pub const EM_KMX32 : UInt16 = 211
+
+pub const EM_KMX8 : UInt16 = 213
+
+pub const EM_KVARC : UInt16 = 214
+
+pub const EM_L10M : UInt16 = 180
+
+pub const EM_LANAI : UInt16 = 244
+
+pub const EM_LATTICEMICO32 : UInt16 = 138
+
+pub const EM_LOONGARCH : UInt16 = 258
+
+pub const EM_M16C : UInt16 = 117
+
+pub const EM_M32 : UInt16 = 1
+
+pub const EM_M32C : UInt16 = 120
+
+pub const EM_M32R : UInt16 = 88
+
+pub const EM_MANIK : UInt16 = 171
+
+pub const EM_MAX : UInt16 = 102
+
+pub const EM_MAXQ30 : UInt16 = 169
+
+pub const EM_MCHP_PIC : UInt16 = 204
+
+pub const EM_MCST_ELBRUS : UInt16 = 175
+
+pub const EM_ME16 : UInt16 = 59
+
+pub const EM_METAG : UInt16 = 174
+
+pub const EM_MICROBLAZE : UInt16 = 189
+
+pub const EM_MIPS : UInt16 = 8
+
+pub const EM_MIPS_RS3_LE : UInt16 = 10
+
+pub const EM_MIPS_X : UInt16 = 51
+
+pub const EM_MMA : UInt16 = 54
+
+pub const EM_MMDSP_PLUS : UInt16 = 160
+
+pub const EM_MMIX : UInt16 = 80
+
+pub const EM_MN10200 : UInt16 = 90
+
+pub const EM_MN10300 : UInt16 = 89
+
+pub const EM_MOXIE : UInt16 = 223
+
+pub const EM_MSP430 : UInt16 = 105
+
+pub const EM_NCPU : UInt16 = 56
+
+pub const EM_NDR1 : UInt16 = 57
+
+pub const EM_NDS32 : UInt16 = 167
+
+pub const EM_NONE : UInt16 = 0
+
+pub const EM_NORC : UInt16 = 218
+
+pub const EM_NS32K : UInt16 = 97
+
+pub const EM_OPEN8 : UInt16 = 196
+
+pub const EM_OPENRISC : UInt16 = 92
+
+pub const EM_PARISC : UInt16 = 15
+
+pub const EM_PCP : UInt16 = 55
+
+pub const EM_PDP10 : UInt16 = 64
+
+pub const EM_PDP11 : UInt16 = 65
+
+pub const EM_PDSP : UInt16 = 63
+
+pub const EM_PJ : UInt16 = 91
+
+pub const EM_PPC : UInt16 = 20
+
+pub const EM_PPC64 : UInt16 = 21
+
+pub const EM_PRISM : UInt16 = 82
+
+pub const EM_QDSP6 : UInt16 = 164
+
+pub const EM_R32C : UInt16 = 162
+
+pub const EM_RCE : UInt16 = 39
+
+pub const EM_RH32 : UInt16 = 38
+
+pub const EM_RISCV : UInt16 = 243
+
+pub const EM_RL78 : UInt16 = 197
+
+pub const EM_RS08 : UInt16 = 132
+
+pub const EM_RX : UInt16 = 173
+
+pub const EM_S370 : UInt16 = 9
+
+pub const EM_S390 : UInt16 = 22
+
+pub const EM_SCORE7 : UInt16 = 135
+
+pub const EM_SEP : UInt16 = 108
+
+pub const EM_SE_C17 : UInt16 = 139
+
+pub const EM_SE_C33 : UInt16 = 107
+
+pub const EM_SH : UInt16 = 42
+
+pub const EM_SHARC : UInt16 = 133
+
+pub const EM_SLE9X : UInt16 = 179
+
+pub const EM_SNP1K : UInt16 = 99
+
+pub const EM_SPARC : UInt16 = 2
+
+pub const EM_SPARC32PLUS : UInt16 = 18
+
+pub const EM_SPARCV9 : UInt16 = 43
+
+pub const EM_SPU : UInt16 = 23
+
+pub const EM_ST100 : UInt16 = 60
+
+pub const EM_ST19 : UInt16 = 74
+
+pub const EM_ST200 : UInt16 = 100
+
+pub const EM_ST7 : UInt16 = 68
+
+pub const EM_ST9PLUS : UInt16 = 67
+
+pub const EM_STARCORE : UInt16 = 58
+
+pub const EM_STM8 : UInt16 = 186
+
+pub const EM_STXP7X : UInt16 = 166
+
+pub const EM_SVX : UInt16 = 73
+
+pub const EM_TILE64 : UInt16 = 187
+
+pub const EM_TILEGX : UInt16 = 191
+
+pub const EM_TILEPRO : UInt16 = 188
+
+pub const EM_TINYJ : UInt16 = 61
+
+pub const EM_TI_ARP32 : UInt16 = 143
+
+pub const EM_TI_C2000 : UInt16 = 141
+
+pub const EM_TI_C5500 : UInt16 = 142
+
+pub const EM_TI_C6000 : UInt16 = 140
+
+pub const EM_TI_PRU : UInt16 = 144
+
+pub const EM_TMM_GPP : UInt16 = 96
+
+pub const EM_TPC : UInt16 = 98
+
+pub const EM_TRICORE : UInt16 = 44
+
+pub const EM_TRIMEDIA : UInt16 = 163
+
+pub const EM_TSK3000 : UInt16 = 131
+
+pub const EM_UNICORE : UInt16 = 110
+
+pub const EM_V800 : UInt16 = 36
+
+pub const EM_V850 : UInt16 = 87
+
+pub const EM_VAX : UInt16 = 75
+
+pub const EM_VE : UInt16 = 251
+
+pub const EM_VIDEOCORE : UInt16 = 95
+
+pub const EM_VIDEOCORE3 : UInt16 = 137
+
+pub const EM_VIDEOCORE5 : UInt16 = 198
+
+pub const EM_VISIUM : UInt16 = 221
+
+pub const EM_VPP500 : UInt16 = 17
+
+pub const EM_X86_64 : UInt16 = 62
+
+pub const EM_XCORE : UInt16 = 203
+
+pub const EM_XGATE : UInt16 = 115
+
+pub const EM_XIMO16 : UInt16 = 170
+
+pub const EM_XTENSA : UInt16 = 94
+
+pub const EM_Z80 : UInt16 = 220
+
+pub const EM_ZSP : UInt16 = 79
+
+pub const ET_CORE : UInt16 = 4
+
+pub const ET_DYN : UInt16 = 3
+
+pub const ET_EXEC : UInt16 = 2
+
+pub const ET_HIOS : UInt16 = 0xfeff
+
+pub const ET_HIPROC : UInt16 = 0xffff
+
+pub const ET_LOOS : UInt16 = 0xfe00
+
+pub const ET_LOPROC : UInt16 = 0xff00
+
+pub const ET_NONE : UInt16 = 0
+
+pub const ET_REL : UInt16 = 1
+
+pub const EV_CURRENT : Byte = 1
+
+pub const EV_NONE : Byte = 0
+
+pub const GNU_PROPERTY_AARCH64_FEATURE_1_AND : UInt = 0xc0000000
+
+pub const GNU_PROPERTY_AARCH64_FEATURE_1_BTI : UInt = 0x1
+
+pub const GNU_PROPERTY_AARCH64_FEATURE_1_PAC : UInt = 0x2
+
+pub const NT_386_IOPERM : UInt64 = 0x201
+
+pub const NT_386_TLS : UInt64 = 0x200
+
+pub const NT_ARM_HW_BREAK : UInt64 = 0x402
+
+pub const NT_ARM_HW_WATCH : UInt64 = 0x403
+
+pub const NT_ARM_PACA_KEYS : UInt64 = 0x407
+
+pub const NT_ARM_PACG_KEYS : UInt64 = 0x408
+
+pub const NT_ARM_PAC_ENABLED_KEYS : UInt64 = 0x40a
+
+pub const NT_ARM_PAC_MASK : UInt64 = 0x406
+
+pub const NT_ARM_SVE : UInt64 = 0x405
+
+pub const NT_ARM_SYSTEM_CALL : UInt64 = 0x404
+
+pub const NT_ARM_TAGGED_ADDR_CTRL : UInt64 = 0x409
+
+pub const NT_ARM_TLS : UInt64 = 0x401
+
+pub const NT_ARM_VFP : UInt64 = 0x400
+
+pub const NT_ASRS : UInt64 = 8
+
+pub const NT_AUXV : UInt64 = 6
+
+pub const NT_FILE : UInt64 = 0x46494c45
+
+pub const NT_FPREGSET : UInt64 = 2
+
+pub const NT_GNU_ABI_TAG : UInt64 = 1
+
+pub const NT_GNU_BUILD_ID : UInt64 = 3
+
+pub const NT_GNU_GOLD_VERSION : UInt64 = 4
+
+pub const NT_GNU_HWCAP : UInt64 = 2
+
+pub const NT_GNU_PROPERTY_TYPE_0 : UInt64 = 5
+
+pub const NT_GWINDOWS : UInt64 = 7
+
+pub const NT_LWPSINFO : UInt64 = 17
+
+pub const NT_LWPSTATUS : UInt64 = 16
+
+pub const NT_PLATFORM : UInt64 = 5
+
+pub const NT_PPC_DSCR : UInt64 = 0x105
+
+pub const NT_PPC_EBB : UInt64 = 0x106
+
+pub const NT_PPC_PKEY : UInt64 = 0x110
+
+pub const NT_PPC_PMU : UInt64 = 0x107
+
+pub const NT_PPC_PPR : UInt64 = 0x104
+
+pub const NT_PPC_SPE : UInt64 = 0x101
+
+pub const NT_PPC_TAR : UInt64 = 0x103
+
+pub const NT_PPC_TM_CDSCR : UInt64 = 0x10f
+
+pub const NT_PPC_TM_CFPR : UInt64 = 0x109
+
+pub const NT_PPC_TM_CGPR : UInt64 = 0x108
+
+pub const NT_PPC_TM_CPPR : UInt64 = 0x10e
+
+pub const NT_PPC_TM_CTAR : UInt64 = 0x10d
+
+pub const NT_PPC_TM_CVMX : UInt64 = 0x10a
+
+pub const NT_PPC_TM_CVSX : UInt64 = 0x10b
+
+pub const NT_PPC_TM_SPR : UInt64 = 0x10c
+
+pub const NT_PPC_VMX : UInt64 = 0x100
+
+pub const NT_PPC_VSX : UInt64 = 0x102
+
+pub const NT_PRCRED : UInt64 = 14
+
+pub const NT_PRFPREG : UInt64 = 2
+
+pub const NT_PRFPXREG : UInt64 = 20
+
+pub const NT_PRPSINFO : UInt64 = 3
+
+pub const NT_PRSTATUS : UInt64 = 1
+
+pub const NT_PRXFPREG : UInt64 = 0x46e62b7f
+
+pub const NT_PRXREG : UInt64 = 4
+
+pub const NT_PSINFO : UInt64 = 13
+
+pub const NT_PSTATUS : UInt64 = 10
+
+pub const NT_SIGINFO : UInt64 = 0x53494749
+
+pub const NT_TASKSTRUCT : UInt64 = 4
+
+pub const NT_UTSNAME : UInt64 = 15
+
+pub const NT_VMCOREDD : UInt64 = 0x700
+
+pub const NT_X86_XSAVE_LAYOUT : UInt64 = 0x205
+
+pub const NT_X86_XSTATE : UInt64 = 0x202
+
+pub const ODK_EXCEPTION : Byte = 2
+
+pub const ODK_FIL : Byte = 5
+
+pub const ODK_GP_GROU : Byte = 9
+
+pub const ODK_HWAN : Byte = 7
+
+pub const ODK_HWO : Byte = 8
+
+pub const ODK_HWPATC : Byte = 4
+
+pub const ODK_IDEN : Byte = 10
+
+pub const ODK_NULL : Byte = 0
+
+pub const ODK_PA : Byte = 3
+
+pub const ODK_PAGESIZ : Byte = 11
+
+pub const ODK_REGINF : Byte = 1
+
+pub const ODK_TAG : Byte = 6
+
+pub const OEX_DISMISS : UInt = 0x00080000
+
+pub const OEX_FPU_DIV0 : UInt = 0x08
+
+pub const OEX_FPU_INEX : UInt = 0x01
+
+pub const OEX_FPU_INVAL : UInt = 0x10
+
+pub const OEX_FPU_MAX : UInt = 0x00001f00
+
+pub const OEX_FPU_MIN : UInt = 0x0000001f
+
+pub const OEX_FPU_OFLO : UInt = 0x04
+
+pub const OEX_FPU_UFLO : UInt = 0x02
+
+pub const OEX_PAGE0 : UInt = 0x00010000
+
+pub const OEX_PRECISEFP : UInt = 0x00040000
+
+pub const OEX_SMM : UInt = 0x00020000
+
+pub const OHWA0_R4KEOP_CHECKED : UInt = 0x00000001
+
+pub const OHWA0_R4KEOP_CLEAN : UInt = 0x00000002
+
+pub const OHWO0_FIXADE : UInt = 0x00000001
+
+pub const OHW_R10KLDL : UInt = 0x00000010
+
+pub const OHW_R4KEOP : UInt = 0x00000001
+
+pub const OHW_R5KCVTL : UInt = 0x00000008
+
+pub const OHW_R5KEOP : UInt = 0x00000004
+
+pub const OHW_R8KPFETCH : UInt = 0x00000002
+
+pub const OPAD_POSTFIX : UInt = 0x2
+
+pub const OPAD_PREFIX : UInt = 0x1
+
+pub const OPAD_SYMBOL : UInt = 0x4
+
+pub const PF_MASKOS : UInt = 0x0ff00000
+
+pub const PF_MASKPROC : UInt = 0xf0000000
+
+pub const PF_NONE : UInt = 0
+
+pub const PF_R : UInt = 4
+
+pub const PF_W : UInt = 2
+
+pub const PF_X : UInt = 1
+
+pub const PN_XNUM : UInt16 = 0xffff
+
+pub const PPC64_OPT_LOCALENTRY : UInt64 = 4
+
+pub const PPC64_OPT_MULTI_TOC : UInt64 = 2
+
+pub const PPC64_OPT_TLS : UInt64 = 1
+
+pub const PPC_OPT_TLS : UInt64 = 1
+
+pub const PT_AARCH64_ARCHEXT : UInt = 0x70000000
+
+pub const PT_AARCH64_MEMTAG_MTE : UInt = 0x70000002
+
+pub const PT_AARCH64_UNWIND : UInt = 0x70000001
+
+pub const PT_ARM_ARCHEXT : UInt = 0x70000000
+
+pub const PT_ARM_ARCHEXT_ARCHMSK : UInt = 0x000000ff
+
+pub const PT_ARM_ARCHEXT_ARCHV4 : UInt = 0x01
+
+pub const PT_ARM_ARCHEXT_ARCHV4T : UInt = 0x02
+
+pub const PT_ARM_ARCHEXT_ARCHV5T : UInt = 0x03
+
+pub const PT_ARM_ARCHEXT_ARCHV5TE : UInt = 0x04
+
+pub const PT_ARM_ARCHEXT_ARCHV5TEJ : UInt = 0x05
+
+pub const PT_ARM_ARCHEXT_ARCHV6 : UInt = 0x06
+
+pub const PT_ARM_ARCHEXT_ARCHV6K : UInt = 0x09
+
+pub const PT_ARM_ARCHEXT_ARCHV6KZ : UInt = 0x07
+
+pub const PT_ARM_ARCHEXT_ARCHV6M : UInt = 0x0B
+
+pub const PT_ARM_ARCHEXT_ARCHV6SM : UInt = 0x0C
+
+pub const PT_ARM_ARCHEXT_ARCHV6T2 : UInt = 0x08
+
+pub const PT_ARM_ARCHEXT_ARCHV7 : UInt = 0x0A
+
+pub const PT_ARM_ARCHEXT_ARCHV7EM : UInt = 0x0D
+
+pub const PT_ARM_ARCHEXT_ARCH_UNKN : UInt = 0x00
+
+pub const PT_ARM_ARCHEXT_FMTMSK : UInt = 0xff000000
+
+pub const PT_ARM_ARCHEXT_FMT_ABI : UInt = 0x01000000
+
+pub const PT_ARM_ARCHEXT_FMT_OS : UInt = 0x00000000
+
+pub const PT_ARM_ARCHEXT_PROFMSK : UInt = 0x00ff0000
+
+pub const PT_ARM_ARCHEXT_PROF_ARM : UInt = 0x00410000
+
+pub const PT_ARM_ARCHEXT_PROF_CLASSIC : UInt = 0x00530000
+
+pub const PT_ARM_ARCHEXT_PROF_MC : UInt = 0x004D0000
+
+pub const PT_ARM_ARCHEXT_PROF_NONE : UInt = 0x00000000
+
+pub const PT_ARM_ARCHEXT_PROF_RT : UInt = 0x00520000
+
+pub const PT_ARM_EXIDX : UInt = 0x70000001
+
+pub const PT_ARM_UNWIND : UInt = 0x70000001
+
+pub const PT_DYNAMIC : UInt = 2
+
+pub const PT_GNU_EH_FRAME : UInt = 0x6474e550
+
+pub const PT_GNU_PROPERTY : UInt = 0x6474e553
+
+pub const PT_GNU_RELRO : UInt = 0x6474e552
+
+pub const PT_GNU_STACK : UInt = 0x6474e551
+
+pub const PT_HIOS : UInt = 0x6fffffff
+
+pub const PT_HIPROC : UInt = 0x7fffffff
+
+pub const PT_INTERP : UInt = 3
+
+pub const PT_LOAD : UInt = 1
+
+pub const PT_LOOS : UInt = 0x60000000
+
+pub const PT_LOPROC : UInt = 0x70000000
+
+pub const PT_NOTE : UInt = 4
+
+pub const PT_NULL : UInt = 0
+
+pub const PT_PHDR : UInt = 6
+
+pub const PT_RISCV_ATTRIBUTES : UInt = 0x70000003
+
+pub const PT_SHLIB : UInt = 5
+
+pub const PT_TLS : UInt = 7
+
+pub const RHF_CORD : UInt = 0x00001000
+
+pub const RHF_DEFAULT_DELAY_LOAD : UInt = 0x00000200
+
+pub const RHF_DELTA_C_PLUS_PLUS : UInt = 0x00000040
+
+pub const RHF_GUARANTEE_INIT : UInt = 0x00000020
+
+pub const RHF_GUARANTEE_START_INIT : UInt = 0x00000080
+
+pub const RHF_NONE : UInt = 0x00000000
+
+pub const RHF_NOTPOT : UInt = 0x00000002
+
+pub const RHF_NO_LIBRARY_REPLACEMENT : UInt = 0x00000004
+
+pub const RHF_NO_MOVE : UInt = 0x00000008
+
+pub const RHF_NO_UNRES_UNDEF : UInt = 0x00002000
+
+pub const RHF_PIXIE : UInt = 0x00000100
+
+pub const RHF_QUICKSTART : UInt = 0x00000001
+
+pub const RHF_REQUICKSTART : UInt = 0x00000400
+
+pub const RHF_REQUICKSTARTED : UInt = 0x00000800
+
+pub const RHF_RLD_ORDER_SAFE : UInt = 0x00004000
+
+pub const RHF_SGI_ONLY : UInt = 0x00000010
+
+pub const RSS_GP : UInt = 1
+
+pub const RSS_GP0 : UInt = 2
+
+pub const RSS_LOC : UInt = 3
+
+pub const RSS_UNDEF : UInt = 0
+
+pub const R_AARCH64_ABS16 : UInt = 259
+
+pub const R_AARCH64_ABS32 : UInt = 258
+
+pub const R_AARCH64_ABS64 : UInt = 257
+
+pub const R_AARCH64_ADD_ABS_LO12_NC : UInt = 277
+
+pub const R_AARCH64_ADR_GOT_PAGE : UInt = 311
+
+pub const R_AARCH64_ADR_PREL_LO21 : UInt = 274
+
+pub const R_AARCH64_ADR_PREL_PG_HI21 : UInt = 275
+
+pub const R_AARCH64_ADR_PREL_PG_HI21_NC : UInt = 276
+
+pub const R_AARCH64_CALL26 : UInt = 283
+
+pub const R_AARCH64_CONDBR19 : UInt = 280
+
+pub const R_AARCH64_COPY : UInt = 1024
+
+pub const R_AARCH64_GLOB_DAT : UInt = 1025
+
+pub const R_AARCH64_GOTREL32 : UInt = 308
+
+pub const R_AARCH64_GOTREL64 : UInt = 307
+
+pub const R_AARCH64_GOT_LD_PREL19 : UInt = 309
+
+pub const R_AARCH64_IRELATIVE : UInt = 1032
+
+pub const R_AARCH64_JUMP26 : UInt = 282
+
+pub const R_AARCH64_JUMP_SLOT : UInt = 1026
+
+pub const R_AARCH64_LD64_GOTOFF_LO15 : UInt = 310
+
+pub const R_AARCH64_LD64_GOTPAGE_LO15 : UInt = 313
+
+pub const R_AARCH64_LD64_GOT_LO12_NC : UInt = 312
+
+pub const R_AARCH64_LDST128_ABS_LO12_NC : UInt = 299
+
+pub const R_AARCH64_LDST16_ABS_LO12_NC : UInt = 284
+
+pub const R_AARCH64_LDST32_ABS_LO12_NC : UInt = 285
+
+pub const R_AARCH64_LDST64_ABS_LO12_NC : UInt = 286
+
+pub const R_AARCH64_LDST8_ABS_LO12_NC : UInt = 278
+
+pub const R_AARCH64_LD_PREL_LO19 : UInt = 273
+
+pub const R_AARCH64_MOVW_GOTOFF_G0 : UInt = 300
+
+pub const R_AARCH64_MOVW_GOTOFF_G0_NC : UInt = 301
+
+pub const R_AARCH64_MOVW_GOTOFF_G1 : UInt = 302
+
+pub const R_AARCH64_MOVW_GOTOFF_G1_NC : UInt = 303
+
+pub const R_AARCH64_MOVW_GOTOFF_G2 : UInt = 304
+
+pub const R_AARCH64_MOVW_GOTOFF_G2_NC : UInt = 305
+
+pub const R_AARCH64_MOVW_GOTOFF_G3 : UInt = 306
+
+pub const R_AARCH64_MOVW_PREL_G0 : UInt = 287
+
+pub const R_AARCH64_MOVW_PREL_G0_NC : UInt = 288
+
+pub const R_AARCH64_MOVW_PREL_G1 : UInt = 289
+
+pub const R_AARCH64_MOVW_PREL_G1_NC : UInt = 290
+
+pub const R_AARCH64_MOVW_PREL_G2 : UInt = 291
+
+pub const R_AARCH64_MOVW_PREL_G2_NC : UInt = 292
+
+pub const R_AARCH64_MOVW_PREL_G3 : UInt = 293
+
+pub const R_AARCH64_MOVW_SABS_G0 : UInt = 270
+
+pub const R_AARCH64_MOVW_SABS_G1 : UInt = 271
+
+pub const R_AARCH64_MOVW_SABS_G2 : UInt = 272
+
+pub const R_AARCH64_MOVW_UABS_G0 : UInt = 263
+
+pub const R_AARCH64_MOVW_UABS_G0_NC : UInt = 264
+
+pub const R_AARCH64_MOVW_UABS_G1 : UInt = 265
+
+pub const R_AARCH64_MOVW_UABS_G1_NC : UInt = 266
+
+pub const R_AARCH64_MOVW_UABS_G2 : UInt = 267
+
+pub const R_AARCH64_MOVW_UABS_G2_NC : UInt = 268
+
+pub const R_AARCH64_MOVW_UABS_G3 : UInt = 269
+
+pub const R_AARCH64_NONE : UInt = 0
+
+pub const R_AARCH64_P32_ABS32 : UInt = 1
+
+pub const R_AARCH64_P32_COPY : UInt = 180
+
+pub const R_AARCH64_P32_GLOB_DAT : UInt = 181
+
+pub const R_AARCH64_P32_IRELATIVE : UInt = 188
+
+pub const R_AARCH64_P32_JUMP_SLOT : UInt = 182
+
+pub const R_AARCH64_P32_RELATIVE : UInt = 183
+
+pub const R_AARCH64_P32_TLSDESC : UInt = 187
+
+pub const R_AARCH64_P32_TLS_DTPMOD : UInt = 184
+
+pub const R_AARCH64_P32_TLS_DTPREL : UInt = 185
+
+pub const R_AARCH64_P32_TLS_TPREL : UInt = 186
+
+pub const R_AARCH64_PREL16 : UInt = 262
+
+pub const R_AARCH64_PREL32 : UInt = 261
+
+pub const R_AARCH64_PREL64 : UInt = 260
+
+pub const R_AARCH64_RELATIVE : UInt = 1027
+
+pub const R_AARCH64_TLSDESC : UInt = 1031
+
+pub const R_AARCH64_TLSDESC_ADD : UInt = 568
+
+pub const R_AARCH64_TLSDESC_ADD_LO12 : UInt = 564
+
+pub const R_AARCH64_TLSDESC_ADR_PAGE21 : UInt = 562
+
+pub const R_AARCH64_TLSDESC_ADR_PREL21 : UInt = 561
+
+pub const R_AARCH64_TLSDESC_CALL : UInt = 569
+
+pub const R_AARCH64_TLSDESC_LD64_LO12 : UInt = 563
+
+pub const R_AARCH64_TLSDESC_LDR : UInt = 567
+
+pub const R_AARCH64_TLSDESC_LD_PREL19 : UInt = 560
+
+pub const R_AARCH64_TLSDESC_OFF_G0_NC : UInt = 566
+
+pub const R_AARCH64_TLSDESC_OFF_G1 : UInt = 565
+
+pub const R_AARCH64_TLSGD_ADD_LO12_NC : UInt = 514
+
+pub const R_AARCH64_TLSGD_ADR_PAGE21 : UInt = 513
+
+pub const R_AARCH64_TLSGD_ADR_PREL21 : UInt = 512
+
+pub const R_AARCH64_TLSGD_MOVW_G0_NC : UInt = 516
+
+pub const R_AARCH64_TLSGD_MOVW_G1 : UInt = 515
+
+pub const R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21 : UInt = 541
+
+pub const R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC : UInt = 542
+
+pub const R_AARCH64_TLSIE_LD_GOTTPREL_PREL19 : UInt = 543
+
+pub const R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC : UInt = 540
+
+pub const R_AARCH64_TLSIE_MOVW_GOTTPREL_G1 : UInt = 539
+
+pub const R_AARCH64_TLSLD_ADD_DTPREL_HI12 : UInt = 528
+
+pub const R_AARCH64_TLSLD_ADD_DTPREL_LO12 : UInt = 529
+
+pub const R_AARCH64_TLSLD_ADD_DTPREL_LO12_NC : UInt = 530
+
+pub const R_AARCH64_TLSLD_ADD_LO12_NC : UInt = 519
+
+pub const R_AARCH64_TLSLD_ADR_PAGE21 : UInt = 518
+
+pub const R_AARCH64_TLSLD_ADR_PREL21 : UInt = 517
+
+pub const R_AARCH64_TLSLD_LDST128_DTPREL_LO12 : UInt = 572
+
+pub const R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC : UInt = 573
+
+pub const R_AARCH64_TLSLD_LDST16_DTPREL_LO12 : UInt = 533
+
+pub const R_AARCH64_TLSLD_LDST16_DTPREL_LO12_NC : UInt = 534
+
+pub const R_AARCH64_TLSLD_LDST32_DTPREL_LO12 : UInt = 535
+
+pub const R_AARCH64_TLSLD_LDST32_DTPREL_LO12_NC : UInt = 536
+
+pub const R_AARCH64_TLSLD_LDST64_DTPREL_LO12 : UInt = 537
+
+pub const R_AARCH64_TLSLD_LDST64_DTPREL_LO12_NC : UInt = 538
+
+pub const R_AARCH64_TLSLD_LDST8_DTPREL_LO12 : UInt = 531
+
+pub const R_AARCH64_TLSLD_LDST8_DTPREL_LO12_NC : UInt = 532
+
+pub const R_AARCH64_TLSLD_LD_PREL19 : UInt = 522
+
+pub const R_AARCH64_TLSLD_MOVW_DTPREL_G0 : UInt = 526
+
+pub const R_AARCH64_TLSLD_MOVW_DTPREL_G0_NC : UInt = 527
+
+pub const R_AARCH64_TLSLD_MOVW_DTPREL_G1 : UInt = 524
+
+pub const R_AARCH64_TLSLD_MOVW_DTPREL_G1_NC : UInt = 525
+
+pub const R_AARCH64_TLSLD_MOVW_DTPREL_G2 : UInt = 523
+
+pub const R_AARCH64_TLSLD_MOVW_G0_NC : UInt = 521
+
+pub const R_AARCH64_TLSLD_MOVW_G1 : UInt = 520
+
+pub const R_AARCH64_TLSLE_ADD_TPREL_HI12 : UInt = 549
+
+pub const R_AARCH64_TLSLE_ADD_TPREL_LO12 : UInt = 550
+
+pub const R_AARCH64_TLSLE_ADD_TPREL_LO12_NC : UInt = 551
+
+pub const R_AARCH64_TLSLE_LDST128_TPREL_LO12 : UInt = 570
+
+pub const R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC : UInt = 571
+
+pub const R_AARCH64_TLSLE_LDST16_TPREL_LO12 : UInt = 554
+
+pub const R_AARCH64_TLSLE_LDST16_TPREL_LO12_NC : UInt = 555
+
+pub const R_AARCH64_TLSLE_LDST32_TPREL_LO12 : UInt = 556
+
+pub const R_AARCH64_TLSLE_LDST32_TPREL_LO12_NC : UInt = 557
+
+pub const R_AARCH64_TLSLE_LDST64_TPREL_LO12 : UInt = 558
+
+pub const R_AARCH64_TLSLE_LDST64_TPREL_LO12_NC : UInt = 559
+
+pub const R_AARCH64_TLSLE_LDST8_TPREL_LO12 : UInt = 552
+
+pub const R_AARCH64_TLSLE_LDST8_TPREL_LO12_NC : UInt = 553
+
+pub const R_AARCH64_TLSLE_MOVW_TPREL_G0 : UInt = 547
+
+pub const R_AARCH64_TLSLE_MOVW_TPREL_G0_NC : UInt = 548
+
+pub const R_AARCH64_TLSLE_MOVW_TPREL_G1 : UInt = 545
+
+pub const R_AARCH64_TLSLE_MOVW_TPREL_G1_NC : UInt = 546
+
+pub const R_AARCH64_TLSLE_MOVW_TPREL_G2 : UInt = 544
+
+pub const R_AARCH64_TLS_DTPMOD : UInt = 1028
+
+pub const R_AARCH64_TLS_DTPREL : UInt = 1029
+
+pub const R_AARCH64_TLS_TPREL : UInt = 1030
+
+pub const R_AARCH64_TSTBR14 : UInt = 279
+
+pub const R_ARM_ABS12 : UInt = 6
+
+pub const R_ARM_ABS16 : UInt = 5
+
+pub const R_ARM_ABS32 : UInt = 2
+
+pub const R_ARM_ABS32_NOI : UInt = 55
+
+pub const R_ARM_ABS8 : UInt = 8
+
+pub const R_ARM_ALU_PCREL_15_8 : UInt = 33
+
+pub const R_ARM_ALU_PCREL_23_15 : UInt = 34
+
+pub const R_ARM_ALU_PCREL_7_0 : UInt = 32
+
+pub const R_ARM_ALU_PC_G0 : UInt = 58
+
+pub const R_ARM_ALU_PC_G0_NC : UInt = 57
+
+pub const R_ARM_ALU_PC_G1 : UInt = 60
+
+pub const R_ARM_ALU_PC_G1_NC : UInt = 59
+
+pub const R_ARM_ALU_PC_G2 : UInt = 61
+
+pub const R_ARM_ALU_SBREL_19_12 : UInt = 36
+
+pub const R_ARM_ALU_SBREL_27_20 : UInt = 37
+
+pub const R_ARM_ALU_SB_G0 : UInt = 71
+
+pub const R_ARM_ALU_SB_G0_NC : UInt = 70
+
+pub const R_ARM_ALU_SB_G1 : UInt = 73
+
+pub const R_ARM_ALU_SB_G1_NC : UInt = 72
+
+pub const R_ARM_ALU_SB_G2 : UInt = 74
+
+pub const R_ARM_BASE_ABS : UInt = 31
+
+pub const R_ARM_BASE_BREL : UInt = 26
+
+pub const R_ARM_BASE_PREL : UInt = 25
+
+pub const R_ARM_BREL_ADJ : UInt = 12
+
+pub const R_ARM_CALL : UInt = 28
+
+pub const R_ARM_COPY : UInt = 20
+
+pub const R_ARM_GLOB_DAT : UInt = 21
+
+pub const R_ARM_GNU_VTENTRY : UInt = 100
+
+pub const R_ARM_GNU_VTINHERIT : UInt = 101
+
+pub const R_ARM_GOTOFF12 : UInt = 98
+
+pub const R_ARM_GOTOFF32 : UInt = 24
+
+pub const R_ARM_GOTRELAX : UInt = 99
+
+pub const R_ARM_GOT_ABS : UInt = 95
+
+pub const R_ARM_GOT_BREL12 : UInt = 97
+
+pub const R_ARM_GOT_PREL : UInt = 96
+
+pub const R_ARM_IRELATIVE : UInt = 160
+
+pub const R_ARM_JUMP24 : UInt = 29
+
+pub const R_ARM_JUMP_SLOT : UInt = 22
+
+pub const R_ARM_LDC_PC_G0 : UInt = 67
+
+pub const R_ARM_LDC_PC_G1 : UInt = 68
+
+pub const R_ARM_LDC_PC_G2 : UInt = 69
+
+pub const R_ARM_LDC_SB_G0 : UInt = 81
+
+pub const R_ARM_LDC_SB_G1 : UInt = 82
+
+pub const R_ARM_LDC_SB_G2 : UInt = 83
+
+pub const R_ARM_LDRS_PC_G0 : UInt = 64
+
+pub const R_ARM_LDRS_PC_G1 : UInt = 65
+
+pub const R_ARM_LDRS_PC_G2 : UInt = 66
+
+pub const R_ARM_LDRS_SB_G0 : UInt = 78
+
+pub const R_ARM_LDRS_SB_G1 : UInt = 79
+
+pub const R_ARM_LDRS_SB_G2 : UInt = 80
+
+pub const R_ARM_LDR_PC_G0 : UInt = 4
+
+pub const R_ARM_LDR_PC_G1 : UInt = 62
+
+pub const R_ARM_LDR_PC_G2 : UInt = 63
+
+pub const R_ARM_LDR_SBREL_11_0 : UInt = 35
+
+pub const R_ARM_LDR_SB_G0 : UInt = 75
+
+pub const R_ARM_LDR_SB_G1 : UInt = 76
+
+pub const R_ARM_LDR_SB_G2 : UInt = 77
+
+pub const R_ARM_ME_TOO : UInt = 128
+
+pub const R_ARM_MOVT_ABS : UInt = 44
+
+pub const R_ARM_MOVT_BREL : UInt = 85
+
+pub const R_ARM_MOVT_PREL : UInt = 46
+
+pub const R_ARM_MOVW_ABS_NC : UInt = 43
+
+pub const R_ARM_MOVW_BREL : UInt = 86
+
+pub const R_ARM_MOVW_BREL_NC : UInt = 84
+
+pub const R_ARM_MOVW_PREL_NC : UInt = 45
+
+pub const R_ARM_NONE : UInt = 0
+
+pub const R_ARM_PC24 : UInt = 1
+
+pub const R_ARM_PLT32 : UInt = 27
+
+pub const R_ARM_PLT32_ABS : UInt = 94
+
+pub const R_ARM_PREL31 : UInt = 42
+
+pub const R_ARM_REL32 : UInt = 3
+
+pub const R_ARM_REL32_NOI : UInt = 56
+
+pub const R_ARM_RELATIVE : UInt = 23
+
+pub const R_ARM_SBREL31 : UInt = 39
+
+pub const R_ARM_SBREL32 : UInt = 9
+
+pub const R_ARM_TARGET1 : UInt = 38
+
+pub const R_ARM_TARGET2 : UInt = 41
+
+pub const R_ARM_THM_ABS5 : UInt = 7
+
+pub const R_ARM_THM_ALU_ABS_G0_NC : UInt = 132
+
+pub const R_ARM_THM_ALU_ABS_G1_NC : UInt = 133
+
+pub const R_ARM_THM_ALU_ABS_G2_NC : UInt = 134
+
+pub const R_ARM_THM_ALU_ABS_G3 : UInt = 135
+
+pub const R_ARM_THM_ALU_PREL_11_0 : UInt = 53
+
+pub const R_ARM_THM_BF12 : UInt = 137
+
+pub const R_ARM_THM_BF16 : UInt = 136
+
+pub const R_ARM_THM_BF18 : UInt = 138
+
+pub const R_ARM_THM_CALL : UInt = 10
+
+pub const R_ARM_THM_GOT_BREL12 : UInt = 131
+
+pub const R_ARM_THM_JUMP11 : UInt = 102
+
+pub const R_ARM_THM_JUMP19 : UInt = 51
+
+pub const R_ARM_THM_JUMP24 : UInt = 30
+
+pub const R_ARM_THM_JUMP6 : UInt = 52
+
+pub const R_ARM_THM_JUMP8 : UInt = 103
+
+pub const R_ARM_THM_MOVT_ABS : UInt = 48
+
+pub const R_ARM_THM_MOVT_BREL : UInt = 88
+
+pub const R_ARM_THM_MOVT_PREL : UInt = 50
+
+pub const R_ARM_THM_MOVW_ABS_NC : UInt = 47
+
+pub const R_ARM_THM_MOVW_BREL : UInt = 89
+
+pub const R_ARM_THM_MOVW_BREL_NC : UInt = 87
+
+pub const R_ARM_THM_MOVW_PREL_NC : UInt = 49
+
+pub const R_ARM_THM_PC12 : UInt = 54
+
+pub const R_ARM_THM_PC8 : UInt = 11
+
+pub const R_ARM_THM_SWI8 : UInt = 14
+
+pub const R_ARM_THM_TLS_CALL : UInt = 93
+
+pub const R_ARM_THM_TLS_DESCSEQ16 : UInt = 129
+
+pub const R_ARM_THM_TLS_DESCSEQ32 : UInt = 130
+
+pub const R_ARM_THM_XPC22 : UInt = 16
+
+pub const R_ARM_TLS_CALL : UInt = 91
+
+pub const R_ARM_TLS_DESC : UInt = 13
+
+pub const R_ARM_TLS_DESCSEQ : UInt = 92
+
+pub const R_ARM_TLS_DTPMOD32 : UInt = 17
+
+pub const R_ARM_TLS_DTPOFF32 : UInt = 18
+
+pub const R_ARM_TLS_GD32 : UInt = 104
+
+pub const R_ARM_TLS_GOTDESC : UInt = 90
+
+pub const R_ARM_TLS_IE12GP : UInt = 111
+
+pub const R_ARM_TLS_IE32 : UInt = 107
+
+pub const R_ARM_TLS_LDM32 : UInt = 105
+
+pub const R_ARM_TLS_LDO12 : UInt = 109
+
+pub const R_ARM_TLS_LDO32 : UInt = 106
+
+pub const R_ARM_TLS_LE12 : UInt = 110
+
+pub const R_ARM_TLS_LE32 : UInt = 108
+
+pub const R_ARM_TLS_TPOFF32 : UInt = 19
+
+pub const R_ARM_V4BX : UInt = 40
+
+pub const R_ARM_XPC25 : UInt = 15
+
+pub const R_MIPS_16 : Byte = 1
+
+pub const R_MIPS_26 : Byte = 4
+
+pub const R_MIPS_32 : Byte = 2
+
+pub const R_MIPS_64 : Byte = 18
+
+pub const R_MIPS_ADD : Byte = 2
+
+pub const R_MIPS_ADD_IMMEDIATE : Byte = 34
+
+pub const R_MIPS_CALL : Byte = 11
+
+pub const R_MIPS_CALL16 : Byte = 11
+
+pub const R_MIPS_CALL_HI16 : Byte = 30
+
+pub const R_MIPS_CALL_LO16 : Byte = 31
+
+pub const R_MIPS_COPY : Byte = 126
+
+pub const R_MIPS_DELETE : Byte = 27
+
+pub const R_MIPS_GLOB_DAT : Byte = 51
+
+pub const R_MIPS_GOT : Byte = 9
+
+pub const R_MIPS_GOT16 : Byte = 9
+
+pub const R_MIPS_GOT_DISP : Byte = 19
+
+pub const R_MIPS_GOT_HI16 : Byte = 22
+
+pub const R_MIPS_GOT_LO16 : Byte = 23
+
+pub const R_MIPS_GOT_OFST : Byte = 21
+
+pub const R_MIPS_GOT_PAGE : Byte = 20
+
+pub const R_MIPS_GPREL : Byte = 7
+
+pub const R_MIPS_GPREL16 : Byte = 7
+
+pub const R_MIPS_GPREL32 : Byte = 12
+
+pub const R_MIPS_HI16 : Byte = 5
+
+pub const R_MIPS_HIGHER : Byte = 28
+
+pub const R_MIPS_HIGHEST : Byte = 29
+
+pub const R_MIPS_INSERT_A : Byte = 25
+
+pub const R_MIPS_INSERT_B : Byte = 26
+
+pub const R_MIPS_JALR : Byte = 37
+
+pub const R_MIPS_JUMP_SLOT : Byte = 127
+
+pub const R_MIPS_LITERAL : Byte = 8
+
+pub const R_MIPS_LO16 : Byte = 6
+
+pub const R_MIPS_NONE : Byte = 0
+
+pub const R_MIPS_PC16 : Byte = 10
+
+pub const R_MIPS_PJUMP : Byte = 35
+
+pub const R_MIPS_REL : Byte = 3
+
+pub const R_MIPS_REL16 : Byte = 33
+
+pub const R_MIPS_REL32 : Byte = 3
+
+pub const R_MIPS_RELGOT : Byte = 36
+
+pub const R_MIPS_SCN_DISP : Byte = 32
+
+pub const R_MIPS_SHIFT5 : Byte = 16
+
+pub const R_MIPS_SHIFT6 : Byte = 17
+
+pub const R_MIPS_SUB : Byte = 24
+
+pub const R_MIPS_TLS_DTPMOD32 : Byte = 38
+
+pub const R_MIPS_TLS_DTPMOD6 : Byte = 40
+
+pub const R_MIPS_TLS_DTPREL3 : Byte = 39
+
+pub const R_MIPS_TLS_DTPREL64 : Byte = 41
+
+pub const R_MIPS_TLS_DTPREL_HI16 : Byte = 44
+
+pub const R_MIPS_TLS_DTPREL_LO16 : Byte = 45
+
+pub const R_MIPS_TLS_GD : Byte = 42
+
+pub const R_MIPS_TLS_GOTTPREL : Byte = 46
+
+pub const R_MIPS_TLS_LDM : Byte = 43
+
+pub const R_MIPS_TLS_TPREL32 : Byte = 47
+
+pub const R_MIPS_TLS_TPREL64 : Byte = 48
+
+pub const R_MIPS_TLS_TPREL_HI16 : Byte = 49
+
+pub const R_MIPS_TLS_TPREL_LO16 : Byte = 50
+
+pub const R_PPC64_ADDR14 : UInt = 7
+
+pub const R_PPC64_ADDR14_BRNTAKEN : UInt = 9
+
+pub const R_PPC64_ADDR14_BRTAKEN : UInt = 8
+
+pub const R_PPC64_ADDR16 : UInt = 3
+
+pub const R_PPC64_ADDR16_DS : UInt = 56
+
+pub const R_PPC64_ADDR16_HA : UInt = 6
+
+pub const R_PPC64_ADDR16_HI : UInt = 5
+
+pub const R_PPC64_ADDR16_HIGH : UInt = 110
+
+pub const R_PPC64_ADDR16_HIGHA : UInt = 111
+
+pub const R_PPC64_ADDR16_HIGHER : UInt = 39
+
+pub const R_PPC64_ADDR16_HIGHERA : UInt = 40
+
+pub const R_PPC64_ADDR16_HIGHEST : UInt = 41
+
+pub const R_PPC64_ADDR16_HIGHESTA : UInt = 42
+
+pub const R_PPC64_ADDR16_LO : UInt = 4
+
+pub const R_PPC64_ADDR16_LO_DS : UInt = 57
+
+pub const R_PPC64_ADDR24 : UInt = 2
+
+pub const R_PPC64_ADDR30 : UInt = 37
+
+pub const R_PPC64_ADDR32 : UInt = 1
+
+pub const R_PPC64_ADDR64 : UInt = 38
+
+pub const R_PPC64_COPY : UInt = 19
+
+pub const R_PPC64_DTPMOD64 : UInt = 68
+
+pub const R_PPC64_DTPREL16 : UInt = 74
+
+pub const R_PPC64_DTPREL16_DS : UInt = 101
+
+pub const R_PPC64_DTPREL16_HA : UInt = 77
+
+pub const R_PPC64_DTPREL16_HI : UInt = 76
+
+pub const R_PPC64_DTPREL16_HIGH : UInt = 114
+
+pub const R_PPC64_DTPREL16_HIGHA : UInt = 115
+
+pub const R_PPC64_DTPREL16_HIGHER : UInt = 103
+
+pub const R_PPC64_DTPREL16_HIGHERA : UInt = 104
+
+pub const R_PPC64_DTPREL16_HIGHEST : UInt = 105
+
+pub const R_PPC64_DTPREL16_HIGHESTA : UInt = 106
+
+pub const R_PPC64_DTPREL16_LO : UInt = 75
+
+pub const R_PPC64_DTPREL16_LO_DS : UInt = 102
+
+pub const R_PPC64_DTPREL64 : UInt = 78
+
+pub const R_PPC64_GLOB_DAT : UInt = 20
+
+pub const R_PPC64_GOT16 : UInt = 14
+
+pub const R_PPC64_GOT16_DS : UInt = 58
+
+pub const R_PPC64_GOT16_HA : UInt = 17
+
+pub const R_PPC64_GOT16_HI : UInt = 16
+
+pub const R_PPC64_GOT16_LO : UInt = 15
+
+pub const R_PPC64_GOT16_LO_DS : UInt = 59
+
+pub const R_PPC64_GOT_DTPREL16_DS : UInt = 91
+
+pub const R_PPC64_GOT_DTPREL16_HA : UInt = 94
+
+pub const R_PPC64_GOT_DTPREL16_HI : UInt = 93
+
+pub const R_PPC64_GOT_DTPREL16_LO_DS : UInt = 92
+
+pub const R_PPC64_GOT_TLSGD16 : UInt = 79
+
+pub const R_PPC64_GOT_TLSGD16_HA : UInt = 82
+
+pub const R_PPC64_GOT_TLSGD16_HI : UInt = 81
+
+pub const R_PPC64_GOT_TLSGD16_LO : UInt = 80
+
+pub const R_PPC64_GOT_TLSLD16 : UInt = 83
+
+pub const R_PPC64_GOT_TLSLD16_HA : UInt = 86
+
+pub const R_PPC64_GOT_TLSLD16_HI : UInt = 85
+
+pub const R_PPC64_GOT_TLSLD16_LO : UInt = 84
+
+pub const R_PPC64_GOT_TPREL16_DS : UInt = 87
+
+pub const R_PPC64_GOT_TPREL16_HA : UInt = 90
+
+pub const R_PPC64_GOT_TPREL16_HI : UInt = 89
+
+pub const R_PPC64_GOT_TPREL16_LO_DS : UInt = 88
+
+pub const R_PPC64_IRELATIVE : UInt = 248
+
+pub const R_PPC64_JMP_IREL : UInt = 247
+
+pub const R_PPC64_JMP_SLOT : UInt = 21
+
+pub const R_PPC64_NONE : UInt = 0
+
+pub const R_PPC64_PLT16_HA : UInt = 31
+
+pub const R_PPC64_PLT16_HI : UInt = 30
+
+pub const R_PPC64_PLT16_LO : UInt = 29
+
+pub const R_PPC64_PLT16_LO_DS : UInt = 60
+
+pub const R_PPC64_PLT32 : UInt = 27
+
+pub const R_PPC64_PLT64 : UInt = 45
+
+pub const R_PPC64_PLTGOT16 : UInt = 52
+
+pub const R_PPC64_PLTGOT16_DS : UInt = 65
+
+pub const R_PPC64_PLTGOT16_HA : UInt = 55
+
+pub const R_PPC64_PLTGOT16_HI : UInt = 54
+
+pub const R_PPC64_PLTGOT16_LO : UInt = 53
+
+pub const R_PPC64_PLTGOT16_LO_DS : UInt = 66
+
+pub const R_PPC64_PLTREL32 : UInt = 28
+
+pub const R_PPC64_PLTREL64 : UInt = 46
+
+pub const R_PPC64_REL14 : UInt = 11
+
+pub const R_PPC64_REL14_BRNTAKEN : UInt = 13
+
+pub const R_PPC64_REL14_BRTAKEN : UInt = 12
+
+pub const R_PPC64_REL16 : UInt = 249
+
+pub const R_PPC64_REL16_HA : UInt = 252
+
+pub const R_PPC64_REL16_HI : UInt = 251
+
+pub const R_PPC64_REL16_LO : UInt = 250
+
+pub const R_PPC64_REL24 : UInt = 10
+
+pub const R_PPC64_REL32 : UInt = 26
+
+pub const R_PPC64_REL64 : UInt = 44
+
+pub const R_PPC64_RELATIVE : UInt = 22
+
+pub const R_PPC64_SECTOFF : UInt = 33
+
+pub const R_PPC64_SECTOFF_DS : UInt = 61
+
+pub const R_PPC64_SECTOFF_HA : UInt = 36
+
+pub const R_PPC64_SECTOFF_HI : UInt = 35
+
+pub const R_PPC64_SECTOFF_LO : UInt = 34
+
+pub const R_PPC64_SECTOFF_LO_DS : UInt = 62
+
+pub const R_PPC64_TLS : UInt = 67
+
+pub const R_PPC64_TLSGD : UInt = 107
+
+pub const R_PPC64_TLSLD : UInt = 108
+
+pub const R_PPC64_TOC : UInt = 51
+
+pub const R_PPC64_TOC16 : UInt = 47
+
+pub const R_PPC64_TOC16_DS : UInt = 63
+
+pub const R_PPC64_TOC16_HA : UInt = 50
+
+pub const R_PPC64_TOC16_HI : UInt = 49
+
+pub const R_PPC64_TOC16_LO : UInt = 48
+
+pub const R_PPC64_TOC16_LO_DS : UInt = 64
+
+pub const R_PPC64_TOCSAVE : UInt = 109
+
+pub const R_PPC64_TPREL16 : UInt = 69
+
+pub const R_PPC64_TPREL16_DS : UInt = 95
+
+pub const R_PPC64_TPREL16_HA : UInt = 72
+
+pub const R_PPC64_TPREL16_HI : UInt = 71
+
+pub const R_PPC64_TPREL16_HIGH : UInt = 112
+
+pub const R_PPC64_TPREL16_HIGHA : UInt = 113
+
+pub const R_PPC64_TPREL16_HIGHER : UInt = 97
+
+pub const R_PPC64_TPREL16_HIGHERA : UInt = 98
+
+pub const R_PPC64_TPREL16_HIGHEST : UInt = 99
+
+pub const R_PPC64_TPREL16_HIGHESTA : UInt = 100
+
+pub const R_PPC64_TPREL16_LO : UInt = 60
+
+pub const R_PPC64_TPREL16_LO_DS : UInt = 96
+
+pub const R_PPC64_TPREL64 : UInt = 73
+
+pub const R_PPC64_UADDR16 : UInt = 25
+
+pub const R_PPC64_UADDR32 : UInt = 24
+
+pub const R_PPC64_UADDR64 : UInt = 43
+
+pub const R_PPC_ADDR14 : UInt = 7
+
+pub const R_PPC_ADDR14_BRNTAKEN : UInt = 9
+
+pub const R_PPC_ADDR14_BRTAKEN : UInt = 8
+
+pub const R_PPC_ADDR16 : UInt = 3
+
+pub const R_PPC_ADDR16_HA : UInt = 6
+
+pub const R_PPC_ADDR16_HI : UInt = 5
+
+pub const R_PPC_ADDR16_LO : UInt = 4
+
+pub const R_PPC_ADDR24 : UInt = 2
+
+pub const R_PPC_ADDR32 : UInt = 1
+
+pub const R_PPC_COPY : UInt = 19
+
+pub const R_PPC_DIAB_RELSDA_HA : UInt = 185
+
+pub const R_PPC_DIAB_RELSDA_HI : UInt = 184
+
+pub const R_PPC_DIAB_RELSDA_LO : UInt = 183
+
+pub const R_PPC_DIAB_SDA21_HA : UInt = 182
+
+pub const R_PPC_DIAB_SDA21_HI : UInt = 181
+
+pub const R_PPC_DIAB_SDA21_LO : UInt = 180
+
+pub const R_PPC_DTPMOD32 : UInt = 68
+
+pub const R_PPC_DTPREL16 : UInt = 74
+
+pub const R_PPC_DTPREL16_HA : UInt = 77
+
+pub const R_PPC_DTPREL16_HI : UInt = 76
+
+pub const R_PPC_DTPREL16_LO : UInt = 75
+
+pub const R_PPC_DTPREL32 : UInt = 78
+
+pub const R_PPC_EMB_BIT_FLD : UInt = 115
+
+pub const R_PPC_EMB_MRKREF : UInt = 110
+
+pub const R_PPC_EMB_NADDR16 : UInt = 102
+
+pub const R_PPC_EMB_NADDR16_HA : UInt = 105
+
+pub const R_PPC_EMB_NADDR16_HI : UInt = 104
+
+pub const R_PPC_EMB_NADDR16_LO : UInt = 103
+
+pub const R_PPC_EMB_NADDR32 : UInt = 101
+
+pub const R_PPC_EMB_RELSDA : UInt = 116
+
+pub const R_PPC_EMB_RELSEC16 : UInt = 111
+
+pub const R_PPC_EMB_RELST_HA : UInt = 114
+
+pub const R_PPC_EMB_RELST_HI : UInt = 113
+
+pub const R_PPC_EMB_RELST_LO : UInt = 112
+
+pub const R_PPC_EMB_SDA21 : UInt = 109
+
+pub const R_PPC_EMB_SDA2I16 : UInt = 107
+
+pub const R_PPC_EMB_SDA2REL : UInt = 108
+
+pub const R_PPC_EMB_SDAI16 : UInt = 106
+
+pub const R_PPC_GLOB_DAT : UInt = 20
+
+pub const R_PPC_GOT16 : UInt = 14
+
+pub const R_PPC_GOT16_HA : UInt = 17
+
+pub const R_PPC_GOT16_HI : UInt = 16
+
+pub const R_PPC_GOT16_LO : UInt = 15
+
+pub const R_PPC_GOT_DTPREL16 : UInt = 91
+
+pub const R_PPC_GOT_DTPREL16_HA : UInt = 94
+
+pub const R_PPC_GOT_DTPREL16_HI : UInt = 93
+
+pub const R_PPC_GOT_DTPREL16_LO : UInt = 92
+
+pub const R_PPC_GOT_TLSGD16 : UInt = 79
+
+pub const R_PPC_GOT_TLSGD16_HA : UInt = 82
+
+pub const R_PPC_GOT_TLSGD16_HI : UInt = 81
+
+pub const R_PPC_GOT_TLSGD16_LO : UInt = 80
+
+pub const R_PPC_GOT_TLSLD16 : UInt = 83
+
+pub const R_PPC_GOT_TLSLD16_HA : UInt = 86
+
+pub const R_PPC_GOT_TLSLD16_HI : UInt = 85
+
+pub const R_PPC_GOT_TLSLD16_LO : UInt = 84
+
+pub const R_PPC_GOT_TPREL16 : UInt = 87
+
+pub const R_PPC_GOT_TPREL16_HA : UInt = 90
+
+pub const R_PPC_GOT_TPREL16_HI : UInt = 89
+
+pub const R_PPC_GOT_TPREL16_LO : UInt = 88
+
+pub const R_PPC_IRELATIVE : UInt = 248
+
+pub const R_PPC_JMP_SLOT : UInt = 21
+
+pub const R_PPC_LOCAL24PC : UInt = 23
+
+pub const R_PPC_NONE : UInt = 0
+
+pub const R_PPC_PLT16_HA : UInt = 31
+
+pub const R_PPC_PLT16_HI : UInt = 30
+
+pub const R_PPC_PLT16_LO : UInt = 29
+
+pub const R_PPC_PLT32 : UInt = 27
+
+pub const R_PPC_PLTREL24 : UInt = 18
+
+pub const R_PPC_PLTREL32 : UInt = 28
+
+pub const R_PPC_REL14 : UInt = 11
+
+pub const R_PPC_REL14_BRNTAKEN : UInt = 13
+
+pub const R_PPC_REL14_BRTAKEN : UInt = 12
+
+pub const R_PPC_REL16 : UInt = 249
+
+pub const R_PPC_REL16_HA : UInt = 252
+
+pub const R_PPC_REL16_HI : UInt = 251
+
+pub const R_PPC_REL16_LO : UInt = 250
+
+pub const R_PPC_REL24 : UInt = 10
+
+pub const R_PPC_REL32 : UInt = 26
+
+pub const R_PPC_RELATIVE : UInt = 22
+
+pub const R_PPC_SDAREL16 : UInt = 32
+
+pub const R_PPC_SECTOFF : UInt = 33
+
+pub const R_PPC_SECTOFF_HA : UInt = 36
+
+pub const R_PPC_SECTOFF_HI : UInt = 35
+
+pub const R_PPC_SECTOFF_LO : UInt = 34
+
+pub const R_PPC_TLS : UInt = 67
+
+pub const R_PPC_TLSGD : UInt = 95
+
+pub const R_PPC_TLSLD : UInt = 96
+
+pub const R_PPC_TOC16 : UInt = 255
+
+pub const R_PPC_TPREL16 : UInt = 69
+
+pub const R_PPC_TPREL16_HA : UInt = 72
+
+pub const R_PPC_TPREL16_HI : UInt = 71
+
+pub const R_PPC_TPREL16_LO : UInt = 70
+
+pub const R_PPC_TPREL32 : UInt = 73
+
+pub const R_PPC_UADDR16 : UInt = 25
+
+pub const R_PPC_UADDR32 : UInt = 24
+
+pub const R_RISCV_32 : UInt = 1
+
+pub const R_RISCV_32_PCREL : UInt = 57
+
+pub const R_RISCV_64 : UInt = 2
+
+pub const R_RISCV_ADD16 : UInt = 34
+
+pub const R_RISCV_ADD32 : UInt = 35
+
+pub const R_RISCV_ADD64 : UInt = 36
+
+pub const R_RISCV_ADD8 : UInt = 33
+
+pub const R_RISCV_ALIGN : UInt = 43
+
+pub const R_RISCV_BRANCH : UInt = 16
+
+pub const R_RISCV_CALL : UInt = 18
+
+pub const R_RISCV_CALL_PLT : UInt = 19
+
+pub const R_RISCV_COPY : UInt = 4
+
+pub const R_RISCV_GOT_HI20 : UInt = 20
+
+pub const R_RISCV_HI20 : UInt = 26
+
+pub const R_RISCV_IRELATIVE : UInt = 58
+
+pub const R_RISCV_JAL : UInt = 17
+
+pub const R_RISCV_JUMP_SLOT : UInt = 5
+
+pub const R_RISCV_LO12_I : UInt = 27
+
+pub const R_RISCV_LO12_S : UInt = 28
+
+pub const R_RISCV_NONE : UInt = 0
+
+pub const R_RISCV_PCREL_HI20 : UInt = 23
+
+pub const R_RISCV_PCREL_LO12_I : UInt = 24
+
+pub const R_RISCV_PCREL_LO12_S : UInt = 25
+
+pub const R_RISCV_RELATIVE : UInt = 3
+
+pub const R_RISCV_RELAX : UInt = 51
+
+pub const R_RISCV_RVC_BRANCH : UInt = 44
+
+pub const R_RISCV_RVC_JUMP : UInt = 45
+
+pub const R_RISCV_RVC_LUI : UInt = 46
+
+pub const R_RISCV_SET16 : UInt = 55
+
+pub const R_RISCV_SET32 : UInt = 56
+
+pub const R_RISCV_SET6 : UInt = 53
+
+pub const R_RISCV_SET8 : UInt = 54
+
+pub const R_RISCV_SUB16 : UInt = 38
+
+pub const R_RISCV_SUB32 : UInt = 39
+
+pub const R_RISCV_SUB6 : UInt = 52
+
+pub const R_RISCV_SUB64 : UInt = 40
+
+pub const R_RISCV_SUB8 : UInt = 37
+
+pub const R_RISCV_TLS_DTPMOD32 : UInt = 6
+
+pub const R_RISCV_TLS_DTPMOD64 : UInt = 7
+
+pub const R_RISCV_TLS_DTPREL32 : UInt = 8
+
+pub const R_RISCV_TLS_DTPREL64 : UInt = 9
+
+pub const R_RISCV_TLS_GD_HI20 : UInt = 22
+
+pub const R_RISCV_TLS_GOT_HI20 : UInt = 21
+
+pub const R_RISCV_TLS_TPREL32 : UInt = 10
+
+pub const R_RISCV_TLS_TPREL64 : UInt = 11
+
+pub const R_RISCV_TPREL_ADD : UInt = 32
+
+pub const R_RISCV_TPREL_HI20 : UInt = 29
+
+pub const R_RISCV_TPREL_LO12_I : UInt = 30
+
+pub const R_RISCV_TPREL_LO12_S : UInt = 31
+
+pub const R_X86_64_16 : UInt = 12
+
+pub const R_X86_64_32 : UInt = 10
+
+pub const R_X86_64_32S : UInt = 11
+
+pub const R_X86_64_64 : UInt = 1
+
+pub const R_X86_64_8 : UInt = 14
+
+pub const R_X86_64_COPY : UInt = 5
+
+pub const R_X86_64_DTPMOD64 : UInt = 16
+
+pub const R_X86_64_DTPOFF32 : UInt = 21
+
+pub const R_X86_64_DTPOFF64 : UInt = 17
+
+pub const R_X86_64_GLOB_DAT : UInt = 6
+
+pub const R_X86_64_GOT32 : UInt = 3
+
+pub const R_X86_64_GOT64 : UInt = 27
+
+pub const R_X86_64_GOTOFF64 : UInt = 25
+
+pub const R_X86_64_GOTPC32 : UInt = 26
+
+pub const R_X86_64_GOTPC32_TLSDESC : UInt = 34
+
+pub const R_X86_64_GOTPC64 : UInt = 29
+
+pub const R_X86_64_GOTPCREL : UInt = 9
+
+pub const R_X86_64_GOTPCREL64 : UInt = 28
+
+pub const R_X86_64_GOTPCRELX : UInt = 41
+
+pub const R_X86_64_GOTTPOFF : UInt = 22
+
+pub const R_X86_64_IRELATIVE : UInt = 37
+
+pub const R_X86_64_JUMP_SLOT : UInt = 7
+
+pub const R_X86_64_NONE : UInt = 0
+
+pub const R_X86_64_PC16 : UInt = 13
+
+pub const R_X86_64_PC32 : UInt = 2
+
+pub const R_X86_64_PC64 : UInt = 24
+
+pub const R_X86_64_PC8 : UInt = 15
+
+pub const R_X86_64_PLT32 : UInt = 4
+
+pub const R_X86_64_PLTOFF64 : UInt = 31
+
+pub const R_X86_64_RELATIVE : UInt = 8
+
+pub const R_X86_64_RELATIVE64 : UInt = 38
+
+pub const R_X86_64_REX_GOTPCRELX : UInt = 42
+
+pub const R_X86_64_SIZE32 : UInt = 32
+
+pub const R_X86_64_SIZE64 : UInt = 33
+
+pub const R_X86_64_TLSDESC : UInt = 36
+
+pub const R_X86_64_TLSDESC_CALL : UInt = 35
+
+pub const R_X86_64_TLSGD : UInt = 19
+
+pub const R_X86_64_TLSLD : UInt = 20
+
+pub const R_X86_64_TPOFF32 : UInt = 23
+
+pub const R_X86_64_TPOFF64 : UInt = 18
+
+pub const SHF_ALLOC : UInt = 2
+
+pub const SHF_ARM_PURECODE : UInt64 = 0x20000000
+
+pub const SHF_COMPRESSED : UInt = 2048
+
+pub const SHF_EXECINSTR : UInt = 4
+
+pub const SHF_GROUP : UInt = 512
+
+pub const SHF_INFO_LINK : UInt = 64
+
+pub const SHF_LINK_ORDER : UInt = 128
+
+pub const SHF_MASKOS : UInt = 0x0ff00000
+
+pub const SHF_MASKPROC : UInt = 0xf0000000
+
+pub const SHF_MERGE : UInt = 16
+
+pub const SHF_MIPS_ADDR : UInt = 0x40000000
+
+pub const SHF_MIPS_GPREL : UInt = 0x10000000
+
+pub const SHF_MIPS_LOCAL : UInt = 0x04000000
+
+pub const SHF_MIPS_MERGE : UInt = 0x20000000
+
+pub const SHF_MIPS_NAMES : UInt = 0x02000000
+
+pub const SHF_MIPS_NODUPE : UInt = 0x01000000
+
+pub const SHF_MIPS_NOSTRIP : UInt = 0x08000000
+
+pub const SHF_MIPS_STRING : UInt = 0x80000000
+
+pub const SHF_NONE : UInt = 0
+
+pub const SHF_OS_NONCONFORMING : UInt = 256
+
+pub const SHF_STRINGS : UInt = 32
+
+pub const SHF_TLS : UInt = 1024
+
+pub const SHF_WRITE : UInt = 1
+
+pub const SHF_X86_64_LARGE : UInt64 = 0x10000000
+
+pub const SHN_ABS : UInt16 = 0xfff1
+
+pub const SHN_COMMON : UInt16 = 0xfff2
+
+pub const SHN_HIPROC : UInt16 = 0xff1f
+
+pub const SHN_HIRESERVE : UInt16 = 0xffff
+
+pub const SHN_LOPROC : UInt16 = 0xff00
+
+pub const SHN_LORESERVE : UInt16 = 0xff00
+
+pub const SHN_MIPS_ACOMMON : UInt16 = 0xff00
+
+pub const SHN_MIPS_DATA : UInt16 = 0xff02
+
+pub const SHN_MIPS_LCOMMON : UInt16 = 0xff05
+
+pub const SHN_MIPS_LUNDEFINED : UInt16 = 0xff06
+
+pub const SHN_MIPS_SCOMMON : UInt16 = 0xff03
+
+pub const SHN_MIPS_SUNDEFINED : UInt16 = 0xff04
+
+pub const SHN_MIPS_TEXT : UInt16 = 0xff01
+
+pub const SHN_UNDEF : UInt16 = 0
+
+pub const SHN_XINDEX : UInt16 = 0xffff
+
+pub const SHT_AARCH64_ATTRIBUTES : UInt = 0x70000003
+
+pub const SHT_AARCH64_ATTRIBUTES_SECTION_NAME : String = ".ARM.attributes"
+
+pub const SHT_ARM_ATTRIBUTES : UInt = 0x70000003
+
+pub const SHT_ARM_DEBUGOVERLAY : UInt = 0x70000004
+
+pub const SHT_ARM_EXIDX : UInt = 0x70000001
+
+pub const SHT_ARM_OVERLAYSECTION : UInt = 0x70000005
+
+pub const SHT_ARM_PREEMPTMAP : UInt = 0x70000002
+
+pub const SHT_DYNAMIC : UInt = 6
+
+pub const SHT_DYNSYM : UInt = 11
+
+pub const SHT_FINI_ARRAY : UInt = 15
+
+pub const SHT_GNU_ATTRIBUTES : UInt = 0x6ffffff5
+
+pub const SHT_GNU_HASH : UInt = 0x6ffffff6
+
+pub const SHT_GNU_LIBLIST : UInt = 0x6ffffff7
+
+pub const SHT_GNU_VERDEF : UInt = 0x6ffffffd
+
+pub const SHT_GNU_VERNEED : UInt = 0x6ffffffe
+
+pub const SHT_GNU_VERSYM : UInt = 0x6fffffff
+
+pub const SHT_GROUP : UInt = 17
+
+pub const SHT_HASH : UInt = 5
+
+pub const SHT_HIOS : UInt = 0x6fffffff
+
+pub const SHT_HIPROC : UInt = 0x7fffffff
+
+pub const SHT_HIUSER : UInt = 0x8fffffff
+
+pub const SHT_IA_64_EXT : UInt = 0x70000000
+
+pub const SHT_IA_64_UNWIND : UInt = 0x70000001
+
+pub const SHT_INIT_ARRAY : UInt = 14
+
+pub const SHT_LOOS : UInt = 0x60000000
+
+pub const SHT_LOPROC : UInt = 0x70000000
+
+pub const SHT_LOUSER : UInt = 0x80000000
+
+pub const SHT_MIPS_CONFLICT : UInt = 0x70000002
+
+pub const SHT_MIPS_CONTENT : UInt = 0x7000000c
+
+pub const SHT_MIPS_DEBUG : UInt = 0x70000005
+
+pub const SHT_MIPS_DELTACLASS : UInt = 0x7000001d
+
+pub const SHT_MIPS_DELTADECL : UInt = 0x7000001f
+
+pub const SHT_MIPS_DELTAINST : UInt = 0x7000001c
+
+pub const SHT_MIPS_DELTASYM : UInt = 0x7000001b
+
+pub const SHT_MIPS_DWARF : UInt = 0x7000001e
+
+pub const SHT_MIPS_EH_REGION : UInt = 0x70000027
+
+pub const SHT_MIPS_EVENTS : UInt = 0x70000021
+
+pub const SHT_MIPS_GPTAB : UInt = 0x70000003
+
+pub const SHT_MIPS_IFACE : UInt = 0x7000000b
+
+pub const SHT_MIPS_LIBLIST : UInt = 0x70000000
+
+pub const SHT_MIPS_MSYM : UInt = 0x70000001
+
+pub const SHT_MIPS_OPTIONS : UInt = 0x7000000d
+
+pub const SHT_MIPS_PACKAGE : UInt = 0x70000007
+
+pub const SHT_MIPS_PACKSYM : UInt = 0x70000008
+
+pub const SHT_MIPS_PDR_EXCEPTION : UInt = 0x70000029
+
+pub const SHT_MIPS_PIXIE : UInt = 0x70000023
+
+pub const SHT_MIPS_REGINFO : UInt = 0x70000006
+
+pub const SHT_MIPS_RELD : UInt = 0x70000009
+
+pub const SHT_MIPS_SYMBOL_LIB : UInt = 0x70000020
+
+pub const SHT_MIPS_TRANSLATE : UInt = 0x70000022
+
+pub const SHT_MIPS_UCODE : UInt = 0x70000004
+
+pub const SHT_MIPS_WHIRL : UInt = 0x70000026
+
+pub const SHT_MIPS_XLATE : UInt = 0x70000024
+
+pub const SHT_MIPS_XLATE_DEBUG : UInt = 0x70000025
+
+pub const SHT_MIPS_XLATE_OLD : UInt = 0x70000028
+
+pub const SHT_NOBITS : UInt = 8
+
+pub const SHT_NOTE : UInt = 7
+
+pub const SHT_NULL : UInt = 0
+
+pub const SHT_PREINIT_ARRAY : UInt = 16
+
+pub const SHT_PROGBITS : UInt = 1
+
+pub const SHT_REL : UInt = 9
+
+pub const SHT_RELA : UInt = 4
+
+pub const SHT_RISCV_ATTRIBUTES : UInt = 0x70000003
+
+pub const SHT_RISCV_ATTRIBUTES_SECTION_NAME : String = ".riscv.attributes"
+
+pub const SHT_SHLIB : UInt = 10
+
+pub const SHT_STRTAB : UInt = 3
+
+pub const SHT_SYMTAB : UInt = 2
+
+pub const SHT_SYMTAB_SHNDX : UInt = 18
+
+pub const SHT_X86_64_UNWIND : UInt = 0x70000001
+
+pub const STB_GLOBAL : Byte = 1
+
+pub const STB_GNU_UNIQUE : Byte = 10
+
+pub const STB_HIOS : Byte = 12
+
+pub const STB_HIPROC : Byte = 15
+
+pub const STB_LOCAL : Byte = 0
+
+pub const STB_LOOS : Byte = 10
+
+pub const STB_LOPROC : Byte = 13
+
+pub const STB_MIPS_SPLIT_COMMON : Byte = 13
+
+pub const STB_WEAK : Byte = 2
+
+pub const STO_AARCH64_VARIANT_PCS : Byte = 0x80
+
+pub const STO_DEFAULT : Byte = 0
+
+pub const STO_EXPORT : Byte = 3
+
+pub const STO_HIDDEN : Byte = 2
+
+pub const STO_INTERNAL : Byte = 1
+
+pub const STO_MIPS_PLT : Byte = 8
+
+pub const STO_MIPS_SC_ALIGN_UNUSED : Byte = 0xff
+
+pub const STO_OPTIONAL : Byte = 4
+
+pub const STO_PPC64_LOCAL_BIT : Byte = 5
+
+pub const STO_PPC64_LOCAL_MASK : Byte = 224
+
+pub const STO_PROTECTED : Byte = 3
+
+pub const STO_RISCV_VARIANT_CC : Byte = 0x80
+
+pub const STT_COMMON : Byte = 5
+
+pub const STT_FILE : Byte = 4
+
+pub const STT_FUNC : Byte = 2
+
+pub const STT_GNU_IFUNC : Byte = 10
+
+pub const STT_HIOS : Byte = 12
+
+pub const STT_HIPROC : Byte = 15
+
+pub const STT_LOOS : Byte = 10
+
+pub const STT_LOPROC : Byte = 13
+
+pub const STT_NOTYPE : Byte = 0
+
+pub const STT_OBJECT : Byte = 1
+
+pub const STT_SECTION : Byte = 3
+
+pub const STT_TLS : Byte = 6
+
+pub const STV_DEFAULT : Byte = 0
+
+pub const STV_HIDDEN : Byte = 2
+
+pub const STV_INTERNAL : Byte = 1
+
+pub const STV_PROTECTED : Byte = 3
+
+pub const VER_DEF_CURRENT : UInt16 = 1
+
+pub const VER_FLG_BASE : UInt16 = 0x1
+
+pub const VER_FLG_INFO : UInt16 = 0x4
+
+pub const VER_FLG_WEAK : UInt16 = 0x2
+
+pub const VER_NDX_GLOBAL : UInt16 = 1
+
+pub const VER_NDX_HIDDEN : UInt16 = 0x8000
+
+pub const VER_NDX_LOCAL : UInt16 = 0
+
+pub const VER_NDX_VERSION : UInt16 = 0x7fff
+
+pub const VER_NEED_CURRENT : UInt16 = 1
+
+pub fn ch_type_to_str(UInt) -> String?
+
+pub fn d_tag_to_str(Int64) -> String?
+
+pub fn e_machine_to_human_str(UInt16) -> String?
+
+pub fn e_machine_to_str(UInt16) -> String?
+
+pub fn e_machine_to_string(UInt16) -> String
+
+pub fn e_osabi_to_str(Byte) -> String?
+
+pub fn e_osabi_to_string(Byte) -> String
+
+pub fn e_type_to_human_str(UInt16) -> String?
+
+pub fn e_type_to_str(UInt16) -> String?
+
+pub fn e_type_to_string(UInt16) -> String
+
+pub fn gnu_hash(BytesView) -> UInt
+
+pub fn note_abi_tag_os_to_str(UInt) -> String?
+
+pub fn p_flags_to_string(UInt) -> String
+
+pub fn p_type_to_str(UInt) -> String?
+
+pub fn p_type_to_string(UInt) -> String
+
+pub fn sh_type_to_str(UInt) -> String?
+
+pub fn sh_type_to_string(UInt) -> String
+
+pub fn st_bind_to_str(Byte) -> String?
+
+pub fn st_bind_to_string(Byte) -> String
+
+pub fn st_symtype_to_str(Byte) -> String?
+
+pub fn st_symtype_to_string(Byte) -> String
+
+pub fn st_vis_to_str(Byte) -> String?
+
+pub fn st_vis_to_string(Byte) -> String
+
+pub fn sysv_hash(BytesView) -> UInt
+
+// Errors
+pub(all) suberror ParseError {
+  BadMagic(Bytes)
+  UnsupportedElfClass(Byte)
+  UnsupportedElfEndianness(Byte)
+  UnsupportedVersion(UInt64, UInt64)
+  BadOffset(UInt64)
+  StringTableMissingNul(UInt64)
+  BadEntsize(UInt64, UInt64)
+  UnexpectedSectionType(UInt, UInt)
+  UnexpectedSegmentType(UInt, UInt)
+  UnexpectedAlignment(Int)
+  SliceReadError(Int, Int)
+  IntegerOverflow
+  Utf8Error
+} derive(Eq, @debug.Debug)
+
+// Types and methods
+pub(all) enum Class {
+  ELF32
+  ELF64
+} derive(Eq, @debug.Debug)
+
+pub(all) struct CommonElfData {
+  symtab : SymbolTable?
+  symtab_strs : StringTable?
+  dynsyms : SymbolTable?
+  dynsyms_strs : StringTable?
+  dynamic : DynamicTable?
+  sysv_hash : SysVHashTable?
+  gnu_hash : GnuHashTable?
+}
+
+pub(all) struct CompressionHeader {
+  ch_type : UInt
+  ch_size : UInt64
+  ch_addralign : UInt64
+} derive(Eq, @debug.Debug)
+pub fn CompressionHeader::size_for(Class) -> Int
+
+pub(all) struct Dyn {
+  d_tag : Int64
+  d_un : UInt64
+} derive(Eq, @debug.Debug)
+pub fn Dyn::d_ptr(Self) -> UInt64
+pub fn Dyn::d_val(Self) -> UInt64
+pub fn Dyn::size_for(Class) -> Int
+
+pub struct DynamicTable {
+  table : ParsingTable[Dyn]
+}
+pub fn DynamicTable::get(Self, Int) -> Dyn raise ParseError
+pub fn DynamicTable::is_empty(Self) -> Bool
+pub fn DynamicTable::iter(Self) -> Iter[Dyn]
+pub fn DynamicTable::len(Self) -> Int
+
+pub(all) struct ElfBytes {
+  ehdr : FileHeader
+  data : BytesView
+  shdrs : SectionHeaderTable?
+  phdrs : SegmentTable?
+}
+pub fn ElfBytes::dynamic(Self) -> DynamicTable? raise ParseError
+pub fn ElfBytes::dynamic_symbol_table(Self) -> (SymbolTable, StringTable)? raise ParseError
+pub fn ElfBytes::find_common_data(Self) -> CommonElfData raise ParseError
+pub fn ElfBytes::minimal_parse(BytesView) -> Self raise ParseError
+pub fn ElfBytes::section_data(Self, SectionHeader) -> (BytesView, CompressionHeader?) raise ParseError
+pub fn ElfBytes::section_data_as_notes(Self, SectionHeader) -> NoteIterator raise ParseError
+pub fn ElfBytes::section_data_as_relas(Self, SectionHeader) -> RelaIterator raise ParseError
+pub fn ElfBytes::section_data_as_rels(Self, SectionHeader) -> RelIterator raise ParseError
+pub fn ElfBytes::section_data_as_strtab(Self, SectionHeader) -> StringTable raise ParseError
+pub fn ElfBytes::section_header_by_name(Self, String) -> SectionHeader? raise ParseError
+pub fn ElfBytes::section_headers(Self) -> SectionHeaderTable?
+pub fn ElfBytes::section_headers_with_strtab(Self) -> (SectionHeaderTable?, StringTable?) raise ParseError
+pub fn ElfBytes::segment_data(Self, ProgramHeader) -> BytesView raise ParseError
+pub fn ElfBytes::segment_data_as_notes(Self, ProgramHeader) -> NoteIterator raise ParseError
+pub fn ElfBytes::segments(Self) -> SegmentTable?
+pub fn ElfBytes::symbol_table(Self) -> (SymbolTable, StringTable)? raise ParseError
+pub fn ElfBytes::symbol_version_table(Self) -> SymbolVersionTable? raise ParseError
+
+pub(all) enum Endian {
+  Little
+  Big
+} derive(Eq, @debug.Debug)
+pub fn Endian::from_ei_data(Byte) -> Self raise ParseError
+pub fn Endian::is_big(Self) -> Bool
+pub fn Endian::is_little(Self) -> Bool
+
+pub(all) struct FileHeader {
+  class : Class
+  endianness : Endian
+  version : UInt
+  osabi : Byte
+  abiversion : Byte
+  e_type : UInt16
+  e_machine : UInt16
+  e_entry : UInt64
+  e_phoff : UInt64
+  e_shoff : UInt64
+  e_flags : UInt
+  e_ehsize : UInt16
+  e_phentsize : UInt16
+  e_phnum : UInt16
+  e_shentsize : UInt16
+  e_shnum : UInt16
+  e_shstrndx : UInt16
+} derive(Eq, @debug.Debug)
+
+pub(all) struct GnuHashHeader {
+  nbucket : UInt
+  table_start_idx : UInt
+  nbloom : UInt
+  nshift : UInt
+} derive(Eq, @debug.Debug)
+
+pub struct GnuHashTable {
+  hdr : GnuHashHeader
+  endian : Endian
+  class : Class
+  bloom : BytesView
+  buckets : U32Table
+  chains : U32Table
+}
+pub fn GnuHashTable::find(Self, BytesView, SymbolTable, StringTable) -> (Int, Symbol)? raise ParseError
+pub fn GnuHashTable::new(Endian, Class, BytesView) -> Self raise ParseError
+
+pub(all) enum Note {
+  GnuAbiTag(NoteGnuAbiTag)
+  GnuBuildId(NoteGnuBuildId)
+  Unknown(NoteAny)
+} derive(Eq, @debug.Debug)
+
+pub(all) struct NoteAny {
+  n_type : UInt64
+  name : BytesView
+  desc : BytesView
+} derive(Eq, @debug.Debug)
+pub fn NoteAny::name_str(Self) -> String raise ParseError
+
+pub(all) struct NoteGnuAbiTag {
+  os : UInt
+  major : UInt
+  minor : UInt
+  subminor : UInt
+} derive(Eq, @debug.Debug)
+
+pub(all) struct NoteGnuBuildId(BytesView) derive(Eq, @debug.Debug)
+
+type NoteHeader derive(Eq, @debug.Debug)
+
+pub struct NoteIterator {
+  endian : Endian
+  class : Class
+  align : Int
+  data : BytesView
+  mut offset : Int
+}
+pub fn NoteIterator::iter(Self) -> Iter[Note]
+pub fn NoteIterator::new(Endian, Class, Int, BytesView) -> Self
+pub fn NoteIterator::next(Self) -> Note?
+
+pub struct ParsingTable[T] {
+  endian : Endian
+  class : Class
+  data : BytesView
+  entry_size : Int
+  parser : (Endian, Class, Int, BytesView) -> (T, Int) raise ParseError
+  phantom : T?
+}
+pub fn[T] ParsingTable::get(Self[T], Int) -> T raise ParseError
+pub fn[T] ParsingTable::is_empty(Self[T]) -> Bool
+pub fn[T] ParsingTable::iter(Self[T]) -> Iter[T]
+pub fn[T] ParsingTable::len(Self[T]) -> Int
+
+pub(all) struct ProgramHeader {
+  p_type : UInt
+  p_offset : UInt64
+  p_vaddr : UInt64
+  p_paddr : UInt64
+  p_filesz : UInt64
+  p_memsz : UInt64
+  p_flags : UInt
+  p_align : UInt64
+} derive(Eq, @debug.Debug)
+pub fn ProgramHeader::size_for(Class) -> Int
+
+pub(all) struct Rel {
+  r_offset : UInt64
+  r_sym : UInt
+  r_type : UInt
+} derive(Eq, @debug.Debug)
+pub fn Rel::size_for(Class) -> Int
+
+pub struct RelIterator {
+  table : ParsingTable[Rel]
+}
+pub fn RelIterator::get(Self, Int) -> Rel raise ParseError
+pub fn RelIterator::is_empty(Self) -> Bool
+pub fn RelIterator::iter(Self) -> Iter[Rel]
+pub fn RelIterator::len(Self) -> Int
+
+pub(all) struct Rela {
+  r_offset : UInt64
+  r_sym : UInt
+  r_type : UInt
+  r_addend : Int64
+} derive(Eq, @debug.Debug)
+pub fn Rela::size_for(Class) -> Int
+
+pub struct RelaIterator {
+  table : ParsingTable[Rela]
+}
+pub fn RelaIterator::get(Self, Int) -> Rela raise ParseError
+pub fn RelaIterator::is_empty(Self) -> Bool
+pub fn RelaIterator::iter(Self) -> Iter[Rela]
+pub fn RelaIterator::len(Self) -> Int
+
+pub(all) struct SectionHeader {
+  sh_name : UInt
+  sh_type : UInt
+  sh_flags : UInt64
+  sh_addr : UInt64
+  sh_offset : UInt64
+  sh_size : UInt64
+  sh_link : UInt
+  sh_info : UInt
+  sh_addralign : UInt64
+  sh_entsize : UInt64
+} derive(Eq, @debug.Debug)
+pub fn SectionHeader::size_for(Class) -> Int
+
+pub struct SectionHeaderTable {
+  table : ParsingTable[SectionHeader]
+}
+pub fn SectionHeaderTable::get(Self, Int) -> SectionHeader raise ParseError
+pub fn SectionHeaderTable::is_empty(Self) -> Bool
+pub fn SectionHeaderTable::iter(Self) -> Iter[SectionHeader]
+pub fn SectionHeaderTable::len(Self) -> Int
+
+pub struct SegmentTable {
+  table : ParsingTable[ProgramHeader]
+}
+pub fn SegmentTable::get(Self, Int) -> ProgramHeader raise ParseError
+pub fn SegmentTable::is_empty(Self) -> Bool
+pub fn SegmentTable::iter(Self) -> Iter[ProgramHeader]
+pub fn SegmentTable::len(Self) -> Int
+
+pub(all) struct StringTable {
+  data : BytesView
+} derive(Eq, @debug.Debug)
+pub fn StringTable::default() -> Self
+pub fn StringTable::get(Self, Int) -> String raise ParseError
+pub fn StringTable::get_raw(Self, Int) -> BytesView raise ParseError
+pub fn StringTable::new(BytesView) -> Self
+
+pub(all) struct Symbol {
+  st_name : UInt
+  st_shndx : UInt16
+  st_info : Byte
+  st_other : Byte
+  st_value : UInt64
+  st_size : UInt64
+} derive(Eq, @debug.Debug)
+pub fn Symbol::is_undefined(Self) -> Bool
+pub fn Symbol::size_for(Class) -> Int
+pub fn Symbol::st_bind(Self) -> Byte
+pub fn Symbol::st_symtype(Self) -> Byte
+pub fn Symbol::st_vis(Self) -> Byte
+
+pub(all) struct SymbolDefinition {
+  hash : UInt
+  flags : UInt16
+  names : Array[String]
+  hidden : Bool
+} derive(Eq, @debug.Debug)
+
+pub(all) struct SymbolRequirement {
+  file : String
+  name : String
+  hash : UInt
+  flags : UInt16
+  hidden : Bool
+} derive(Eq, @debug.Debug)
+
+pub struct SymbolTable {
+  table : ParsingTable[Symbol]
+}
+pub fn SymbolTable::get(Self, Int) -> Symbol raise ParseError
+pub fn SymbolTable::is_empty(Self) -> Bool
+pub fn SymbolTable::iter(Self) -> Iter[Symbol]
+pub fn SymbolTable::len(Self) -> Int
+
+pub struct SymbolVersionTable {
+  version_ids : VersionIndexTable
+  verneeds : VersionNeedData?
+  verdefs : VersionDefData?
+}
+pub fn SymbolVersionTable::get_definition(Self, Int) -> SymbolDefinition? raise ParseError
+pub fn SymbolVersionTable::get_requirement(Self, Int) -> SymbolRequirement? raise ParseError
+pub fn SymbolVersionTable::new(VersionIndexTable, (VerNeedIterator, StringTable)?, (VerDefIterator, StringTable)?) -> Self
+
+pub(all) struct SysVHashHeader {
+  nbucket : UInt
+  nchain : UInt
+} derive(Eq, @debug.Debug)
+
+pub struct SysVHashTable {
+  buckets : U32Table
+  chains : U32Table
+}
+pub fn SysVHashTable::find(Self, BytesView, SymbolTable, StringTable) -> (Int, Symbol)? raise ParseError
+pub fn SysVHashTable::new(Endian, Class, BytesView) -> Self raise ParseError
+
+type U32Table
+
+pub(all) struct VerDef {
+  vd_flags : UInt16
+  vd_ndx : UInt16
+  vd_cnt : UInt16
+  vd_hash : UInt
+  vd_aux : UInt
+  vd_next : UInt
+} derive(Eq, @debug.Debug)
+pub fn VerDef::size_for(Class) -> Int
+
+pub(all) struct VerDefAux {
+  vda_name : UInt
+  vda_next : UInt
+} derive(Eq, @debug.Debug)
+pub fn VerDefAux::size_for(Class) -> Int
+
+pub struct VerDefAuxIterator {
+  endian : Endian
+  class : Class
+  mut count : UInt16
+  data : BytesView
+  mut offset : Int
+}
+pub fn VerDefAuxIterator::iter(Self) -> Iter[VerDefAux]
+pub fn VerDefAuxIterator::new(Endian, Class, UInt16, Int, BytesView) -> Self
+pub fn VerDefAuxIterator::next(Self) -> VerDefAux?
+
+pub struct VerDefIterator {
+  endian : Endian
+  class : Class
+  mut count : UInt64
+  data : BytesView
+  mut offset : Int
+}
+pub fn VerDefIterator::iter(Self) -> Iter[(VerDef, VerDefAuxIterator)]
+pub fn VerDefIterator::new(Endian, Class, UInt64, Int, BytesView) -> Self
+pub fn VerDefIterator::next(Self) -> (VerDef, VerDefAuxIterator)?
+
+pub(all) struct VerNeed {
+  vn_cnt : UInt16
+  vn_file : UInt
+  vn_aux : UInt
+  vn_next : UInt
+} derive(Eq, @debug.Debug)
+pub fn VerNeed::size_for(Class) -> Int
+
+pub(all) struct VerNeedAux {
+  vna_hash : UInt
+  vna_flags : UInt16
+  vna_other : UInt16
+  vna_name : UInt
+  vna_next : UInt
+} derive(Eq, @debug.Debug)
+pub fn VerNeedAux::size_for(Class) -> Int
+
+pub struct VerNeedAuxIterator {
+  endian : Endian
+  class : Class
+  mut count : UInt16
+  data : BytesView
+  mut offset : Int
+}
+pub fn VerNeedAuxIterator::iter(Self) -> Iter[VerNeedAux]
+pub fn VerNeedAuxIterator::new(Endian, Class, UInt16, Int, BytesView) -> Self
+pub fn VerNeedAuxIterator::next(Self) -> VerNeedAux?
+
+pub struct VerNeedIterator {
+  endian : Endian
+  class : Class
+  mut count : UInt64
+  data : BytesView
+  mut offset : Int
+}
+pub fn VerNeedIterator::iter(Self) -> Iter[(VerNeed, VerNeedAuxIterator)]
+pub fn VerNeedIterator::new(Endian, Class, UInt64, Int, BytesView) -> Self
+pub fn VerNeedIterator::next(Self) -> (VerNeed, VerNeedAuxIterator)?
+
+type VersionDefData
+
+pub(all) struct VersionIndex(UInt16) derive(Eq, @debug.Debug)
+pub fn VersionIndex::index(Self) -> UInt16
+pub fn VersionIndex::is_global(Self) -> Bool
+pub fn VersionIndex::is_hidden(Self) -> Bool
+pub fn VersionIndex::is_local(Self) -> Bool
+pub fn VersionIndex::size_for(Class) -> Int
+
+pub struct VersionIndexTable {
+  table : ParsingTable[VersionIndex]
+}
+pub fn VersionIndexTable::get(Self, Int) -> VersionIndex raise ParseError
+pub fn VersionIndexTable::is_empty(Self) -> Bool
+pub fn VersionIndexTable::iter(Self) -> Iter[VersionIndex]
+pub fn VersionIndexTable::len(Self) -> Int
+
+type VersionNeedData
+
+// Type aliases
+
+// Traits
+pub(open) trait ParseAt {
+  parse_at(Endian, Class, Int, BytesView) -> (Self, Int) raise ParseError
+}
+
