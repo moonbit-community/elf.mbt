@@ -64,7 +64,7 @@ fn U32Table::U32Table(
   class : Class,
   data : BytesView,
 ) -> U32Table {
-  { table: ParsingTable(endian, class, data, 4, parse_uint_table_at) }
+  { table: ParsingTable(endian, class, data, 4, parse_uint_table_at), }
 }
 
 ///|
@@ -73,7 +73,7 @@ fn U64Table::U64Table(
   class : Class,
   data : BytesView,
 ) -> U64Table {
-  { table: ParsingTable(endian, class, data, 8, parse_uint64_table_at) }
+  { table: ParsingTable(endian, class, data, 8, parse_uint64_table_at), }
 }
 
 ///|
@@ -106,18 +106,18 @@ pub(all) struct SysVHashHeader {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for SysVHashHeader with parse_at(endian, _class, offset, data) {
+impl ParseAt for SysVHashHeader with fn parse_at(endian, _class, offset, data) {
   let end = checked_add(offset, 8)
   let record = slice_checked(data, offset, end)
   let header = match endian {
     Little =>
       match record {
-        [u32le(nbucket), u32le(nchain)] => { nbucket, nchain }
+        [u32le(nbucket), u32le(nchain)] => { nbucket, nchain, }
         _ => raise SliceReadError(offset, end)
       }
     Big =>
       match record {
-        [u32be(nbucket), u32be(nchain)] => { nbucket, nchain }
+        [u32be(nbucket), u32be(nchain)] => { nbucket, nchain, }
         _ => raise SliceReadError(offset, end)
       }
   }
@@ -237,20 +237,20 @@ pub(all) struct GnuHashHeader {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for GnuHashHeader with parse_at(endian, _class, offset, data) {
+impl ParseAt for GnuHashHeader with fn parse_at(endian, _class, offset, data) {
   let end = checked_add(offset, 16)
   let record = slice_checked(data, offset, end)
   let header = match endian {
     Little =>
       match record {
         [u32le(nbucket), u32le(table_start_idx), u32le(nbloom), u32le(nshift)] =>
-          { nbucket, table_start_idx, nbloom, nshift }
+          { nbucket, table_start_idx, nbloom, nshift, }
         _ => raise SliceReadError(offset, end)
       }
     Big =>
       match record {
         [u32be(nbucket), u32be(table_start_idx), u32be(nbloom), u32be(nshift)] =>
-          { nbucket, table_start_idx, nbloom, nshift }
+          { nbucket, table_start_idx, nbloom, nshift, }
         _ => raise SliceReadError(offset, end)
       }
   }

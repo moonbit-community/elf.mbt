@@ -99,7 +99,7 @@ pub fn Symbol::st_vis(self : Symbol) -> Byte {
 }
 
 ///|
-impl ParseAt for Symbol with parse_at(endian, class, offset, data) {
+impl ParseAt for Symbol with fn parse_at(endian, class, offset, data) {
   let end = checked_add(offset, Symbol::size_for(class))
   let record = slice_checked(data, offset, end)
   let symbol = match (class, endian) {

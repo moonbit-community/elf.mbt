@@ -15,7 +15,7 @@ pub(all) struct CompressionHeader {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for CompressionHeader with parse_at(endian, class, offset, data) {
+impl ParseAt for CompressionHeader with fn parse_at(endian, class, offset, data) {
   let end = checked_add(offset, CompressionHeader::size_for(class))
   let record = slice_checked(data, offset, end)
   let header = match (class, endian) {
@@ -42,13 +42,13 @@ impl ParseAt for CompressionHeader with parse_at(endian, class, offset, data) {
     (ELF64, Little) =>
       match record {
         [u32le(ch_type), u32le(_reserved), u64le(ch_size), u64le(ch_addralign)] =>
-          { ch_type, ch_size, ch_addralign }
+          { ch_type, ch_size, ch_addralign, }
         _ => raise SliceReadError(offset, end)
       }
     (ELF64, Big) =>
       match record {
         [u32be(ch_type), u32be(_reserved), u64be(ch_size), u64be(ch_addralign)] =>
-          { ch_type, ch_size, ch_addralign }
+          { ch_type, ch_size, ch_addralign, }
         _ => raise SliceReadError(offset, end)
       }
   }

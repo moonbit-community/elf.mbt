@@ -82,7 +82,7 @@ pub(all) struct SectionHeader {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for SectionHeader with parse_at(endian, class, offset, data) {
+impl ParseAt for SectionHeader with fn parse_at(endian, class, offset, data) {
   let end = checked_add(offset, SectionHeader::size_for(class))
   let record = slice_checked(data, offset, end)
   let shdr = match (class, endian) {

@@ -131,7 +131,7 @@ pub fn ElfBytes::minimal_parse(data : BytesView) -> ElfBytes raise ParseError {
   let ehdr = FileHeader::parse_tail(ident, tail_buf)
   let shdrs = find_shdrs(ehdr, data)
   let phdrs = find_phdrs(ehdr, data)
-  { ehdr, data, shdrs, phdrs }
+  { ehdr, data, shdrs, phdrs, }
 }
 
 ///|

@@ -121,19 +121,19 @@ pub fn SymbolVersionTable::new(
 ) -> SymbolVersionTable {
   let verneeds = match verneeds {
     Some((iter, strtab)) => {
-      let data : VersionNeedData = { iter, strtab }
+      let data : VersionNeedData = { iter, strtab, }
       Some(data)
     }
     None => None
   }
   let verdefs = match verdefs {
     Some((iter, strtab)) => {
-      let data : VersionDefData = { iter, strtab }
+      let data : VersionDefData = { iter, strtab, }
       Some(data)
     }
     None => None
   }
-  { version_ids, verneeds, verdefs }
+  { version_ids, verneeds, verdefs, }
 }
 
 ///|
@@ -236,7 +236,7 @@ pub fn VersionIndex::is_hidden(self : VersionIndex) -> Bool {
 }
 
 ///|
-impl ParseAt for VersionIndex with parse_at(endian, _class, offset, data) {
+impl ParseAt for VersionIndex with fn parse_at(endian, _class, offset, data) {
   let end = checked_add(offset, VersionIndex::size_for(ELF32))
   let record = slice_checked(data, offset, end)
   let value = match endian {
@@ -281,7 +281,7 @@ pub(all) struct VerDef {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for VerDef with parse_at(endian, _class, offset, data) {
+impl ParseAt for VerDef with fn parse_at(endian, _class, offset, data) {
   let end = checked_add(offset, VerDef::size_for(ELF32))
   let record = slice_checked(data, offset, end)
   let (vd_version, value) = match endian {
@@ -373,7 +373,7 @@ pub fn VerDefIterator::new(
   starting_offset : Int,
   data : BytesView,
 ) -> VerDefIterator {
-  { endian, class, count, data, offset: starting_offset }
+  { endian, class, count, data, offset: starting_offset, }
 }
 
 ///|
@@ -458,18 +458,18 @@ pub(all) struct VerDefAux {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for VerDefAux with parse_at(endian, _class, offset, data) {
+impl ParseAt for VerDefAux with fn parse_at(endian, _class, offset, data) {
   let end = checked_add(offset, VerDefAux::size_for(ELF32))
   let record = slice_checked(data, offset, end)
   let value = match endian {
     Little =>
       match record {
-        [u32le(vda_name), u32le(vda_next)] => { vda_name, vda_next }
+        [u32le(vda_name), u32le(vda_next)] => { vda_name, vda_next, }
         _ => raise SliceReadError(offset, end)
       }
     Big =>
       match record {
-        [u32be(vda_name), u32be(vda_next)] => { vda_name, vda_next }
+        [u32be(vda_name), u32be(vda_next)] => { vda_name, vda_next, }
         _ => raise SliceReadError(offset, end)
       }
   }
@@ -506,7 +506,7 @@ pub fn VerDefAuxIterator::new(
   starting_offset : Int,
   data : BytesView,
 ) -> VerDefAuxIterator {
-  { endian, class, count, data, offset: starting_offset }
+  { endian, class, count, data, offset: starting_offset, }
 }
 
 ///|
@@ -565,7 +565,7 @@ pub(all) struct VerNeed {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for VerNeed with parse_at(endian, _class, offset, data) {
+impl ParseAt for VerNeed with fn parse_at(endian, _class, offset, data) {
   let end = checked_add(offset, VerNeed::size_for(ELF32))
   let record = slice_checked(data, offset, end)
   let (vn_version, value) = match endian {
@@ -580,7 +580,7 @@ impl ParseAt for VerNeed with parse_at(endian, _class, offset, data) {
         ] =>
           (
             vn_version.to_uint16(),
-            { vn_cnt: vn_cnt.to_uint16(), vn_file, vn_aux, vn_next },
+            { vn_cnt: vn_cnt.to_uint16(), vn_file, vn_aux, vn_next, },
           )
         _ => raise SliceReadError(offset, end)
       }
@@ -595,7 +595,7 @@ impl ParseAt for VerNeed with parse_at(endian, _class, offset, data) {
         ] =>
           (
             vn_version.to_uint16(),
-            { vn_cnt: vn_cnt.to_uint16(), vn_file, vn_aux, vn_next },
+            { vn_cnt: vn_cnt.to_uint16(), vn_file, vn_aux, vn_next, },
           )
         _ => raise SliceReadError(offset, end)
       }
@@ -639,7 +639,7 @@ pub fn VerNeedIterator::new(
   starting_offset : Int,
   data : BytesView,
 ) -> VerNeedIterator {
-  { endian, class, count, data, offset: starting_offset }
+  { endian, class, count, data, offset: starting_offset, }
 }
 
 ///|
@@ -726,7 +726,7 @@ pub(all) struct VerNeedAux {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for VerNeedAux with parse_at(endian, _class, offset, data) {
+impl ParseAt for VerNeedAux with fn parse_at(endian, _class, offset, data) {
   let end = checked_add(offset, VerNeedAux::size_for(ELF32))
   let record = slice_checked(data, offset, end)
   let value = match endian {
@@ -800,7 +800,7 @@ pub fn VerNeedAuxIterator::new(
   starting_offset : Int,
   data : BytesView,
 ) -> VerNeedAuxIterator {
-  { endian, class, count, data, offset: starting_offset }
+  { endian, class, count, data, offset: starting_offset, }
 }
 
 ///|

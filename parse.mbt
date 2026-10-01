@@ -80,7 +80,7 @@ fn tail_checked(data : BytesView, start : Int) -> BytesView raise ParseError {
 /// the small abstraction used by every lazy table wrapper in the package.
 pub(open) trait ParseAt {
   /// Parse one value at `offset` from `BytesView`, using the supplied class and endian.
-  parse_at(Endian, Class, Int, BytesView) -> (Self, Int) raise ParseError
+  fn parse_at(Endian, Class, Int, BytesView) -> (Self, Int) raise ParseError
 }
 
 ///|
@@ -121,7 +121,7 @@ fn[T] ParsingTable::ParsingTable(
   entry_size : Int,
   parser : (Endian, Class, Int, BytesView) -> (T, Int) raise ParseError,
 ) -> ParsingTable[T] {
-  { endian, class, data, entry_size, parser, phantom: None }
+  { endian, class, data, entry_size, parser, phantom: None, }
 }
 
 ///|
