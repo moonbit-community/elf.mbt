@@ -76,7 +76,7 @@ pub(all) struct ProgramHeader {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for ProgramHeader with parse_at(endian, class, offset, data) {
+impl ParseAt for ProgramHeader with fn parse_at(endian, class, offset, data) {
   let end = checked_add(offset, ProgramHeader::size_for(class))
   let record = slice_checked(data, offset, end)
   let phdr = match (class, endian) {

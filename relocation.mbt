@@ -113,7 +113,7 @@ pub(all) struct Rel {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for Rel with parse_at(endian, class, offset, data) {
+impl ParseAt for Rel with fn parse_at(endian, class, offset, data) {
   let end = checked_add(offset, Rel::size_for(class))
   let record = slice_checked(data, offset, end)
   let rel = match (class, endian) {
@@ -186,7 +186,7 @@ pub(all) struct Rela {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for Rela with parse_at(endian, class, offset, data) {
+impl ParseAt for Rela with fn parse_at(endian, class, offset, data) {
   let end = checked_add(offset, Rela::size_for(class))
   let record = slice_checked(data, offset, end)
   let rela = match (class, endian) {

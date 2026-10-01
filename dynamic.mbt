@@ -76,7 +76,7 @@ pub fn Dyn::d_ptr(self : Dyn) -> UInt64 {
 }
 
 ///|
-impl ParseAt for Dyn with parse_at(endian, class, offset, data) {
+impl ParseAt for Dyn with fn parse_at(endian, class, offset, data) {
   let end = checked_add(offset, Dyn::size_for(class))
   let record = slice_checked(data, offset, end)
   let entry = match (class, endian) {
@@ -101,13 +101,13 @@ impl ParseAt for Dyn with parse_at(endian, class, offset, data) {
     (ELF64, Little) =>
       match record {
         [u64le(d_tag), u64le(d_un)] =>
-          { d_tag: d_tag.reinterpret_as_int64(), d_un }
+          { d_tag: d_tag.reinterpret_as_int64(), d_un, }
         _ => raise SliceReadError(offset, end)
       }
     (ELF64, Big) =>
       match record {
         [u64be(d_tag), u64be(d_un)] =>
-          { d_tag: d_tag.reinterpret_as_int64(), d_un }
+          { d_tag: d_tag.reinterpret_as_int64(), d_un, }
         _ => raise SliceReadError(offset, end)
       }
   }

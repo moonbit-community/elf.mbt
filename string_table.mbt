@@ -20,7 +20,7 @@ pub fn StringTable::new(data : BytesView) -> StringTable {
 ///
 /// Accessing any offset in the empty table raises `BadOffset`.
 pub fn StringTable::default() -> StringTable {
-  { data: b""[:] }
+  { data: b""[:], }
 }
 
 ///|

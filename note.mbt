@@ -66,7 +66,7 @@ struct NoteHeader {
 } derive(Debug, Eq)
 
 ///|
-impl ParseAt for NoteHeader with parse_at(endian, class, offset, data) {
+impl ParseAt for NoteHeader with fn parse_at(endian, class, offset, data) {
   let size = match class {
     ELF32 => 12
     ELF64 => 24
@@ -97,13 +97,13 @@ impl ParseAt for NoteHeader with parse_at(endian, class, offset, data) {
     (ELF64, Little) =>
       match record {
         [u64le(n_namesz), u64le(n_descsz), u64le(n_type)] =>
-          { n_namesz, n_descsz, n_type }
+          { n_namesz, n_descsz, n_type, }
         _ => raise SliceReadError(offset, end)
       }
     (ELF64, Big) =>
       match record {
         [u64be(n_namesz), u64be(n_descsz), u64be(n_type)] =>
-          { n_namesz, n_descsz, n_type }
+          { n_namesz, n_descsz, n_type, }
         _ => raise SliceReadError(offset, end)
       }
   }
@@ -111,20 +111,20 @@ impl ParseAt for NoteHeader with parse_at(endian, class, offset, data) {
 }
 
 ///|
-impl ParseAt for NoteGnuAbiTag with parse_at(endian, _class, offset, data) {
+impl ParseAt for NoteGnuAbiTag with fn parse_at(endian, _class, offset, data) {
   let end = checked_add(offset, 16)
   let record = slice_checked(data, offset, end)
   let tag = match endian {
     Little =>
       match record {
         [u32le(os), u32le(major), u32le(minor), u32le(subminor)] =>
-          { os, major, minor, subminor }
+          { os, major, minor, subminor, }
         _ => raise SliceReadError(offset, end)
       }
     Big =>
       match record {
         [u32be(os), u32be(major), u32be(minor), u32be(subminor)] =>
-          { os, major, minor, subminor }
+          { os, major, minor, subminor, }
         _ => raise SliceReadError(offset, end)
       }
   }
@@ -174,7 +174,7 @@ fn Note::parse_at(
   } else if name == ELF_NOTE_GNU[:] && nhdr.n_type == NT_GNU_BUILD_ID {
     GnuBuildId(NoteGnuBuildId(desc))
   } else {
-    Unknown({ n_type: nhdr.n_type, name, desc })
+    Unknown({ n_type: nhdr.n_type, name, desc, })
   }
   (note, idx)
 }
@@ -209,7 +209,7 @@ pub fn NoteIterator::new(
   align : Int,
   data : BytesView,
 ) -> NoteIterator {
-  { endian, class, align, data, offset: 0 }
+  { endian, class, align, data, offset: 0, }
 }
 
 ///|
