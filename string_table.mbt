@@ -31,7 +31,7 @@ pub fn StringTable::default() -> StringTable {
 /// appears before the table ends.
 pub fn StringTable::get_raw(
   self : StringTable,
-  offset : Int,
+  offset : Int32,
 ) -> BytesView raise ParseError {
   if offset < 0 {
     raise BadOffset(0UL)
@@ -56,7 +56,7 @@ pub fn StringTable::get_raw(
 /// non-UTF-8 byte sequences.
 pub fn StringTable::get(
   self : StringTable,
-  offset : Int,
+  offset : Int32,
 ) -> String raise ParseError {
   let raw = self.get_raw(offset)
   @utf8.decode(raw) catch {

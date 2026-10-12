@@ -9,37 +9,37 @@
 // file. These positions are used before endianness and word size are known.
 
 ///|
-pub const EI_MAG0 : Int = 0
+pub const EI_MAG0 : Int32 = 0
 
 ///|
-pub const EI_MAG1 : Int = 1
+pub const EI_MAG1 : Int32 = 1
 
 ///|
-pub const EI_MAG2 : Int = 2
+pub const EI_MAG2 : Int32 = 2
 
 ///|
-pub const EI_MAG3 : Int = 3
+pub const EI_MAG3 : Int32 = 3
 
 ///|
-pub const EI_CLASS : Int = 4
+pub const EI_CLASS : Int32 = 4
 
 ///|
-pub const EI_DATA : Int = 5
+pub const EI_DATA : Int32 = 5
 
 ///|
-pub const EI_VERSION : Int = 6
+pub const EI_VERSION : Int32 = 6
 
 ///|
-pub const EI_OSABI : Int = 7
+pub const EI_OSABI : Int32 = 7
 
 ///|
-pub const EI_ABIVERSION : Int = 8
+pub const EI_ABIVERSION : Int32 = 8
 
 ///|
-pub const EI_PAD : Int = 9
+pub const EI_PAD : Int32 = 9
 
 ///|
-pub const EI_NIDENT : Int = 16
+pub const EI_NIDENT : Int32 = 16
 
 // Magic bytes identifying an ELF object. The first four bytes must be
 // `0x7f, 'E', 'L', 'F'`.
@@ -755,167 +755,167 @@ pub const PN_XNUM : UInt16 = 0xffff
 // Program-header permission flags stored in `ProgramHeader.p_flags`.
 
 ///|
-pub const PF_NONE : UInt = 0U
+pub const PF_NONE : UInt32 = 0U
 
 ///|
-pub const PF_X : UInt = 1U
+pub const PF_X : UInt32 = 1U
 
 ///|
-pub const PF_W : UInt = 2U
+pub const PF_W : UInt32 = 2U
 
 ///|
-pub const PF_R : UInt = 4U
+pub const PF_R : UInt32 = 4U
 
 ///|
-pub const PF_MASKOS : UInt = 0x0ff00000U
+pub const PF_MASKOS : UInt32 = 0x0ff00000U
 
 ///|
-pub const PF_MASKPROC : UInt = 0xf0000000U
+pub const PF_MASKPROC : UInt32 = 0xf0000000U
 
 // Program-header segment types stored in `ProgramHeader.p_type`.
 
 ///|
-pub const PT_NULL : UInt = 0U
+pub const PT_NULL : UInt32 = 0U
 
 ///|
-pub const PT_LOAD : UInt = 1U
+pub const PT_LOAD : UInt32 = 1U
 
 ///|
-pub const PT_DYNAMIC : UInt = 2U
+pub const PT_DYNAMIC : UInt32 = 2U
 
 ///|
-pub const PT_INTERP : UInt = 3U
+pub const PT_INTERP : UInt32 = 3U
 
 ///|
-pub const PT_NOTE : UInt = 4U
+pub const PT_NOTE : UInt32 = 4U
 
 ///|
-pub const PT_SHLIB : UInt = 5U
+pub const PT_SHLIB : UInt32 = 5U
 
 ///|
-pub const PT_PHDR : UInt = 6U
+pub const PT_PHDR : UInt32 = 6U
 
 ///|
-pub const PT_TLS : UInt = 7U
+pub const PT_TLS : UInt32 = 7U
 
 ///|
-pub const PT_GNU_EH_FRAME : UInt = 0x6474e550U
+pub const PT_GNU_EH_FRAME : UInt32 = 0x6474e550U
 
 ///|
-pub const PT_GNU_STACK : UInt = 0x6474e551U
+pub const PT_GNU_STACK : UInt32 = 0x6474e551U
 
 ///|
-pub const PT_GNU_RELRO : UInt = 0x6474e552U
+pub const PT_GNU_RELRO : UInt32 = 0x6474e552U
 
 ///|
-pub const PT_GNU_PROPERTY : UInt = 0x6474e553U
+pub const PT_GNU_PROPERTY : UInt32 = 0x6474e553U
 
 ///|
-pub const PT_LOOS : UInt = 0x60000000U
+pub const PT_LOOS : UInt32 = 0x60000000U
 
 ///|
-pub const PT_HIOS : UInt = 0x6fffffffU
+pub const PT_HIOS : UInt32 = 0x6fffffffU
 
 ///|
-pub const PT_LOPROC : UInt = 0x70000000U
+pub const PT_LOPROC : UInt32 = 0x70000000U
 
 ///|
-pub const PT_HIPROC : UInt = 0x7fffffffU
+pub const PT_HIPROC : UInt32 = 0x7fffffffU
 
 // Section-header types stored in `SectionHeader.sh_type`.
 
 ///|
-pub const SHT_NULL : UInt = 0U
+pub const SHT_NULL : UInt32 = 0U
 
 ///|
-pub const SHT_PROGBITS : UInt = 1U
+pub const SHT_PROGBITS : UInt32 = 1U
 
 ///|
-pub const SHT_SYMTAB : UInt = 2U
+pub const SHT_SYMTAB : UInt32 = 2U
 
 ///|
-pub const SHT_STRTAB : UInt = 3U
+pub const SHT_STRTAB : UInt32 = 3U
 
 ///|
-pub const SHT_RELA : UInt = 4U
+pub const SHT_RELA : UInt32 = 4U
 
 ///|
-pub const SHT_HASH : UInt = 5U
+pub const SHT_HASH : UInt32 = 5U
 
 ///|
-pub const SHT_DYNAMIC : UInt = 6U
+pub const SHT_DYNAMIC : UInt32 = 6U
 
 ///|
-pub const SHT_NOTE : UInt = 7U
+pub const SHT_NOTE : UInt32 = 7U
 
 ///|
-pub const SHT_NOBITS : UInt = 8U
+pub const SHT_NOBITS : UInt32 = 8U
 
 ///|
-pub const SHT_REL : UInt = 9U
+pub const SHT_REL : UInt32 = 9U
 
 ///|
-pub const SHT_SHLIB : UInt = 10U
+pub const SHT_SHLIB : UInt32 = 10U
 
 ///|
-pub const SHT_DYNSYM : UInt = 11U
+pub const SHT_DYNSYM : UInt32 = 11U
 
 ///|
-pub const SHT_INIT_ARRAY : UInt = 14U
+pub const SHT_INIT_ARRAY : UInt32 = 14U
 
 ///|
-pub const SHT_FINI_ARRAY : UInt = 15U
+pub const SHT_FINI_ARRAY : UInt32 = 15U
 
 ///|
-pub const SHT_PREINIT_ARRAY : UInt = 16U
+pub const SHT_PREINIT_ARRAY : UInt32 = 16U
 
 ///|
-pub const SHT_GROUP : UInt = 17U
+pub const SHT_GROUP : UInt32 = 17U
 
 ///|
-pub const SHT_SYMTAB_SHNDX : UInt = 18U
+pub const SHT_SYMTAB_SHNDX : UInt32 = 18U
 
 ///|
-pub const SHT_LOOS : UInt = 0x60000000U
+pub const SHT_LOOS : UInt32 = 0x60000000U
 
 ///|
-pub const SHT_GNU_ATTRIBUTES : UInt = 0x6ffffff5U
+pub const SHT_GNU_ATTRIBUTES : UInt32 = 0x6ffffff5U
 
 ///|
-pub const SHT_GNU_HASH : UInt = 0x6ffffff6U
+pub const SHT_GNU_HASH : UInt32 = 0x6ffffff6U
 
 ///|
-pub const SHT_GNU_LIBLIST : UInt = 0x6ffffff7U
+pub const SHT_GNU_LIBLIST : UInt32 = 0x6ffffff7U
 
 ///|
-pub const SHT_GNU_VERDEF : UInt = 0x6ffffffdU
+pub const SHT_GNU_VERDEF : UInt32 = 0x6ffffffdU
 
 ///|
-pub const SHT_GNU_VERNEED : UInt = 0x6ffffffeU
+pub const SHT_GNU_VERNEED : UInt32 = 0x6ffffffeU
 
 ///|
-pub const SHT_GNU_VERSYM : UInt = 0x6fffffffU
+pub const SHT_GNU_VERSYM : UInt32 = 0x6fffffffU
 
 ///|
-pub const SHT_HIOS : UInt = 0x6fffffffU
+pub const SHT_HIOS : UInt32 = 0x6fffffffU
 
 ///|
-pub const SHT_LOPROC : UInt = 0x70000000U
+pub const SHT_LOPROC : UInt32 = 0x70000000U
 
 ///|
-pub const SHT_IA_64_EXT : UInt = 0x70000000U // SHT_LOPROC + 0U
+pub const SHT_IA_64_EXT : UInt32 = 0x70000000U // SHT_LOPROC + 0U
 
 ///|
-pub const SHT_IA_64_UNWIND : UInt = 0x70000001U // SHT_LOPROC + 1U
+pub const SHT_IA_64_UNWIND : UInt32 = 0x70000001U // SHT_LOPROC + 1U
 
 ///|
-pub const SHT_HIPROC : UInt = 0x7fffffffU
+pub const SHT_HIPROC : UInt32 = 0x7fffffffU
 
 ///|
-pub const SHT_LOUSER : UInt = 0x80000000U
+pub const SHT_LOUSER : UInt32 = 0x80000000U
 
 ///|
-pub const SHT_HIUSER : UInt = 0x8fffffffU
+pub const SHT_HIUSER : UInt32 = 0x8fffffffU
 
 // Special section indexes used by symbols and header extension mechanisms.
 
@@ -934,46 +934,46 @@ pub const SHN_XINDEX : UInt16 = 0xffff
 // Section flags stored in `SectionHeader.sh_flags`.
 
 ///|
-pub const SHF_NONE : UInt = 0U
+pub const SHF_NONE : UInt32 = 0U
 
 ///|
-pub const SHF_WRITE : UInt = 1U
+pub const SHF_WRITE : UInt32 = 1U
 
 ///|
-pub const SHF_ALLOC : UInt = 1U << 1
+pub const SHF_ALLOC : UInt32 = 1U << 1
 
 ///|
-pub const SHF_EXECINSTR : UInt = 1U << 2
+pub const SHF_EXECINSTR : UInt32 = 1U << 2
 
 ///|
-pub const SHF_MERGE : UInt = 1U << 4
+pub const SHF_MERGE : UInt32 = 1U << 4
 
 ///|
-pub const SHF_STRINGS : UInt = 1U << 5
+pub const SHF_STRINGS : UInt32 = 1U << 5
 
 ///|
-pub const SHF_INFO_LINK : UInt = 1U << 6
+pub const SHF_INFO_LINK : UInt32 = 1U << 6
 
 ///|
-pub const SHF_LINK_ORDER : UInt = 1U << 7
+pub const SHF_LINK_ORDER : UInt32 = 1U << 7
 
 ///|
-pub const SHF_OS_NONCONFORMING : UInt = 1U << 8
+pub const SHF_OS_NONCONFORMING : UInt32 = 1U << 8
 
 ///|
-pub const SHF_GROUP : UInt = 1U << 9
+pub const SHF_GROUP : UInt32 = 1U << 9
 
 ///|
-pub const SHF_TLS : UInt = 1U << 10
+pub const SHF_TLS : UInt32 = 1U << 10
 
 ///|
-pub const SHF_COMPRESSED : UInt = 1U << 11
+pub const SHF_COMPRESSED : UInt32 = 1U << 11
 
 ///|
-pub const SHF_MASKOS : UInt = 0x0ff00000U
+pub const SHF_MASKOS : UInt32 = 0x0ff00000U
 
 ///|
-pub const SHF_MASKPROC : UInt = 0xf0000000U
+pub const SHF_MASKPROC : UInt32 = 0xf0000000U
 
 // Symbol types: low nibble of `Symbol.st_info`.
 
@@ -1433,22 +1433,22 @@ pub const VER_FLG_INFO : UInt16 = 0x4
 // Compression algorithm identifiers stored in `CompressionHeader.ch_type`.
 
 ///|
-pub const ELFCOMPRESS_ZLIB : UInt = 1U
+pub const ELFCOMPRESS_ZLIB : UInt32 = 1U
 
 ///|
-pub const ELFCOMPRESS_ZSTD : UInt = 2U
+pub const ELFCOMPRESS_ZSTD : UInt32 = 2U
 
 ///|
-pub const ELFCOMPRESS_LOOS : UInt = 0x60000000U
+pub const ELFCOMPRESS_LOOS : UInt32 = 0x60000000U
 
 ///|
-pub const ELFCOMPRESS_HIOS : UInt = 0x6fffffffU
+pub const ELFCOMPRESS_HIOS : UInt32 = 0x6fffffffU
 
 ///|
-pub const ELFCOMPRESS_LOPROC : UInt = 0x70000000U
+pub const ELFCOMPRESS_LOPROC : UInt32 = 0x70000000U
 
 ///|
-pub const ELFCOMPRESS_HIPROC : UInt = 0x7fffffffU
+pub const ELFCOMPRESS_HIPROC : UInt32 = 0x7fffffffU
 
 // ELF note owner names and note type identifiers.
 
@@ -1630,156 +1630,156 @@ pub const NT_GNU_GOLD_VERSION : UInt64 = 4UL
 pub const NT_GNU_PROPERTY_TYPE_0 : UInt64 = 5UL
 
 ///|
-pub const ELF_NOTE_GNU_ABI_TAG_OS_LINUX : UInt = 0U
+pub const ELF_NOTE_GNU_ABI_TAG_OS_LINUX : UInt32 = 0U
 
 ///|
-pub const ELF_NOTE_GNU_ABI_TAG_OS_GNU : UInt = 1U
+pub const ELF_NOTE_GNU_ABI_TAG_OS_GNU : UInt32 = 1U
 
 ///|
-pub const ELF_NOTE_GNU_ABI_TAG_OS_SOLARIS2 : UInt = 2U
+pub const ELF_NOTE_GNU_ABI_TAG_OS_SOLARIS2 : UInt32 = 2U
 
 ///|
-pub const ELF_NOTE_GNU_ABI_TAG_OS_FREEBSD : UInt = 3U
+pub const ELF_NOTE_GNU_ABI_TAG_OS_FREEBSD : UInt32 = 3U
 
 // ARM-specific file flags, section types, segment types, and relocation values.
 
 ///|
-pub const EF_ARM_ABI_FLOAT_SOFT : UInt = 0x200U
+pub const EF_ARM_ABI_FLOAT_SOFT : UInt32 = 0x200U
 
 ///|
-pub const EF_ARM_SOFT_FLOAT : UInt = EF_ARM_ABI_FLOAT_SOFT
+pub const EF_ARM_SOFT_FLOAT : UInt32 = EF_ARM_ABI_FLOAT_SOFT
 
 ///|
-pub const EF_ARM_ABI_FLOAT_HARD : UInt = 0x400U
+pub const EF_ARM_ABI_FLOAT_HARD : UInt32 = 0x400U
 
 ///|
-pub const EF_ARM_VFP_FLOAT : UInt = EF_ARM_ABI_FLOAT_HARD
+pub const EF_ARM_VFP_FLOAT : UInt32 = EF_ARM_ABI_FLOAT_HARD
 
 ///|
-pub const EF_ARM_BE8 : UInt = 0x00800000U
+pub const EF_ARM_BE8 : UInt32 = 0x00800000U
 
 ///|
-pub const EF_ARM_GCCMASK : UInt = 0x00400FFFU
+pub const EF_ARM_GCCMASK : UInt32 = 0x00400FFFU
 
 ///|
-pub const EF_ARM_EABIMASK : UInt = 0xFF000000U
+pub const EF_ARM_EABIMASK : UInt32 = 0xFF000000U
 
 ///|
-pub const EF_ARM_EABI_UNKNOWN : UInt = 0x00000000U
+pub const EF_ARM_EABI_UNKNOWN : UInt32 = 0x00000000U
 
 ///|
-pub const EF_ARM_EABI_VER1 : UInt = 0x01000000U
+pub const EF_ARM_EABI_VER1 : UInt32 = 0x01000000U
 
 ///|
-pub const EF_ARM_EABI_VER2 : UInt = 0x02000000U
+pub const EF_ARM_EABI_VER2 : UInt32 = 0x02000000U
 
 ///|
-pub const EF_ARM_EABI_VER3 : UInt = 0x03000000U
+pub const EF_ARM_EABI_VER3 : UInt32 = 0x03000000U
 
 ///|
-pub const EF_ARM_EABI_VER4 : UInt = 0x04000000U
+pub const EF_ARM_EABI_VER4 : UInt32 = 0x04000000U
 
 ///|
-pub const EF_ARM_EABI_VER5 : UInt = 0x05000000U
+pub const EF_ARM_EABI_VER5 : UInt32 = 0x05000000U
 
 ///|
-pub const SHT_ARM_EXIDX : UInt = 0x70000001U
+pub const SHT_ARM_EXIDX : UInt32 = 0x70000001U
 
 ///|
-pub const SHT_ARM_PREEMPTMAP : UInt = 0x70000002U
+pub const SHT_ARM_PREEMPTMAP : UInt32 = 0x70000002U
 
 ///|
-pub const SHT_ARM_ATTRIBUTES : UInt = 0x70000003U
+pub const SHT_ARM_ATTRIBUTES : UInt32 = 0x70000003U
 
 ///|
-pub const SHT_ARM_DEBUGOVERLAY : UInt = 0x70000004U
+pub const SHT_ARM_DEBUGOVERLAY : UInt32 = 0x70000004U
 
 ///|
-pub const SHT_ARM_OVERLAYSECTION : UInt = 0x70000005U
+pub const SHT_ARM_OVERLAYSECTION : UInt32 = 0x70000005U
 
 ///|
 pub const SHF_ARM_PURECODE : UInt64 = 0x20000000UL
 
 ///|
-pub const PT_ARM_ARCHEXT : UInt = 0x70000000U
+pub const PT_ARM_ARCHEXT : UInt32 = 0x70000000U
 
 ///|
-pub const PT_ARM_EXIDX : UInt = 0x70000001U
+pub const PT_ARM_EXIDX : UInt32 = 0x70000001U
 
 ///|
-pub const PT_ARM_UNWIND : UInt = 0x70000001U
+pub const PT_ARM_UNWIND : UInt32 = 0x70000001U
 
 ///|
-pub const PT_ARM_ARCHEXT_FMTMSK : UInt = 0xff000000U
+pub const PT_ARM_ARCHEXT_FMTMSK : UInt32 = 0xff000000U
 
 ///|
-pub const PT_ARM_ARCHEXT_FMT_OS : UInt = 0x00000000U
+pub const PT_ARM_ARCHEXT_FMT_OS : UInt32 = 0x00000000U
 
 ///|
-pub const PT_ARM_ARCHEXT_FMT_ABI : UInt = 0x01000000U
+pub const PT_ARM_ARCHEXT_FMT_ABI : UInt32 = 0x01000000U
 
 ///|
-pub const PT_ARM_ARCHEXT_PROFMSK : UInt = 0x00ff0000U
+pub const PT_ARM_ARCHEXT_PROFMSK : UInt32 = 0x00ff0000U
 
 ///|
-pub const PT_ARM_ARCHEXT_PROF_NONE : UInt = 0x00000000U
+pub const PT_ARM_ARCHEXT_PROF_NONE : UInt32 = 0x00000000U
 
 ///|
-pub const PT_ARM_ARCHEXT_PROF_ARM : UInt = 0x00410000U
+pub const PT_ARM_ARCHEXT_PROF_ARM : UInt32 = 0x00410000U
 
 ///|
-pub const PT_ARM_ARCHEXT_PROF_RT : UInt = 0x00520000U
+pub const PT_ARM_ARCHEXT_PROF_RT : UInt32 = 0x00520000U
 
 ///|
-pub const PT_ARM_ARCHEXT_PROF_MC : UInt = 0x004D0000U
+pub const PT_ARM_ARCHEXT_PROF_MC : UInt32 = 0x004D0000U
 
 ///|
-pub const PT_ARM_ARCHEXT_PROF_CLASSIC : UInt = 0x00530000U
+pub const PT_ARM_ARCHEXT_PROF_CLASSIC : UInt32 = 0x00530000U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHMSK : UInt = 0x000000ffU
+pub const PT_ARM_ARCHEXT_ARCHMSK : UInt32 = 0x000000ffU
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCH_UNKN : UInt = 0x00U
+pub const PT_ARM_ARCHEXT_ARCH_UNKN : UInt32 = 0x00U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV4 : UInt = 0x01U
+pub const PT_ARM_ARCHEXT_ARCHV4 : UInt32 = 0x01U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV4T : UInt = 0x02U
+pub const PT_ARM_ARCHEXT_ARCHV4T : UInt32 = 0x02U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV5T : UInt = 0x03U
+pub const PT_ARM_ARCHEXT_ARCHV5T : UInt32 = 0x03U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV5TE : UInt = 0x04U
+pub const PT_ARM_ARCHEXT_ARCHV5TE : UInt32 = 0x04U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV5TEJ : UInt = 0x05U
+pub const PT_ARM_ARCHEXT_ARCHV5TEJ : UInt32 = 0x05U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV6 : UInt = 0x06U
+pub const PT_ARM_ARCHEXT_ARCHV6 : UInt32 = 0x06U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV6KZ : UInt = 0x07U
+pub const PT_ARM_ARCHEXT_ARCHV6KZ : UInt32 = 0x07U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV6T2 : UInt = 0x08U
+pub const PT_ARM_ARCHEXT_ARCHV6T2 : UInt32 = 0x08U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV6K : UInt = 0x09U
+pub const PT_ARM_ARCHEXT_ARCHV6K : UInt32 = 0x09U
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV7 : UInt = 0x0AU
+pub const PT_ARM_ARCHEXT_ARCHV7 : UInt32 = 0x0AU
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV6M : UInt = 0x0BU
+pub const PT_ARM_ARCHEXT_ARCHV6M : UInt32 = 0x0BU
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV6SM : UInt = 0x0CU
+pub const PT_ARM_ARCHEXT_ARCHV6SM : UInt32 = 0x0CU
 
 ///|
-pub const PT_ARM_ARCHEXT_ARCHV7EM : UInt = 0x0DU
+pub const PT_ARM_ARCHEXT_ARCHV7EM : UInt32 = 0x0DU
 
 ///|
 pub const DT_ARM_SYMTABSZ : Int64 = 0x70000001L
@@ -1788,405 +1788,405 @@ pub const DT_ARM_SYMTABSZ : Int64 = 0x70000001L
 pub const DT_ARM_PREEMPTMAP : Int64 = 0x70000002L
 
 ///|
-pub const R_ARM_NONE : UInt = 0U
+pub const R_ARM_NONE : UInt32 = 0U
 
 ///|
-pub const R_ARM_PC24 : UInt = 1U
+pub const R_ARM_PC24 : UInt32 = 1U
 
 ///|
-pub const R_ARM_ABS32 : UInt = 2U
+pub const R_ARM_ABS32 : UInt32 = 2U
 
 ///|
-pub const R_ARM_REL32 : UInt = 3U
+pub const R_ARM_REL32 : UInt32 = 3U
 
 ///|
-pub const R_ARM_LDR_PC_G0 : UInt = 4U
+pub const R_ARM_LDR_PC_G0 : UInt32 = 4U
 
 ///|
-pub const R_ARM_ABS16 : UInt = 5U
+pub const R_ARM_ABS16 : UInt32 = 5U
 
 ///|
-pub const R_ARM_ABS12 : UInt = 6U
+pub const R_ARM_ABS12 : UInt32 = 6U
 
 ///|
-pub const R_ARM_THM_ABS5 : UInt = 7U
+pub const R_ARM_THM_ABS5 : UInt32 = 7U
 
 ///|
-pub const R_ARM_ABS8 : UInt = 8U
+pub const R_ARM_ABS8 : UInt32 = 8U
 
 ///|
-pub const R_ARM_SBREL32 : UInt = 9U
+pub const R_ARM_SBREL32 : UInt32 = 9U
 
 ///|
-pub const R_ARM_THM_CALL : UInt = 10U
+pub const R_ARM_THM_CALL : UInt32 = 10U
 
 ///|
-pub const R_ARM_THM_PC8 : UInt = 11U
+pub const R_ARM_THM_PC8 : UInt32 = 11U
 
 ///|
-pub const R_ARM_BREL_ADJ : UInt = 12U
+pub const R_ARM_BREL_ADJ : UInt32 = 12U
 
 ///|
-pub const R_ARM_TLS_DESC : UInt = 13U
+pub const R_ARM_TLS_DESC : UInt32 = 13U
 
 ///|
-pub const R_ARM_THM_SWI8 : UInt = 14U
+pub const R_ARM_THM_SWI8 : UInt32 = 14U
 
 ///|
-pub const R_ARM_XPC25 : UInt = 15U
+pub const R_ARM_XPC25 : UInt32 = 15U
 
 ///|
-pub const R_ARM_THM_XPC22 : UInt = 16U
+pub const R_ARM_THM_XPC22 : UInt32 = 16U
 
 ///|
-pub const R_ARM_TLS_DTPMOD32 : UInt = 17U
+pub const R_ARM_TLS_DTPMOD32 : UInt32 = 17U
 
 ///|
-pub const R_ARM_TLS_DTPOFF32 : UInt = 18U
+pub const R_ARM_TLS_DTPOFF32 : UInt32 = 18U
 
 ///|
-pub const R_ARM_TLS_TPOFF32 : UInt = 19U
+pub const R_ARM_TLS_TPOFF32 : UInt32 = 19U
 
 ///|
-pub const R_ARM_COPY : UInt = 20U
+pub const R_ARM_COPY : UInt32 = 20U
 
 ///|
-pub const R_ARM_GLOB_DAT : UInt = 21U
+pub const R_ARM_GLOB_DAT : UInt32 = 21U
 
 ///|
-pub const R_ARM_JUMP_SLOT : UInt = 22U
+pub const R_ARM_JUMP_SLOT : UInt32 = 22U
 
 ///|
-pub const R_ARM_RELATIVE : UInt = 23U
+pub const R_ARM_RELATIVE : UInt32 = 23U
 
 ///|
-pub const R_ARM_GOTOFF32 : UInt = 24U
+pub const R_ARM_GOTOFF32 : UInt32 = 24U
 
 ///|
-pub const R_ARM_BASE_PREL : UInt = 25U
+pub const R_ARM_BASE_PREL : UInt32 = 25U
 
 ///|
-pub const R_ARM_BASE_BREL : UInt = 26U
+pub const R_ARM_BASE_BREL : UInt32 = 26U
 
 ///|
-pub const R_ARM_PLT32 : UInt = 27U
+pub const R_ARM_PLT32 : UInt32 = 27U
 
 ///|
-pub const R_ARM_CALL : UInt = 28U
+pub const R_ARM_CALL : UInt32 = 28U
 
 ///|
-pub const R_ARM_JUMP24 : UInt = 29U
+pub const R_ARM_JUMP24 : UInt32 = 29U
 
 ///|
-pub const R_ARM_THM_JUMP24 : UInt = 30U
+pub const R_ARM_THM_JUMP24 : UInt32 = 30U
 
 ///|
-pub const R_ARM_BASE_ABS : UInt = 31U
+pub const R_ARM_BASE_ABS : UInt32 = 31U
 
 ///|
-pub const R_ARM_ALU_PCREL_7_0 : UInt = 32U
+pub const R_ARM_ALU_PCREL_7_0 : UInt32 = 32U
 
 ///|
-pub const R_ARM_ALU_PCREL_15_8 : UInt = 33U
+pub const R_ARM_ALU_PCREL_15_8 : UInt32 = 33U
 
 ///|
-pub const R_ARM_ALU_PCREL_23_15 : UInt = 34U
+pub const R_ARM_ALU_PCREL_23_15 : UInt32 = 34U
 
 ///|
-pub const R_ARM_LDR_SBREL_11_0 : UInt = 35U
+pub const R_ARM_LDR_SBREL_11_0 : UInt32 = 35U
 
 ///|
-pub const R_ARM_ALU_SBREL_19_12 : UInt = 36U
+pub const R_ARM_ALU_SBREL_19_12 : UInt32 = 36U
 
 ///|
-pub const R_ARM_ALU_SBREL_27_20 : UInt = 37U
+pub const R_ARM_ALU_SBREL_27_20 : UInt32 = 37U
 
 ///|
-pub const R_ARM_TARGET1 : UInt = 38U
+pub const R_ARM_TARGET1 : UInt32 = 38U
 
 ///|
-pub const R_ARM_SBREL31 : UInt = 39U
+pub const R_ARM_SBREL31 : UInt32 = 39U
 
 ///|
-pub const R_ARM_V4BX : UInt = 40U
+pub const R_ARM_V4BX : UInt32 = 40U
 
 ///|
-pub const R_ARM_TARGET2 : UInt = 41U
+pub const R_ARM_TARGET2 : UInt32 = 41U
 
 ///|
-pub const R_ARM_PREL31 : UInt = 42U
+pub const R_ARM_PREL31 : UInt32 = 42U
 
 ///|
-pub const R_ARM_MOVW_ABS_NC : UInt = 43U
+pub const R_ARM_MOVW_ABS_NC : UInt32 = 43U
 
 ///|
-pub const R_ARM_MOVT_ABS : UInt = 44U
+pub const R_ARM_MOVT_ABS : UInt32 = 44U
 
 ///|
-pub const R_ARM_MOVW_PREL_NC : UInt = 45U
+pub const R_ARM_MOVW_PREL_NC : UInt32 = 45U
 
 ///|
-pub const R_ARM_MOVT_PREL : UInt = 46U
+pub const R_ARM_MOVT_PREL : UInt32 = 46U
 
 ///|
-pub const R_ARM_THM_MOVW_ABS_NC : UInt = 47U
+pub const R_ARM_THM_MOVW_ABS_NC : UInt32 = 47U
 
 ///|
-pub const R_ARM_THM_MOVT_ABS : UInt = 48U
+pub const R_ARM_THM_MOVT_ABS : UInt32 = 48U
 
 ///|
-pub const R_ARM_THM_MOVW_PREL_NC : UInt = 49U
+pub const R_ARM_THM_MOVW_PREL_NC : UInt32 = 49U
 
 ///|
-pub const R_ARM_THM_MOVT_PREL : UInt = 50U
+pub const R_ARM_THM_MOVT_PREL : UInt32 = 50U
 
 ///|
-pub const R_ARM_THM_JUMP19 : UInt = 51U
+pub const R_ARM_THM_JUMP19 : UInt32 = 51U
 
 ///|
-pub const R_ARM_THM_JUMP6 : UInt = 52U
+pub const R_ARM_THM_JUMP6 : UInt32 = 52U
 
 ///|
-pub const R_ARM_THM_ALU_PREL_11_0 : UInt = 53U
+pub const R_ARM_THM_ALU_PREL_11_0 : UInt32 = 53U
 
 ///|
-pub const R_ARM_THM_PC12 : UInt = 54U
+pub const R_ARM_THM_PC12 : UInt32 = 54U
 
 ///|
-pub const R_ARM_ABS32_NOI : UInt = 55U
+pub const R_ARM_ABS32_NOI : UInt32 = 55U
 
 ///|
-pub const R_ARM_REL32_NOI : UInt = 56U
+pub const R_ARM_REL32_NOI : UInt32 = 56U
 
 ///|
-pub const R_ARM_ALU_PC_G0_NC : UInt = 57U
+pub const R_ARM_ALU_PC_G0_NC : UInt32 = 57U
 
 ///|
-pub const R_ARM_ALU_PC_G0 : UInt = 58U
+pub const R_ARM_ALU_PC_G0 : UInt32 = 58U
 
 ///|
-pub const R_ARM_ALU_PC_G1_NC : UInt = 59U
+pub const R_ARM_ALU_PC_G1_NC : UInt32 = 59U
 
 ///|
-pub const R_ARM_ALU_PC_G1 : UInt = 60U
+pub const R_ARM_ALU_PC_G1 : UInt32 = 60U
 
 ///|
-pub const R_ARM_ALU_PC_G2 : UInt = 61U
+pub const R_ARM_ALU_PC_G2 : UInt32 = 61U
 
 ///|
-pub const R_ARM_LDR_PC_G1 : UInt = 62U
+pub const R_ARM_LDR_PC_G1 : UInt32 = 62U
 
 ///|
-pub const R_ARM_LDR_PC_G2 : UInt = 63U
+pub const R_ARM_LDR_PC_G2 : UInt32 = 63U
 
 ///|
-pub const R_ARM_LDRS_PC_G0 : UInt = 64U
+pub const R_ARM_LDRS_PC_G0 : UInt32 = 64U
 
 ///|
-pub const R_ARM_LDRS_PC_G1 : UInt = 65U
+pub const R_ARM_LDRS_PC_G1 : UInt32 = 65U
 
 ///|
-pub const R_ARM_LDRS_PC_G2 : UInt = 66U
+pub const R_ARM_LDRS_PC_G2 : UInt32 = 66U
 
 ///|
-pub const R_ARM_LDC_PC_G0 : UInt = 67U
+pub const R_ARM_LDC_PC_G0 : UInt32 = 67U
 
 ///|
-pub const R_ARM_LDC_PC_G1 : UInt = 68U
+pub const R_ARM_LDC_PC_G1 : UInt32 = 68U
 
 ///|
-pub const R_ARM_LDC_PC_G2 : UInt = 69U
+pub const R_ARM_LDC_PC_G2 : UInt32 = 69U
 
 ///|
-pub const R_ARM_ALU_SB_G0_NC : UInt = 70U
+pub const R_ARM_ALU_SB_G0_NC : UInt32 = 70U
 
 ///|
-pub const R_ARM_ALU_SB_G0 : UInt = 71U
+pub const R_ARM_ALU_SB_G0 : UInt32 = 71U
 
 ///|
-pub const R_ARM_ALU_SB_G1_NC : UInt = 72U
+pub const R_ARM_ALU_SB_G1_NC : UInt32 = 72U
 
 ///|
-pub const R_ARM_ALU_SB_G1 : UInt = 73U
+pub const R_ARM_ALU_SB_G1 : UInt32 = 73U
 
 ///|
-pub const R_ARM_ALU_SB_G2 : UInt = 74U
+pub const R_ARM_ALU_SB_G2 : UInt32 = 74U
 
 ///|
-pub const R_ARM_LDR_SB_G0 : UInt = 75U
+pub const R_ARM_LDR_SB_G0 : UInt32 = 75U
 
 ///|
-pub const R_ARM_LDR_SB_G1 : UInt = 76U
+pub const R_ARM_LDR_SB_G1 : UInt32 = 76U
 
 ///|
-pub const R_ARM_LDR_SB_G2 : UInt = 77U
+pub const R_ARM_LDR_SB_G2 : UInt32 = 77U
 
 ///|
-pub const R_ARM_LDRS_SB_G0 : UInt = 78U
+pub const R_ARM_LDRS_SB_G0 : UInt32 = 78U
 
 ///|
-pub const R_ARM_LDRS_SB_G1 : UInt = 79U
+pub const R_ARM_LDRS_SB_G1 : UInt32 = 79U
 
 ///|
-pub const R_ARM_LDRS_SB_G2 : UInt = 80U
+pub const R_ARM_LDRS_SB_G2 : UInt32 = 80U
 
 ///|
-pub const R_ARM_LDC_SB_G0 : UInt = 81U
+pub const R_ARM_LDC_SB_G0 : UInt32 = 81U
 
 ///|
-pub const R_ARM_LDC_SB_G1 : UInt = 82U
+pub const R_ARM_LDC_SB_G1 : UInt32 = 82U
 
 ///|
-pub const R_ARM_LDC_SB_G2 : UInt = 83U
+pub const R_ARM_LDC_SB_G2 : UInt32 = 83U
 
 ///|
-pub const R_ARM_MOVW_BREL_NC : UInt = 84U
+pub const R_ARM_MOVW_BREL_NC : UInt32 = 84U
 
 ///|
-pub const R_ARM_MOVT_BREL : UInt = 85U
+pub const R_ARM_MOVT_BREL : UInt32 = 85U
 
 ///|
-pub const R_ARM_MOVW_BREL : UInt = 86U
+pub const R_ARM_MOVW_BREL : UInt32 = 86U
 
 ///|
-pub const R_ARM_THM_MOVW_BREL_NC : UInt = 87U
+pub const R_ARM_THM_MOVW_BREL_NC : UInt32 = 87U
 
 ///|
-pub const R_ARM_THM_MOVT_BREL : UInt = 88U
+pub const R_ARM_THM_MOVT_BREL : UInt32 = 88U
 
 ///|
-pub const R_ARM_THM_MOVW_BREL : UInt = 89U
+pub const R_ARM_THM_MOVW_BREL : UInt32 = 89U
 
 ///|
-pub const R_ARM_TLS_GOTDESC : UInt = 90U
+pub const R_ARM_TLS_GOTDESC : UInt32 = 90U
 
 ///|
-pub const R_ARM_TLS_CALL : UInt = 91U
+pub const R_ARM_TLS_CALL : UInt32 = 91U
 
 ///|
-pub const R_ARM_TLS_DESCSEQ : UInt = 92U
+pub const R_ARM_TLS_DESCSEQ : UInt32 = 92U
 
 ///|
-pub const R_ARM_THM_TLS_CALL : UInt = 93U
+pub const R_ARM_THM_TLS_CALL : UInt32 = 93U
 
 ///|
-pub const R_ARM_PLT32_ABS : UInt = 94U
+pub const R_ARM_PLT32_ABS : UInt32 = 94U
 
 ///|
-pub const R_ARM_GOT_ABS : UInt = 95U
+pub const R_ARM_GOT_ABS : UInt32 = 95U
 
 ///|
-pub const R_ARM_GOT_PREL : UInt = 96U
+pub const R_ARM_GOT_PREL : UInt32 = 96U
 
 ///|
-pub const R_ARM_GOT_BREL12 : UInt = 97U
+pub const R_ARM_GOT_BREL12 : UInt32 = 97U
 
 ///|
-pub const R_ARM_GOTOFF12 : UInt = 98U
+pub const R_ARM_GOTOFF12 : UInt32 = 98U
 
 ///|
-pub const R_ARM_GOTRELAX : UInt = 99U
+pub const R_ARM_GOTRELAX : UInt32 = 99U
 
 ///|
-pub const R_ARM_GNU_VTENTRY : UInt = 100U
+pub const R_ARM_GNU_VTENTRY : UInt32 = 100U
 
 ///|
-pub const R_ARM_GNU_VTINHERIT : UInt = 101U
+pub const R_ARM_GNU_VTINHERIT : UInt32 = 101U
 
 ///|
-pub const R_ARM_THM_JUMP11 : UInt = 102U
+pub const R_ARM_THM_JUMP11 : UInt32 = 102U
 
 ///|
-pub const R_ARM_THM_JUMP8 : UInt = 103U
+pub const R_ARM_THM_JUMP8 : UInt32 = 103U
 
 ///|
-pub const R_ARM_TLS_GD32 : UInt = 104U
+pub const R_ARM_TLS_GD32 : UInt32 = 104U
 
 ///|
-pub const R_ARM_TLS_LDM32 : UInt = 105U
+pub const R_ARM_TLS_LDM32 : UInt32 = 105U
 
 ///|
-pub const R_ARM_TLS_LDO32 : UInt = 106U
+pub const R_ARM_TLS_LDO32 : UInt32 = 106U
 
 ///|
-pub const R_ARM_TLS_IE32 : UInt = 107U
+pub const R_ARM_TLS_IE32 : UInt32 = 107U
 
 ///|
-pub const R_ARM_TLS_LE32 : UInt = 108U
+pub const R_ARM_TLS_LE32 : UInt32 = 108U
 
 ///|
-pub const R_ARM_TLS_LDO12 : UInt = 109U
+pub const R_ARM_TLS_LDO12 : UInt32 = 109U
 
 ///|
-pub const R_ARM_TLS_LE12 : UInt = 110U
+pub const R_ARM_TLS_LE12 : UInt32 = 110U
 
 ///|
-pub const R_ARM_TLS_IE12GP : UInt = 111U
+pub const R_ARM_TLS_IE12GP : UInt32 = 111U
 
 ///|
-pub const R_ARM_ME_TOO : UInt = 128U
+pub const R_ARM_ME_TOO : UInt32 = 128U
 
 ///|
-pub const R_ARM_THM_TLS_DESCSEQ16 : UInt = 129U
+pub const R_ARM_THM_TLS_DESCSEQ16 : UInt32 = 129U
 
 ///|
-pub const R_ARM_THM_TLS_DESCSEQ32 : UInt = 130U
+pub const R_ARM_THM_TLS_DESCSEQ32 : UInt32 = 130U
 
 ///|
-pub const R_ARM_THM_GOT_BREL12 : UInt = 131U
+pub const R_ARM_THM_GOT_BREL12 : UInt32 = 131U
 
 ///|
-pub const R_ARM_THM_ALU_ABS_G0_NC : UInt = 132U
+pub const R_ARM_THM_ALU_ABS_G0_NC : UInt32 = 132U
 
 ///|
-pub const R_ARM_THM_ALU_ABS_G1_NC : UInt = 133U
+pub const R_ARM_THM_ALU_ABS_G1_NC : UInt32 = 133U
 
 ///|
-pub const R_ARM_THM_ALU_ABS_G2_NC : UInt = 134U
+pub const R_ARM_THM_ALU_ABS_G2_NC : UInt32 = 134U
 
 ///|
-pub const R_ARM_THM_ALU_ABS_G3 : UInt = 135U
+pub const R_ARM_THM_ALU_ABS_G3 : UInt32 = 135U
 
 ///|
-pub const R_ARM_THM_BF16 : UInt = 136U
+pub const R_ARM_THM_BF16 : UInt32 = 136U
 
 ///|
-pub const R_ARM_THM_BF12 : UInt = 137U
+pub const R_ARM_THM_BF12 : UInt32 = 137U
 
 ///|
-pub const R_ARM_THM_BF18 : UInt = 138U
+pub const R_ARM_THM_BF18 : UInt32 = 138U
 
 ///|
-pub const R_ARM_IRELATIVE : UInt = 160U
+pub const R_ARM_IRELATIVE : UInt32 = 160U
 
 // AArch64 section, segment, property, dynamic, and relocation values.
 
 ///|
-pub const SHT_AARCH64_ATTRIBUTES : UInt = 0x70000003U
+pub const SHT_AARCH64_ATTRIBUTES : UInt32 = 0x70000003U
 
 ///|
 pub const SHT_AARCH64_ATTRIBUTES_SECTION_NAME : String = ".ARM.attributes"
 
 ///|
-pub const PT_AARCH64_ARCHEXT : UInt = 0x70000000U
+pub const PT_AARCH64_ARCHEXT : UInt32 = 0x70000000U
 
 ///|
-pub const PT_AARCH64_UNWIND : UInt = 0x70000001U
+pub const PT_AARCH64_UNWIND : UInt32 = 0x70000001U
 
 ///|
-pub const PT_AARCH64_MEMTAG_MTE : UInt = 0x70000002U
+pub const PT_AARCH64_MEMTAG_MTE : UInt32 = 0x70000002U
 
 ///|
 pub const STO_AARCH64_VARIANT_PCS : Byte = 0x80
 
 ///|
-pub const GNU_PROPERTY_AARCH64_FEATURE_1_AND : UInt = 0xc0000000U
+pub const GNU_PROPERTY_AARCH64_FEATURE_1_AND : UInt32 = 0xc0000000U
 
 ///|
-pub const GNU_PROPERTY_AARCH64_FEATURE_1_BTI : UInt = 0x1U
+pub const GNU_PROPERTY_AARCH64_FEATURE_1_BTI : UInt32 = 0x1U
 
 ///|
-pub const GNU_PROPERTY_AARCH64_FEATURE_1_PAC : UInt = 0x2U
+pub const GNU_PROPERTY_AARCH64_FEATURE_1_PAC : UInt32 = 0x2U
 
 ///|
 pub const DT_AARCH64_BTI_PLT : Int64 = 0x70000001L
@@ -2198,699 +2198,699 @@ pub const DT_AARCH64_PAC_PLT : Int64 = 0x70000003L
 pub const DT_AARCH64_VARIANT_PCS : Int64 = 0x70000005L
 
 ///|
-pub const R_AARCH64_NONE : UInt = 0U
+pub const R_AARCH64_NONE : UInt32 = 0U
 
 ///|
-pub const R_AARCH64_P32_ABS32 : UInt = 1U
+pub const R_AARCH64_P32_ABS32 : UInt32 = 1U
 
 ///|
-pub const R_AARCH64_P32_COPY : UInt = 180U
+pub const R_AARCH64_P32_COPY : UInt32 = 180U
 
 ///|
-pub const R_AARCH64_P32_GLOB_DAT : UInt = 181U
+pub const R_AARCH64_P32_GLOB_DAT : UInt32 = 181U
 
 ///|
-pub const R_AARCH64_P32_JUMP_SLOT : UInt = 182U
+pub const R_AARCH64_P32_JUMP_SLOT : UInt32 = 182U
 
 ///|
-pub const R_AARCH64_P32_RELATIVE : UInt = 183U
+pub const R_AARCH64_P32_RELATIVE : UInt32 = 183U
 
 ///|
-pub const R_AARCH64_P32_TLS_DTPMOD : UInt = 184U
+pub const R_AARCH64_P32_TLS_DTPMOD : UInt32 = 184U
 
 ///|
-pub const R_AARCH64_P32_TLS_DTPREL : UInt = 185U
+pub const R_AARCH64_P32_TLS_DTPREL : UInt32 = 185U
 
 ///|
-pub const R_AARCH64_P32_TLS_TPREL : UInt = 186U
+pub const R_AARCH64_P32_TLS_TPREL : UInt32 = 186U
 
 ///|
-pub const R_AARCH64_P32_TLSDESC : UInt = 187U
+pub const R_AARCH64_P32_TLSDESC : UInt32 = 187U
 
 ///|
-pub const R_AARCH64_P32_IRELATIVE : UInt = 188U
+pub const R_AARCH64_P32_IRELATIVE : UInt32 = 188U
 
 ///|
-pub const R_AARCH64_ABS64 : UInt = 257U
+pub const R_AARCH64_ABS64 : UInt32 = 257U
 
 ///|
-pub const R_AARCH64_ABS32 : UInt = 258U
+pub const R_AARCH64_ABS32 : UInt32 = 258U
 
 ///|
-pub const R_AARCH64_ABS16 : UInt = 259U
+pub const R_AARCH64_ABS16 : UInt32 = 259U
 
 ///|
-pub const R_AARCH64_PREL64 : UInt = 260U
+pub const R_AARCH64_PREL64 : UInt32 = 260U
 
 ///|
-pub const R_AARCH64_PREL32 : UInt = 261U
+pub const R_AARCH64_PREL32 : UInt32 = 261U
 
 ///|
-pub const R_AARCH64_PREL16 : UInt = 262U
+pub const R_AARCH64_PREL16 : UInt32 = 262U
 
 ///|
-pub const R_AARCH64_MOVW_UABS_G0 : UInt = 263U
+pub const R_AARCH64_MOVW_UABS_G0 : UInt32 = 263U
 
 ///|
-pub const R_AARCH64_MOVW_UABS_G0_NC : UInt = 264U
+pub const R_AARCH64_MOVW_UABS_G0_NC : UInt32 = 264U
 
 ///|
-pub const R_AARCH64_MOVW_UABS_G1 : UInt = 265U
+pub const R_AARCH64_MOVW_UABS_G1 : UInt32 = 265U
 
 ///|
-pub const R_AARCH64_MOVW_UABS_G1_NC : UInt = 266U
+pub const R_AARCH64_MOVW_UABS_G1_NC : UInt32 = 266U
 
 ///|
-pub const R_AARCH64_MOVW_UABS_G2 : UInt = 267U
+pub const R_AARCH64_MOVW_UABS_G2 : UInt32 = 267U
 
 ///|
-pub const R_AARCH64_MOVW_UABS_G2_NC : UInt = 268U
+pub const R_AARCH64_MOVW_UABS_G2_NC : UInt32 = 268U
 
 ///|
-pub const R_AARCH64_MOVW_UABS_G3 : UInt = 269U
+pub const R_AARCH64_MOVW_UABS_G3 : UInt32 = 269U
 
 ///|
-pub const R_AARCH64_MOVW_SABS_G0 : UInt = 270U
+pub const R_AARCH64_MOVW_SABS_G0 : UInt32 = 270U
 
 ///|
-pub const R_AARCH64_MOVW_SABS_G1 : UInt = 271U
+pub const R_AARCH64_MOVW_SABS_G1 : UInt32 = 271U
 
 ///|
-pub const R_AARCH64_MOVW_SABS_G2 : UInt = 272U
+pub const R_AARCH64_MOVW_SABS_G2 : UInt32 = 272U
 
 ///|
-pub const R_AARCH64_LD_PREL_LO19 : UInt = 273U
+pub const R_AARCH64_LD_PREL_LO19 : UInt32 = 273U
 
 ///|
-pub const R_AARCH64_ADR_PREL_LO21 : UInt = 274U
+pub const R_AARCH64_ADR_PREL_LO21 : UInt32 = 274U
 
 ///|
-pub const R_AARCH64_ADR_PREL_PG_HI21 : UInt = 275U
+pub const R_AARCH64_ADR_PREL_PG_HI21 : UInt32 = 275U
 
 ///|
-pub const R_AARCH64_ADR_PREL_PG_HI21_NC : UInt = 276U
+pub const R_AARCH64_ADR_PREL_PG_HI21_NC : UInt32 = 276U
 
 ///|
-pub const R_AARCH64_ADD_ABS_LO12_NC : UInt = 277U
+pub const R_AARCH64_ADD_ABS_LO12_NC : UInt32 = 277U
 
 ///|
-pub const R_AARCH64_LDST8_ABS_LO12_NC : UInt = 278U
+pub const R_AARCH64_LDST8_ABS_LO12_NC : UInt32 = 278U
 
 ///|
-pub const R_AARCH64_TSTBR14 : UInt = 279U
+pub const R_AARCH64_TSTBR14 : UInt32 = 279U
 
 ///|
-pub const R_AARCH64_CONDBR19 : UInt = 280U
+pub const R_AARCH64_CONDBR19 : UInt32 = 280U
 
 ///|
-pub const R_AARCH64_JUMP26 : UInt = 282U
+pub const R_AARCH64_JUMP26 : UInt32 = 282U
 
 ///|
-pub const R_AARCH64_CALL26 : UInt = 283U
+pub const R_AARCH64_CALL26 : UInt32 = 283U
 
 ///|
-pub const R_AARCH64_LDST16_ABS_LO12_NC : UInt = 284U
+pub const R_AARCH64_LDST16_ABS_LO12_NC : UInt32 = 284U
 
 ///|
-pub const R_AARCH64_LDST32_ABS_LO12_NC : UInt = 285U
+pub const R_AARCH64_LDST32_ABS_LO12_NC : UInt32 = 285U
 
 ///|
-pub const R_AARCH64_LDST64_ABS_LO12_NC : UInt = 286U
+pub const R_AARCH64_LDST64_ABS_LO12_NC : UInt32 = 286U
 
 ///|
-pub const R_AARCH64_MOVW_PREL_G0 : UInt = 287U
+pub const R_AARCH64_MOVW_PREL_G0 : UInt32 = 287U
 
 ///|
-pub const R_AARCH64_MOVW_PREL_G0_NC : UInt = 288U
+pub const R_AARCH64_MOVW_PREL_G0_NC : UInt32 = 288U
 
 ///|
-pub const R_AARCH64_MOVW_PREL_G1 : UInt = 289U
+pub const R_AARCH64_MOVW_PREL_G1 : UInt32 = 289U
 
 ///|
-pub const R_AARCH64_MOVW_PREL_G1_NC : UInt = 290U
+pub const R_AARCH64_MOVW_PREL_G1_NC : UInt32 = 290U
 
 ///|
-pub const R_AARCH64_MOVW_PREL_G2 : UInt = 291U
+pub const R_AARCH64_MOVW_PREL_G2 : UInt32 = 291U
 
 ///|
-pub const R_AARCH64_MOVW_PREL_G2_NC : UInt = 292U
+pub const R_AARCH64_MOVW_PREL_G2_NC : UInt32 = 292U
 
 ///|
-pub const R_AARCH64_MOVW_PREL_G3 : UInt = 293U
+pub const R_AARCH64_MOVW_PREL_G3 : UInt32 = 293U
 
 ///|
-pub const R_AARCH64_LDST128_ABS_LO12_NC : UInt = 299U
+pub const R_AARCH64_LDST128_ABS_LO12_NC : UInt32 = 299U
 
 ///|
-pub const R_AARCH64_MOVW_GOTOFF_G0 : UInt = 300U
+pub const R_AARCH64_MOVW_GOTOFF_G0 : UInt32 = 300U
 
 ///|
-pub const R_AARCH64_MOVW_GOTOFF_G0_NC : UInt = 301U
+pub const R_AARCH64_MOVW_GOTOFF_G0_NC : UInt32 = 301U
 
 ///|
-pub const R_AARCH64_MOVW_GOTOFF_G1 : UInt = 302U
+pub const R_AARCH64_MOVW_GOTOFF_G1 : UInt32 = 302U
 
 ///|
-pub const R_AARCH64_MOVW_GOTOFF_G1_NC : UInt = 303U
+pub const R_AARCH64_MOVW_GOTOFF_G1_NC : UInt32 = 303U
 
 ///|
-pub const R_AARCH64_MOVW_GOTOFF_G2 : UInt = 304U
+pub const R_AARCH64_MOVW_GOTOFF_G2 : UInt32 = 304U
 
 ///|
-pub const R_AARCH64_MOVW_GOTOFF_G2_NC : UInt = 305U
+pub const R_AARCH64_MOVW_GOTOFF_G2_NC : UInt32 = 305U
 
 ///|
-pub const R_AARCH64_MOVW_GOTOFF_G3 : UInt = 306U
+pub const R_AARCH64_MOVW_GOTOFF_G3 : UInt32 = 306U
 
 ///|
-pub const R_AARCH64_GOTREL64 : UInt = 307U
+pub const R_AARCH64_GOTREL64 : UInt32 = 307U
 
 ///|
-pub const R_AARCH64_GOTREL32 : UInt = 308U
+pub const R_AARCH64_GOTREL32 : UInt32 = 308U
 
 ///|
-pub const R_AARCH64_GOT_LD_PREL19 : UInt = 309U
+pub const R_AARCH64_GOT_LD_PREL19 : UInt32 = 309U
 
 ///|
-pub const R_AARCH64_LD64_GOTOFF_LO15 : UInt = 310U
+pub const R_AARCH64_LD64_GOTOFF_LO15 : UInt32 = 310U
 
 ///|
-pub const R_AARCH64_ADR_GOT_PAGE : UInt = 311U
+pub const R_AARCH64_ADR_GOT_PAGE : UInt32 = 311U
 
 ///|
-pub const R_AARCH64_LD64_GOT_LO12_NC : UInt = 312U
+pub const R_AARCH64_LD64_GOT_LO12_NC : UInt32 = 312U
 
 ///|
-pub const R_AARCH64_LD64_GOTPAGE_LO15 : UInt = 313U
+pub const R_AARCH64_LD64_GOTPAGE_LO15 : UInt32 = 313U
 
 ///|
-pub const R_AARCH64_TLSGD_ADR_PREL21 : UInt = 512U
+pub const R_AARCH64_TLSGD_ADR_PREL21 : UInt32 = 512U
 
 ///|
-pub const R_AARCH64_TLSGD_ADR_PAGE21 : UInt = 513U
+pub const R_AARCH64_TLSGD_ADR_PAGE21 : UInt32 = 513U
 
 ///|
-pub const R_AARCH64_TLSGD_ADD_LO12_NC : UInt = 514U
+pub const R_AARCH64_TLSGD_ADD_LO12_NC : UInt32 = 514U
 
 ///|
-pub const R_AARCH64_TLSGD_MOVW_G1 : UInt = 515U
+pub const R_AARCH64_TLSGD_MOVW_G1 : UInt32 = 515U
 
 ///|
-pub const R_AARCH64_TLSGD_MOVW_G0_NC : UInt = 516U
+pub const R_AARCH64_TLSGD_MOVW_G0_NC : UInt32 = 516U
 
 ///|
-pub const R_AARCH64_TLSLD_ADR_PREL21 : UInt = 517U
+pub const R_AARCH64_TLSLD_ADR_PREL21 : UInt32 = 517U
 
 ///|
-pub const R_AARCH64_TLSLD_ADR_PAGE21 : UInt = 518U
+pub const R_AARCH64_TLSLD_ADR_PAGE21 : UInt32 = 518U
 
 ///|
-pub const R_AARCH64_TLSLD_ADD_LO12_NC : UInt = 519U
+pub const R_AARCH64_TLSLD_ADD_LO12_NC : UInt32 = 519U
 
 ///|
-pub const R_AARCH64_TLSLD_MOVW_G1 : UInt = 520U
+pub const R_AARCH64_TLSLD_MOVW_G1 : UInt32 = 520U
 
 ///|
-pub const R_AARCH64_TLSLD_MOVW_G0_NC : UInt = 521U
+pub const R_AARCH64_TLSLD_MOVW_G0_NC : UInt32 = 521U
 
 ///|
-pub const R_AARCH64_TLSLD_LD_PREL19 : UInt = 522U
+pub const R_AARCH64_TLSLD_LD_PREL19 : UInt32 = 522U
 
 ///|
-pub const R_AARCH64_TLSLD_MOVW_DTPREL_G2 : UInt = 523U
+pub const R_AARCH64_TLSLD_MOVW_DTPREL_G2 : UInt32 = 523U
 
 ///|
-pub const R_AARCH64_TLSLD_MOVW_DTPREL_G1 : UInt = 524U
+pub const R_AARCH64_TLSLD_MOVW_DTPREL_G1 : UInt32 = 524U
 
 ///|
-pub const R_AARCH64_TLSLD_MOVW_DTPREL_G1_NC : UInt = 525U
+pub const R_AARCH64_TLSLD_MOVW_DTPREL_G1_NC : UInt32 = 525U
 
 ///|
-pub const R_AARCH64_TLSLD_MOVW_DTPREL_G0 : UInt = 526U
+pub const R_AARCH64_TLSLD_MOVW_DTPREL_G0 : UInt32 = 526U
 
 ///|
-pub const R_AARCH64_TLSLD_MOVW_DTPREL_G0_NC : UInt = 527U
+pub const R_AARCH64_TLSLD_MOVW_DTPREL_G0_NC : UInt32 = 527U
 
 ///|
-pub const R_AARCH64_TLSLD_ADD_DTPREL_HI12 : UInt = 528U
+pub const R_AARCH64_TLSLD_ADD_DTPREL_HI12 : UInt32 = 528U
 
 ///|
-pub const R_AARCH64_TLSLD_ADD_DTPREL_LO12 : UInt = 529U
+pub const R_AARCH64_TLSLD_ADD_DTPREL_LO12 : UInt32 = 529U
 
 ///|
-pub const R_AARCH64_TLSLD_ADD_DTPREL_LO12_NC : UInt = 530U
+pub const R_AARCH64_TLSLD_ADD_DTPREL_LO12_NC : UInt32 = 530U
 
 ///|
-pub const R_AARCH64_TLSLD_LDST8_DTPREL_LO12 : UInt = 531U
+pub const R_AARCH64_TLSLD_LDST8_DTPREL_LO12 : UInt32 = 531U
 
 ///|
-pub const R_AARCH64_TLSLD_LDST8_DTPREL_LO12_NC : UInt = 532U
+pub const R_AARCH64_TLSLD_LDST8_DTPREL_LO12_NC : UInt32 = 532U
 
 ///|
-pub const R_AARCH64_TLSLD_LDST16_DTPREL_LO12 : UInt = 533U
+pub const R_AARCH64_TLSLD_LDST16_DTPREL_LO12 : UInt32 = 533U
 
 ///|
-pub const R_AARCH64_TLSLD_LDST16_DTPREL_LO12_NC : UInt = 534U
+pub const R_AARCH64_TLSLD_LDST16_DTPREL_LO12_NC : UInt32 = 534U
 
 ///|
-pub const R_AARCH64_TLSLD_LDST32_DTPREL_LO12 : UInt = 535U
+pub const R_AARCH64_TLSLD_LDST32_DTPREL_LO12 : UInt32 = 535U
 
 ///|
-pub const R_AARCH64_TLSLD_LDST32_DTPREL_LO12_NC : UInt = 536U
+pub const R_AARCH64_TLSLD_LDST32_DTPREL_LO12_NC : UInt32 = 536U
 
 ///|
-pub const R_AARCH64_TLSLD_LDST64_DTPREL_LO12 : UInt = 537U
+pub const R_AARCH64_TLSLD_LDST64_DTPREL_LO12 : UInt32 = 537U
 
 ///|
-pub const R_AARCH64_TLSLD_LDST64_DTPREL_LO12_NC : UInt = 538U
+pub const R_AARCH64_TLSLD_LDST64_DTPREL_LO12_NC : UInt32 = 538U
 
 ///|
-pub const R_AARCH64_TLSIE_MOVW_GOTTPREL_G1 : UInt = 539U
+pub const R_AARCH64_TLSIE_MOVW_GOTTPREL_G1 : UInt32 = 539U
 
 ///|
-pub const R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC : UInt = 540U
+pub const R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC : UInt32 = 540U
 
 ///|
-pub const R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21 : UInt = 541U
+pub const R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21 : UInt32 = 541U
 
 ///|
-pub const R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC : UInt = 542U
+pub const R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC : UInt32 = 542U
 
 ///|
-pub const R_AARCH64_TLSIE_LD_GOTTPREL_PREL19 : UInt = 543U
+pub const R_AARCH64_TLSIE_LD_GOTTPREL_PREL19 : UInt32 = 543U
 
 ///|
-pub const R_AARCH64_TLSLE_MOVW_TPREL_G2 : UInt = 544U
+pub const R_AARCH64_TLSLE_MOVW_TPREL_G2 : UInt32 = 544U
 
 ///|
-pub const R_AARCH64_TLSLE_MOVW_TPREL_G1 : UInt = 545U
+pub const R_AARCH64_TLSLE_MOVW_TPREL_G1 : UInt32 = 545U
 
 ///|
-pub const R_AARCH64_TLSLE_MOVW_TPREL_G1_NC : UInt = 546U
+pub const R_AARCH64_TLSLE_MOVW_TPREL_G1_NC : UInt32 = 546U
 
 ///|
-pub const R_AARCH64_TLSLE_MOVW_TPREL_G0 : UInt = 547U
+pub const R_AARCH64_TLSLE_MOVW_TPREL_G0 : UInt32 = 547U
 
 ///|
-pub const R_AARCH64_TLSLE_MOVW_TPREL_G0_NC : UInt = 548U
+pub const R_AARCH64_TLSLE_MOVW_TPREL_G0_NC : UInt32 = 548U
 
 ///|
-pub const R_AARCH64_TLSLE_ADD_TPREL_HI12 : UInt = 549U
+pub const R_AARCH64_TLSLE_ADD_TPREL_HI12 : UInt32 = 549U
 
 ///|
-pub const R_AARCH64_TLSLE_ADD_TPREL_LO12 : UInt = 550U
+pub const R_AARCH64_TLSLE_ADD_TPREL_LO12 : UInt32 = 550U
 
 ///|
-pub const R_AARCH64_TLSLE_ADD_TPREL_LO12_NC : UInt = 551U
+pub const R_AARCH64_TLSLE_ADD_TPREL_LO12_NC : UInt32 = 551U
 
 ///|
-pub const R_AARCH64_TLSLE_LDST8_TPREL_LO12 : UInt = 552U
+pub const R_AARCH64_TLSLE_LDST8_TPREL_LO12 : UInt32 = 552U
 
 ///|
-pub const R_AARCH64_TLSLE_LDST8_TPREL_LO12_NC : UInt = 553U
+pub const R_AARCH64_TLSLE_LDST8_TPREL_LO12_NC : UInt32 = 553U
 
 ///|
-pub const R_AARCH64_TLSLE_LDST16_TPREL_LO12 : UInt = 554U
+pub const R_AARCH64_TLSLE_LDST16_TPREL_LO12 : UInt32 = 554U
 
 ///|
-pub const R_AARCH64_TLSLE_LDST16_TPREL_LO12_NC : UInt = 555U
+pub const R_AARCH64_TLSLE_LDST16_TPREL_LO12_NC : UInt32 = 555U
 
 ///|
-pub const R_AARCH64_TLSLE_LDST32_TPREL_LO12 : UInt = 556U
+pub const R_AARCH64_TLSLE_LDST32_TPREL_LO12 : UInt32 = 556U
 
 ///|
-pub const R_AARCH64_TLSLE_LDST32_TPREL_LO12_NC : UInt = 557U
+pub const R_AARCH64_TLSLE_LDST32_TPREL_LO12_NC : UInt32 = 557U
 
 ///|
-pub const R_AARCH64_TLSLE_LDST64_TPREL_LO12 : UInt = 558U
+pub const R_AARCH64_TLSLE_LDST64_TPREL_LO12 : UInt32 = 558U
 
 ///|
-pub const R_AARCH64_TLSLE_LDST64_TPREL_LO12_NC : UInt = 559U
+pub const R_AARCH64_TLSLE_LDST64_TPREL_LO12_NC : UInt32 = 559U
 
 ///|
-pub const R_AARCH64_TLSDESC_LD_PREL19 : UInt = 560U
+pub const R_AARCH64_TLSDESC_LD_PREL19 : UInt32 = 560U
 
 ///|
-pub const R_AARCH64_TLSDESC_ADR_PREL21 : UInt = 561U
+pub const R_AARCH64_TLSDESC_ADR_PREL21 : UInt32 = 561U
 
 ///|
-pub const R_AARCH64_TLSDESC_ADR_PAGE21 : UInt = 562U
+pub const R_AARCH64_TLSDESC_ADR_PAGE21 : UInt32 = 562U
 
 ///|
-pub const R_AARCH64_TLSDESC_LD64_LO12 : UInt = 563U
+pub const R_AARCH64_TLSDESC_LD64_LO12 : UInt32 = 563U
 
 ///|
-pub const R_AARCH64_TLSDESC_ADD_LO12 : UInt = 564U
+pub const R_AARCH64_TLSDESC_ADD_LO12 : UInt32 = 564U
 
 ///|
-pub const R_AARCH64_TLSDESC_OFF_G1 : UInt = 565U
+pub const R_AARCH64_TLSDESC_OFF_G1 : UInt32 = 565U
 
 ///|
-pub const R_AARCH64_TLSDESC_OFF_G0_NC : UInt = 566U
+pub const R_AARCH64_TLSDESC_OFF_G0_NC : UInt32 = 566U
 
 ///|
-pub const R_AARCH64_TLSDESC_LDR : UInt = 567U
+pub const R_AARCH64_TLSDESC_LDR : UInt32 = 567U
 
 ///|
-pub const R_AARCH64_TLSDESC_ADD : UInt = 568U
+pub const R_AARCH64_TLSDESC_ADD : UInt32 = 568U
 
 ///|
-pub const R_AARCH64_TLSDESC_CALL : UInt = 569U
+pub const R_AARCH64_TLSDESC_CALL : UInt32 = 569U
 
 ///|
-pub const R_AARCH64_TLSLE_LDST128_TPREL_LO12 : UInt = 570U
+pub const R_AARCH64_TLSLE_LDST128_TPREL_LO12 : UInt32 = 570U
 
 ///|
-pub const R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC : UInt = 571U
+pub const R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC : UInt32 = 571U
 
 ///|
-pub const R_AARCH64_TLSLD_LDST128_DTPREL_LO12 : UInt = 572U
+pub const R_AARCH64_TLSLD_LDST128_DTPREL_LO12 : UInt32 = 572U
 
 ///|
-pub const R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC : UInt = 573U
+pub const R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC : UInt32 = 573U
 
 ///|
-pub const R_AARCH64_COPY : UInt = 1024U
+pub const R_AARCH64_COPY : UInt32 = 1024U
 
 ///|
-pub const R_AARCH64_GLOB_DAT : UInt = 1025U
+pub const R_AARCH64_GLOB_DAT : UInt32 = 1025U
 
 ///|
-pub const R_AARCH64_JUMP_SLOT : UInt = 1026U
+pub const R_AARCH64_JUMP_SLOT : UInt32 = 1026U
 
 ///|
-pub const R_AARCH64_RELATIVE : UInt = 1027U
+pub const R_AARCH64_RELATIVE : UInt32 = 1027U
 
 ///|
-pub const R_AARCH64_TLS_DTPMOD : UInt = 1028U
+pub const R_AARCH64_TLS_DTPMOD : UInt32 = 1028U
 
 ///|
-pub const R_AARCH64_TLS_DTPREL : UInt = 1029U
+pub const R_AARCH64_TLS_DTPREL : UInt32 = 1029U
 
 ///|
-pub const R_AARCH64_TLS_TPREL : UInt = 1030U
+pub const R_AARCH64_TLS_TPREL : UInt32 = 1030U
 
 ///|
-pub const R_AARCH64_TLSDESC : UInt = 1031U
+pub const R_AARCH64_TLSDESC : UInt32 = 1031U
 
 ///|
-pub const R_AARCH64_IRELATIVE : UInt = 1032U
+pub const R_AARCH64_IRELATIVE : UInt32 = 1032U
 
 // PowerPC file flags and relocation values.
 
 ///|
-pub const EF_PPC_EMB : UInt = 0x80000000U
+pub const EF_PPC_EMB : UInt32 = 0x80000000U
 
 ///|
-pub const EF_PPC_RELOCATABLE : UInt = 0x00010000U
+pub const EF_PPC_RELOCATABLE : UInt32 = 0x00010000U
 
 ///|
-pub const EF_PPC_RELOCATABLE_LIB : UInt = 0x00008000U
+pub const EF_PPC_RELOCATABLE_LIB : UInt32 = 0x00008000U
 
 ///|
-pub const R_PPC_NONE : UInt = 0U
+pub const R_PPC_NONE : UInt32 = 0U
 
 ///|
-pub const R_PPC_ADDR32 : UInt = 1U
+pub const R_PPC_ADDR32 : UInt32 = 1U
 
 ///|
-pub const R_PPC_ADDR24 : UInt = 2U
+pub const R_PPC_ADDR24 : UInt32 = 2U
 
 ///|
-pub const R_PPC_ADDR16 : UInt = 3U
+pub const R_PPC_ADDR16 : UInt32 = 3U
 
 ///|
-pub const R_PPC_ADDR16_LO : UInt = 4U
+pub const R_PPC_ADDR16_LO : UInt32 = 4U
 
 ///|
-pub const R_PPC_ADDR16_HI : UInt = 5U
+pub const R_PPC_ADDR16_HI : UInt32 = 5U
 
 ///|
-pub const R_PPC_ADDR16_HA : UInt = 6U
+pub const R_PPC_ADDR16_HA : UInt32 = 6U
 
 ///|
-pub const R_PPC_ADDR14 : UInt = 7U
+pub const R_PPC_ADDR14 : UInt32 = 7U
 
 ///|
-pub const R_PPC_ADDR14_BRTAKEN : UInt = 8U
+pub const R_PPC_ADDR14_BRTAKEN : UInt32 = 8U
 
 ///|
-pub const R_PPC_ADDR14_BRNTAKEN : UInt = 9U
+pub const R_PPC_ADDR14_BRNTAKEN : UInt32 = 9U
 
 ///|
-pub const R_PPC_REL24 : UInt = 10U
+pub const R_PPC_REL24 : UInt32 = 10U
 
 ///|
-pub const R_PPC_REL14 : UInt = 11U
+pub const R_PPC_REL14 : UInt32 = 11U
 
 ///|
-pub const R_PPC_REL14_BRTAKEN : UInt = 12U
+pub const R_PPC_REL14_BRTAKEN : UInt32 = 12U
 
 ///|
-pub const R_PPC_REL14_BRNTAKEN : UInt = 13U
+pub const R_PPC_REL14_BRNTAKEN : UInt32 = 13U
 
 ///|
-pub const R_PPC_GOT16 : UInt = 14U
+pub const R_PPC_GOT16 : UInt32 = 14U
 
 ///|
-pub const R_PPC_GOT16_LO : UInt = 15U
+pub const R_PPC_GOT16_LO : UInt32 = 15U
 
 ///|
-pub const R_PPC_GOT16_HI : UInt = 16U
+pub const R_PPC_GOT16_HI : UInt32 = 16U
 
 ///|
-pub const R_PPC_GOT16_HA : UInt = 17U
+pub const R_PPC_GOT16_HA : UInt32 = 17U
 
 ///|
-pub const R_PPC_PLTREL24 : UInt = 18U
+pub const R_PPC_PLTREL24 : UInt32 = 18U
 
 ///|
-pub const R_PPC_COPY : UInt = 19U
+pub const R_PPC_COPY : UInt32 = 19U
 
 ///|
-pub const R_PPC_GLOB_DAT : UInt = 20U
+pub const R_PPC_GLOB_DAT : UInt32 = 20U
 
 ///|
-pub const R_PPC_JMP_SLOT : UInt = 21U
+pub const R_PPC_JMP_SLOT : UInt32 = 21U
 
 ///|
-pub const R_PPC_RELATIVE : UInt = 22U
+pub const R_PPC_RELATIVE : UInt32 = 22U
 
 ///|
-pub const R_PPC_LOCAL24PC : UInt = 23U
+pub const R_PPC_LOCAL24PC : UInt32 = 23U
 
 ///|
-pub const R_PPC_UADDR32 : UInt = 24U
+pub const R_PPC_UADDR32 : UInt32 = 24U
 
 ///|
-pub const R_PPC_UADDR16 : UInt = 25U
+pub const R_PPC_UADDR16 : UInt32 = 25U
 
 ///|
-pub const R_PPC_REL32 : UInt = 26U
+pub const R_PPC_REL32 : UInt32 = 26U
 
 ///|
-pub const R_PPC_PLT32 : UInt = 27U
+pub const R_PPC_PLT32 : UInt32 = 27U
 
 ///|
-pub const R_PPC_PLTREL32 : UInt = 28U
+pub const R_PPC_PLTREL32 : UInt32 = 28U
 
 ///|
-pub const R_PPC_PLT16_LO : UInt = 29U
+pub const R_PPC_PLT16_LO : UInt32 = 29U
 
 ///|
-pub const R_PPC_PLT16_HI : UInt = 30U
+pub const R_PPC_PLT16_HI : UInt32 = 30U
 
 ///|
-pub const R_PPC_PLT16_HA : UInt = 31U
+pub const R_PPC_PLT16_HA : UInt32 = 31U
 
 ///|
-pub const R_PPC_SDAREL16 : UInt = 32U
+pub const R_PPC_SDAREL16 : UInt32 = 32U
 
 ///|
-pub const R_PPC_SECTOFF : UInt = 33U
+pub const R_PPC_SECTOFF : UInt32 = 33U
 
 ///|
-pub const R_PPC_SECTOFF_LO : UInt = 34U
+pub const R_PPC_SECTOFF_LO : UInt32 = 34U
 
 ///|
-pub const R_PPC_SECTOFF_HI : UInt = 35U
+pub const R_PPC_SECTOFF_HI : UInt32 = 35U
 
 ///|
-pub const R_PPC_SECTOFF_HA : UInt = 36U
+pub const R_PPC_SECTOFF_HA : UInt32 = 36U
 
 ///|
-pub const R_PPC_TLS : UInt = 67U
+pub const R_PPC_TLS : UInt32 = 67U
 
 ///|
-pub const R_PPC_DTPMOD32 : UInt = 68U
+pub const R_PPC_DTPMOD32 : UInt32 = 68U
 
 ///|
-pub const R_PPC_TPREL16 : UInt = 69U
+pub const R_PPC_TPREL16 : UInt32 = 69U
 
 ///|
-pub const R_PPC_TPREL16_LO : UInt = 70U
+pub const R_PPC_TPREL16_LO : UInt32 = 70U
 
 ///|
-pub const R_PPC_TPREL16_HI : UInt = 71U
+pub const R_PPC_TPREL16_HI : UInt32 = 71U
 
 ///|
-pub const R_PPC_TPREL16_HA : UInt = 72U
+pub const R_PPC_TPREL16_HA : UInt32 = 72U
 
 ///|
-pub const R_PPC_TPREL32 : UInt = 73U
+pub const R_PPC_TPREL32 : UInt32 = 73U
 
 ///|
-pub const R_PPC_DTPREL16 : UInt = 74U
+pub const R_PPC_DTPREL16 : UInt32 = 74U
 
 ///|
-pub const R_PPC_DTPREL16_LO : UInt = 75U
+pub const R_PPC_DTPREL16_LO : UInt32 = 75U
 
 ///|
-pub const R_PPC_DTPREL16_HI : UInt = 76U
+pub const R_PPC_DTPREL16_HI : UInt32 = 76U
 
 ///|
-pub const R_PPC_DTPREL16_HA : UInt = 77U
+pub const R_PPC_DTPREL16_HA : UInt32 = 77U
 
 ///|
-pub const R_PPC_DTPREL32 : UInt = 78U
+pub const R_PPC_DTPREL32 : UInt32 = 78U
 
 ///|
-pub const R_PPC_GOT_TLSGD16 : UInt = 79U
+pub const R_PPC_GOT_TLSGD16 : UInt32 = 79U
 
 ///|
-pub const R_PPC_GOT_TLSGD16_LO : UInt = 80U
+pub const R_PPC_GOT_TLSGD16_LO : UInt32 = 80U
 
 ///|
-pub const R_PPC_GOT_TLSGD16_HI : UInt = 81U
+pub const R_PPC_GOT_TLSGD16_HI : UInt32 = 81U
 
 ///|
-pub const R_PPC_GOT_TLSGD16_HA : UInt = 82U
+pub const R_PPC_GOT_TLSGD16_HA : UInt32 = 82U
 
 ///|
-pub const R_PPC_GOT_TLSLD16 : UInt = 83U
+pub const R_PPC_GOT_TLSLD16 : UInt32 = 83U
 
 ///|
-pub const R_PPC_GOT_TLSLD16_LO : UInt = 84U
+pub const R_PPC_GOT_TLSLD16_LO : UInt32 = 84U
 
 ///|
-pub const R_PPC_GOT_TLSLD16_HI : UInt = 85U
+pub const R_PPC_GOT_TLSLD16_HI : UInt32 = 85U
 
 ///|
-pub const R_PPC_GOT_TLSLD16_HA : UInt = 86U
+pub const R_PPC_GOT_TLSLD16_HA : UInt32 = 86U
 
 ///|
-pub const R_PPC_GOT_TPREL16 : UInt = 87U
+pub const R_PPC_GOT_TPREL16 : UInt32 = 87U
 
 ///|
-pub const R_PPC_GOT_TPREL16_LO : UInt = 88U
+pub const R_PPC_GOT_TPREL16_LO : UInt32 = 88U
 
 ///|
-pub const R_PPC_GOT_TPREL16_HI : UInt = 89U
+pub const R_PPC_GOT_TPREL16_HI : UInt32 = 89U
 
 ///|
-pub const R_PPC_GOT_TPREL16_HA : UInt = 90U
+pub const R_PPC_GOT_TPREL16_HA : UInt32 = 90U
 
 ///|
-pub const R_PPC_GOT_DTPREL16 : UInt = 91U
+pub const R_PPC_GOT_DTPREL16 : UInt32 = 91U
 
 ///|
-pub const R_PPC_GOT_DTPREL16_LO : UInt = 92U
+pub const R_PPC_GOT_DTPREL16_LO : UInt32 = 92U
 
 ///|
-pub const R_PPC_GOT_DTPREL16_HI : UInt = 93U
+pub const R_PPC_GOT_DTPREL16_HI : UInt32 = 93U
 
 ///|
-pub const R_PPC_GOT_DTPREL16_HA : UInt = 94U
+pub const R_PPC_GOT_DTPREL16_HA : UInt32 = 94U
 
 ///|
-pub const R_PPC_TLSGD : UInt = 95U
+pub const R_PPC_TLSGD : UInt32 = 95U
 
 ///|
-pub const R_PPC_TLSLD : UInt = 96U
+pub const R_PPC_TLSLD : UInt32 = 96U
 
 ///|
-pub const R_PPC_EMB_NADDR32 : UInt = 101U
+pub const R_PPC_EMB_NADDR32 : UInt32 = 101U
 
 ///|
-pub const R_PPC_EMB_NADDR16 : UInt = 102U
+pub const R_PPC_EMB_NADDR16 : UInt32 = 102U
 
 ///|
-pub const R_PPC_EMB_NADDR16_LO : UInt = 103U
+pub const R_PPC_EMB_NADDR16_LO : UInt32 = 103U
 
 ///|
-pub const R_PPC_EMB_NADDR16_HI : UInt = 104U
+pub const R_PPC_EMB_NADDR16_HI : UInt32 = 104U
 
 ///|
-pub const R_PPC_EMB_NADDR16_HA : UInt = 105U
+pub const R_PPC_EMB_NADDR16_HA : UInt32 = 105U
 
 ///|
-pub const R_PPC_EMB_SDAI16 : UInt = 106U
+pub const R_PPC_EMB_SDAI16 : UInt32 = 106U
 
 ///|
-pub const R_PPC_EMB_SDA2I16 : UInt = 107U
+pub const R_PPC_EMB_SDA2I16 : UInt32 = 107U
 
 ///|
-pub const R_PPC_EMB_SDA2REL : UInt = 108U
+pub const R_PPC_EMB_SDA2REL : UInt32 = 108U
 
 ///|
-pub const R_PPC_EMB_SDA21 : UInt = 109U
+pub const R_PPC_EMB_SDA21 : UInt32 = 109U
 
 ///|
-pub const R_PPC_EMB_MRKREF : UInt = 110U
+pub const R_PPC_EMB_MRKREF : UInt32 = 110U
 
 ///|
-pub const R_PPC_EMB_RELSEC16 : UInt = 111U
+pub const R_PPC_EMB_RELSEC16 : UInt32 = 111U
 
 ///|
-pub const R_PPC_EMB_RELST_LO : UInt = 112U
+pub const R_PPC_EMB_RELST_LO : UInt32 = 112U
 
 ///|
-pub const R_PPC_EMB_RELST_HI : UInt = 113U
+pub const R_PPC_EMB_RELST_HI : UInt32 = 113U
 
 ///|
-pub const R_PPC_EMB_RELST_HA : UInt = 114U
+pub const R_PPC_EMB_RELST_HA : UInt32 = 114U
 
 ///|
-pub const R_PPC_EMB_BIT_FLD : UInt = 115U
+pub const R_PPC_EMB_BIT_FLD : UInt32 = 115U
 
 ///|
-pub const R_PPC_EMB_RELSDA : UInt = 116U
+pub const R_PPC_EMB_RELSDA : UInt32 = 116U
 
 ///|
-pub const R_PPC_DIAB_SDA21_LO : UInt = 180U
+pub const R_PPC_DIAB_SDA21_LO : UInt32 = 180U
 
 ///|
-pub const R_PPC_DIAB_SDA21_HI : UInt = 181U
+pub const R_PPC_DIAB_SDA21_HI : UInt32 = 181U
 
 ///|
-pub const R_PPC_DIAB_SDA21_HA : UInt = 182U
+pub const R_PPC_DIAB_SDA21_HA : UInt32 = 182U
 
 ///|
-pub const R_PPC_DIAB_RELSDA_LO : UInt = 183U
+pub const R_PPC_DIAB_RELSDA_LO : UInt32 = 183U
 
 ///|
-pub const R_PPC_DIAB_RELSDA_HI : UInt = 184U
+pub const R_PPC_DIAB_RELSDA_HI : UInt32 = 184U
 
 ///|
-pub const R_PPC_DIAB_RELSDA_HA : UInt = 185U
+pub const R_PPC_DIAB_RELSDA_HA : UInt32 = 185U
 
 ///|
-pub const R_PPC_IRELATIVE : UInt = 248U
+pub const R_PPC_IRELATIVE : UInt32 = 248U
 
 ///|
-pub const R_PPC_REL16 : UInt = 249U
+pub const R_PPC_REL16 : UInt32 = 249U
 
 ///|
-pub const R_PPC_REL16_LO : UInt = 250U
+pub const R_PPC_REL16_LO : UInt32 = 250U
 
 ///|
-pub const R_PPC_REL16_HI : UInt = 251U
+pub const R_PPC_REL16_HI : UInt32 = 251U
 
 ///|
-pub const R_PPC_REL16_HA : UInt = 252U
+pub const R_PPC_REL16_HA : UInt32 = 252U
 
 ///|
-pub const R_PPC_TOC16 : UInt = 255U
+pub const R_PPC_TOC16 : UInt32 = 255U
 
 ///|
 pub const DT_PPC_GOT : Int64 = 0x70000000L
@@ -2904,7 +2904,7 @@ pub const PPC_OPT_TLS : UInt64 = 1UL
 // PowerPC64 file flags, dynamic tags, symbol flags, and relocation values.
 
 ///|
-pub const EF_PPC64_ABI : UInt = 3U
+pub const EF_PPC64_ABI : UInt32 = 3U
 
 ///|
 pub const DT_PPC64_GLINK : Int64 = 0x70000000L
@@ -2934,396 +2934,396 @@ pub const STO_PPC64_LOCAL_BIT : Byte = 5
 pub const STO_PPC64_LOCAL_MASK : Byte = 224
 
 ///|
-pub const R_PPC64_NONE : UInt = 0U
+pub const R_PPC64_NONE : UInt32 = 0U
 
 ///|
-pub const R_PPC64_ADDR32 : UInt = 1U
+pub const R_PPC64_ADDR32 : UInt32 = 1U
 
 ///|
-pub const R_PPC64_ADDR24 : UInt = 2U
+pub const R_PPC64_ADDR24 : UInt32 = 2U
 
 ///|
-pub const R_PPC64_ADDR16 : UInt = 3U
+pub const R_PPC64_ADDR16 : UInt32 = 3U
 
 ///|
-pub const R_PPC64_ADDR16_LO : UInt = 4U
+pub const R_PPC64_ADDR16_LO : UInt32 = 4U
 
 ///|
-pub const R_PPC64_ADDR16_HI : UInt = 5U
+pub const R_PPC64_ADDR16_HI : UInt32 = 5U
 
 ///|
-pub const R_PPC64_ADDR16_HA : UInt = 6U
+pub const R_PPC64_ADDR16_HA : UInt32 = 6U
 
 ///|
-pub const R_PPC64_ADDR14 : UInt = 7U
+pub const R_PPC64_ADDR14 : UInt32 = 7U
 
 ///|
-pub const R_PPC64_ADDR14_BRTAKEN : UInt = 8U
+pub const R_PPC64_ADDR14_BRTAKEN : UInt32 = 8U
 
 ///|
-pub const R_PPC64_ADDR14_BRNTAKEN : UInt = 9U
+pub const R_PPC64_ADDR14_BRNTAKEN : UInt32 = 9U
 
 ///|
-pub const R_PPC64_REL24 : UInt = 10U
+pub const R_PPC64_REL24 : UInt32 = 10U
 
 ///|
-pub const R_PPC64_REL14 : UInt = 11U
+pub const R_PPC64_REL14 : UInt32 = 11U
 
 ///|
-pub const R_PPC64_REL14_BRTAKEN : UInt = 12U
+pub const R_PPC64_REL14_BRTAKEN : UInt32 = 12U
 
 ///|
-pub const R_PPC64_REL14_BRNTAKEN : UInt = 13U
+pub const R_PPC64_REL14_BRNTAKEN : UInt32 = 13U
 
 ///|
-pub const R_PPC64_GOT16 : UInt = 14U
+pub const R_PPC64_GOT16 : UInt32 = 14U
 
 ///|
-pub const R_PPC64_GOT16_LO : UInt = 15U
+pub const R_PPC64_GOT16_LO : UInt32 = 15U
 
 ///|
-pub const R_PPC64_GOT16_HI : UInt = 16U
+pub const R_PPC64_GOT16_HI : UInt32 = 16U
 
 ///|
-pub const R_PPC64_GOT16_HA : UInt = 17U
+pub const R_PPC64_GOT16_HA : UInt32 = 17U
 
 ///|
-pub const R_PPC64_COPY : UInt = 19U
+pub const R_PPC64_COPY : UInt32 = 19U
 
 ///|
-pub const R_PPC64_GLOB_DAT : UInt = 20U
+pub const R_PPC64_GLOB_DAT : UInt32 = 20U
 
 ///|
-pub const R_PPC64_JMP_SLOT : UInt = 21U
+pub const R_PPC64_JMP_SLOT : UInt32 = 21U
 
 ///|
-pub const R_PPC64_RELATIVE : UInt = 22U
+pub const R_PPC64_RELATIVE : UInt32 = 22U
 
 ///|
-pub const R_PPC64_UADDR32 : UInt = 24U
+pub const R_PPC64_UADDR32 : UInt32 = 24U
 
 ///|
-pub const R_PPC64_UADDR16 : UInt = 25U
+pub const R_PPC64_UADDR16 : UInt32 = 25U
 
 ///|
-pub const R_PPC64_REL32 : UInt = 26U
+pub const R_PPC64_REL32 : UInt32 = 26U
 
 ///|
-pub const R_PPC64_PLT32 : UInt = 27U
+pub const R_PPC64_PLT32 : UInt32 = 27U
 
 ///|
-pub const R_PPC64_PLTREL32 : UInt = 28U
+pub const R_PPC64_PLTREL32 : UInt32 = 28U
 
 ///|
-pub const R_PPC64_PLT16_LO : UInt = 29U
+pub const R_PPC64_PLT16_LO : UInt32 = 29U
 
 ///|
-pub const R_PPC64_PLT16_HI : UInt = 30U
+pub const R_PPC64_PLT16_HI : UInt32 = 30U
 
 ///|
-pub const R_PPC64_PLT16_HA : UInt = 31U
+pub const R_PPC64_PLT16_HA : UInt32 = 31U
 
 ///|
-pub const R_PPC64_SECTOFF : UInt = 33U
+pub const R_PPC64_SECTOFF : UInt32 = 33U
 
 ///|
-pub const R_PPC64_SECTOFF_LO : UInt = 34U
+pub const R_PPC64_SECTOFF_LO : UInt32 = 34U
 
 ///|
-pub const R_PPC64_SECTOFF_HI : UInt = 35U
+pub const R_PPC64_SECTOFF_HI : UInt32 = 35U
 
 ///|
-pub const R_PPC64_SECTOFF_HA : UInt = 36U
+pub const R_PPC64_SECTOFF_HA : UInt32 = 36U
 
 ///|
-pub const R_PPC64_ADDR30 : UInt = 37U
+pub const R_PPC64_ADDR30 : UInt32 = 37U
 
 ///|
-pub const R_PPC64_ADDR64 : UInt = 38U
+pub const R_PPC64_ADDR64 : UInt32 = 38U
 
 ///|
-pub const R_PPC64_ADDR16_HIGHER : UInt = 39U
+pub const R_PPC64_ADDR16_HIGHER : UInt32 = 39U
 
 ///|
-pub const R_PPC64_ADDR16_HIGHERA : UInt = 40U
+pub const R_PPC64_ADDR16_HIGHERA : UInt32 = 40U
 
 ///|
-pub const R_PPC64_ADDR16_HIGHEST : UInt = 41U
+pub const R_PPC64_ADDR16_HIGHEST : UInt32 = 41U
 
 ///|
-pub const R_PPC64_ADDR16_HIGHESTA : UInt = 42U
+pub const R_PPC64_ADDR16_HIGHESTA : UInt32 = 42U
 
 ///|
-pub const R_PPC64_UADDR64 : UInt = 43U
+pub const R_PPC64_UADDR64 : UInt32 = 43U
 
 ///|
-pub const R_PPC64_REL64 : UInt = 44U
+pub const R_PPC64_REL64 : UInt32 = 44U
 
 ///|
-pub const R_PPC64_PLT64 : UInt = 45U
+pub const R_PPC64_PLT64 : UInt32 = 45U
 
 ///|
-pub const R_PPC64_PLTREL64 : UInt = 46U
+pub const R_PPC64_PLTREL64 : UInt32 = 46U
 
 ///|
-pub const R_PPC64_TOC16 : UInt = 47U
+pub const R_PPC64_TOC16 : UInt32 = 47U
 
 ///|
-pub const R_PPC64_TOC16_LO : UInt = 48U
+pub const R_PPC64_TOC16_LO : UInt32 = 48U
 
 ///|
-pub const R_PPC64_TOC16_HI : UInt = 49U
+pub const R_PPC64_TOC16_HI : UInt32 = 49U
 
 ///|
-pub const R_PPC64_TOC16_HA : UInt = 50U
+pub const R_PPC64_TOC16_HA : UInt32 = 50U
 
 ///|
-pub const R_PPC64_TOC : UInt = 51U
+pub const R_PPC64_TOC : UInt32 = 51U
 
 ///|
-pub const R_PPC64_PLTGOT16 : UInt = 52U
+pub const R_PPC64_PLTGOT16 : UInt32 = 52U
 
 ///|
-pub const R_PPC64_PLTGOT16_LO : UInt = 53U
+pub const R_PPC64_PLTGOT16_LO : UInt32 = 53U
 
 ///|
-pub const R_PPC64_PLTGOT16_HI : UInt = 54U
+pub const R_PPC64_PLTGOT16_HI : UInt32 = 54U
 
 ///|
-pub const R_PPC64_PLTGOT16_HA : UInt = 55U
+pub const R_PPC64_PLTGOT16_HA : UInt32 = 55U
 
 ///|
-pub const R_PPC64_ADDR16_DS : UInt = 56U
+pub const R_PPC64_ADDR16_DS : UInt32 = 56U
 
 ///|
-pub const R_PPC64_ADDR16_LO_DS : UInt = 57U
+pub const R_PPC64_ADDR16_LO_DS : UInt32 = 57U
 
 ///|
-pub const R_PPC64_GOT16_DS : UInt = 58U
+pub const R_PPC64_GOT16_DS : UInt32 = 58U
 
 ///|
-pub const R_PPC64_GOT16_LO_DS : UInt = 59U
+pub const R_PPC64_GOT16_LO_DS : UInt32 = 59U
 
 ///|
-pub const R_PPC64_PLT16_LO_DS : UInt = 60U
+pub const R_PPC64_PLT16_LO_DS : UInt32 = 60U
 
 ///|
-pub const R_PPC64_SECTOFF_DS : UInt = 61U
+pub const R_PPC64_SECTOFF_DS : UInt32 = 61U
 
 ///|
-pub const R_PPC64_SECTOFF_LO_DS : UInt = 62U
+pub const R_PPC64_SECTOFF_LO_DS : UInt32 = 62U
 
 ///|
-pub const R_PPC64_TOC16_DS : UInt = 63U
+pub const R_PPC64_TOC16_DS : UInt32 = 63U
 
 ///|
-pub const R_PPC64_TOC16_LO_DS : UInt = 64U
+pub const R_PPC64_TOC16_LO_DS : UInt32 = 64U
 
 ///|
-pub const R_PPC64_PLTGOT16_DS : UInt = 65U
+pub const R_PPC64_PLTGOT16_DS : UInt32 = 65U
 
 ///|
-pub const R_PPC64_PLTGOT16_LO_DS : UInt = 66U
+pub const R_PPC64_PLTGOT16_LO_DS : UInt32 = 66U
 
 ///|
-pub const R_PPC64_TLS : UInt = 67U
+pub const R_PPC64_TLS : UInt32 = 67U
 
 ///|
-pub const R_PPC64_DTPMOD64 : UInt = 68U
+pub const R_PPC64_DTPMOD64 : UInt32 = 68U
 
 ///|
-pub const R_PPC64_TPREL16 : UInt = 69U
+pub const R_PPC64_TPREL16 : UInt32 = 69U
 
 ///|
-pub const R_PPC64_TPREL16_LO : UInt = 60U
+pub const R_PPC64_TPREL16_LO : UInt32 = 60U
 
 ///|
-pub const R_PPC64_TPREL16_HI : UInt = 71U
+pub const R_PPC64_TPREL16_HI : UInt32 = 71U
 
 ///|
-pub const R_PPC64_TPREL16_HA : UInt = 72U
+pub const R_PPC64_TPREL16_HA : UInt32 = 72U
 
 ///|
-pub const R_PPC64_TPREL64 : UInt = 73U
+pub const R_PPC64_TPREL64 : UInt32 = 73U
 
 ///|
-pub const R_PPC64_DTPREL16 : UInt = 74U
+pub const R_PPC64_DTPREL16 : UInt32 = 74U
 
 ///|
-pub const R_PPC64_DTPREL16_LO : UInt = 75U
+pub const R_PPC64_DTPREL16_LO : UInt32 = 75U
 
 ///|
-pub const R_PPC64_DTPREL16_HI : UInt = 76U
+pub const R_PPC64_DTPREL16_HI : UInt32 = 76U
 
 ///|
-pub const R_PPC64_DTPREL16_HA : UInt = 77U
+pub const R_PPC64_DTPREL16_HA : UInt32 = 77U
 
 ///|
-pub const R_PPC64_DTPREL64 : UInt = 78U
+pub const R_PPC64_DTPREL64 : UInt32 = 78U
 
 ///|
-pub const R_PPC64_GOT_TLSGD16 : UInt = 79U
+pub const R_PPC64_GOT_TLSGD16 : UInt32 = 79U
 
 ///|
-pub const R_PPC64_GOT_TLSGD16_LO : UInt = 80U
+pub const R_PPC64_GOT_TLSGD16_LO : UInt32 = 80U
 
 ///|
-pub const R_PPC64_GOT_TLSGD16_HI : UInt = 81U
+pub const R_PPC64_GOT_TLSGD16_HI : UInt32 = 81U
 
 ///|
-pub const R_PPC64_GOT_TLSGD16_HA : UInt = 82U
+pub const R_PPC64_GOT_TLSGD16_HA : UInt32 = 82U
 
 ///|
-pub const R_PPC64_GOT_TLSLD16 : UInt = 83U
+pub const R_PPC64_GOT_TLSLD16 : UInt32 = 83U
 
 ///|
-pub const R_PPC64_GOT_TLSLD16_LO : UInt = 84U
+pub const R_PPC64_GOT_TLSLD16_LO : UInt32 = 84U
 
 ///|
-pub const R_PPC64_GOT_TLSLD16_HI : UInt = 85U
+pub const R_PPC64_GOT_TLSLD16_HI : UInt32 = 85U
 
 ///|
-pub const R_PPC64_GOT_TLSLD16_HA : UInt = 86U
+pub const R_PPC64_GOT_TLSLD16_HA : UInt32 = 86U
 
 ///|
-pub const R_PPC64_GOT_TPREL16_DS : UInt = 87U
+pub const R_PPC64_GOT_TPREL16_DS : UInt32 = 87U
 
 ///|
-pub const R_PPC64_GOT_TPREL16_LO_DS : UInt = 88U
+pub const R_PPC64_GOT_TPREL16_LO_DS : UInt32 = 88U
 
 ///|
-pub const R_PPC64_GOT_TPREL16_HI : UInt = 89U
+pub const R_PPC64_GOT_TPREL16_HI : UInt32 = 89U
 
 ///|
-pub const R_PPC64_GOT_TPREL16_HA : UInt = 90U
+pub const R_PPC64_GOT_TPREL16_HA : UInt32 = 90U
 
 ///|
-pub const R_PPC64_GOT_DTPREL16_DS : UInt = 91U
+pub const R_PPC64_GOT_DTPREL16_DS : UInt32 = 91U
 
 ///|
-pub const R_PPC64_GOT_DTPREL16_LO_DS : UInt = 92U
+pub const R_PPC64_GOT_DTPREL16_LO_DS : UInt32 = 92U
 
 ///|
-pub const R_PPC64_GOT_DTPREL16_HI : UInt = 93U
+pub const R_PPC64_GOT_DTPREL16_HI : UInt32 = 93U
 
 ///|
-pub const R_PPC64_GOT_DTPREL16_HA : UInt = 94U
+pub const R_PPC64_GOT_DTPREL16_HA : UInt32 = 94U
 
 ///|
-pub const R_PPC64_TPREL16_DS : UInt = 95U
+pub const R_PPC64_TPREL16_DS : UInt32 = 95U
 
 ///|
-pub const R_PPC64_TPREL16_LO_DS : UInt = 96U
+pub const R_PPC64_TPREL16_LO_DS : UInt32 = 96U
 
 ///|
-pub const R_PPC64_TPREL16_HIGHER : UInt = 97U
+pub const R_PPC64_TPREL16_HIGHER : UInt32 = 97U
 
 ///|
-pub const R_PPC64_TPREL16_HIGHERA : UInt = 98U
+pub const R_PPC64_TPREL16_HIGHERA : UInt32 = 98U
 
 ///|
-pub const R_PPC64_TPREL16_HIGHEST : UInt = 99U
+pub const R_PPC64_TPREL16_HIGHEST : UInt32 = 99U
 
 ///|
-pub const R_PPC64_TPREL16_HIGHESTA : UInt = 100U
+pub const R_PPC64_TPREL16_HIGHESTA : UInt32 = 100U
 
 ///|
-pub const R_PPC64_DTPREL16_DS : UInt = 101U
+pub const R_PPC64_DTPREL16_DS : UInt32 = 101U
 
 ///|
-pub const R_PPC64_DTPREL16_LO_DS : UInt = 102U
+pub const R_PPC64_DTPREL16_LO_DS : UInt32 = 102U
 
 ///|
-pub const R_PPC64_DTPREL16_HIGHER : UInt = 103U
+pub const R_PPC64_DTPREL16_HIGHER : UInt32 = 103U
 
 ///|
-pub const R_PPC64_DTPREL16_HIGHERA : UInt = 104U
+pub const R_PPC64_DTPREL16_HIGHERA : UInt32 = 104U
 
 ///|
-pub const R_PPC64_DTPREL16_HIGHEST : UInt = 105U
+pub const R_PPC64_DTPREL16_HIGHEST : UInt32 = 105U
 
 ///|
-pub const R_PPC64_DTPREL16_HIGHESTA : UInt = 106U
+pub const R_PPC64_DTPREL16_HIGHESTA : UInt32 = 106U
 
 ///|
-pub const R_PPC64_TLSGD : UInt = 107U
+pub const R_PPC64_TLSGD : UInt32 = 107U
 
 ///|
-pub const R_PPC64_TLSLD : UInt = 108U
+pub const R_PPC64_TLSLD : UInt32 = 108U
 
 ///|
-pub const R_PPC64_TOCSAVE : UInt = 109U
+pub const R_PPC64_TOCSAVE : UInt32 = 109U
 
 ///|
-pub const R_PPC64_ADDR16_HIGH : UInt = 110U
+pub const R_PPC64_ADDR16_HIGH : UInt32 = 110U
 
 ///|
-pub const R_PPC64_ADDR16_HIGHA : UInt = 111U
+pub const R_PPC64_ADDR16_HIGHA : UInt32 = 111U
 
 ///|
-pub const R_PPC64_TPREL16_HIGH : UInt = 112U
+pub const R_PPC64_TPREL16_HIGH : UInt32 = 112U
 
 ///|
-pub const R_PPC64_TPREL16_HIGHA : UInt = 113U
+pub const R_PPC64_TPREL16_HIGHA : UInt32 = 113U
 
 ///|
-pub const R_PPC64_DTPREL16_HIGH : UInt = 114U
+pub const R_PPC64_DTPREL16_HIGH : UInt32 = 114U
 
 ///|
-pub const R_PPC64_DTPREL16_HIGHA : UInt = 115U
+pub const R_PPC64_DTPREL16_HIGHA : UInt32 = 115U
 
 ///|
-pub const R_PPC64_JMP_IREL : UInt = 247U
+pub const R_PPC64_JMP_IREL : UInt32 = 247U
 
 ///|
-pub const R_PPC64_IRELATIVE : UInt = 248U
+pub const R_PPC64_IRELATIVE : UInt32 = 248U
 
 ///|
-pub const R_PPC64_REL16 : UInt = 249U
+pub const R_PPC64_REL16 : UInt32 = 249U
 
 ///|
-pub const R_PPC64_REL16_LO : UInt = 250U
+pub const R_PPC64_REL16_LO : UInt32 = 250U
 
 ///|
-pub const R_PPC64_REL16_HI : UInt = 251U
+pub const R_PPC64_REL16_HI : UInt32 = 251U
 
 ///|
-pub const R_PPC64_REL16_HA : UInt = 252U
+pub const R_PPC64_REL16_HA : UInt32 = 252U
 
 // RISC-V file flags, section/segment extensions, dynamic tags, and relocations.
 
 ///|
-pub const EF_RISCV_RVC : UInt = 0x0001U
+pub const EF_RISCV_RVC : UInt32 = 0x0001U
 
 ///|
-pub const EF_RISCV_FLOAT_ABI_SOFT : UInt = 0x0000U
+pub const EF_RISCV_FLOAT_ABI_SOFT : UInt32 = 0x0000U
 
 ///|
-pub const EF_RISCV_FLOAT_ABI_SINGLE : UInt = 0x0002U
+pub const EF_RISCV_FLOAT_ABI_SINGLE : UInt32 = 0x0002U
 
 ///|
-pub const EF_RISCV_FLOAT_ABI_DOUBLE : UInt = 0x0004U
+pub const EF_RISCV_FLOAT_ABI_DOUBLE : UInt32 = 0x0004U
 
 ///|
-pub const EF_RISCV_FLOAT_ABI_QUAD : UInt = 0x0006U
+pub const EF_RISCV_FLOAT_ABI_QUAD : UInt32 = 0x0006U
 
 ///|
-pub const EF_RISCV_FLOAT_ABI_MASK : UInt = 0x0006U
+pub const EF_RISCV_FLOAT_ABI_MASK : UInt32 = 0x0006U
 
 ///|
-pub const EF_RISCV_RVE : UInt = 0x0008U
+pub const EF_RISCV_RVE : UInt32 = 0x0008U
 
 ///|
-pub const EF_RISCV_TSO : UInt = 0x0010U
+pub const EF_RISCV_TSO : UInt32 = 0x0010U
 
 ///|
-pub const SHT_RISCV_ATTRIBUTES : UInt = 0x70000003U // SHT_LOPROC + 3U
+pub const SHT_RISCV_ATTRIBUTES : UInt32 = 0x70000003U // SHT_LOPROC + 3U
 
 ///|
 pub const SHT_RISCV_ATTRIBUTES_SECTION_NAME : String = ".riscv.attributes"
 
 ///|
-pub const PT_RISCV_ATTRIBUTES : UInt = 0x70000003U
+pub const PT_RISCV_ATTRIBUTES : UInt32 = 0x70000003U
 
 ///|
 pub const STO_RISCV_VARIANT_CC : Byte = 0x80
@@ -3332,151 +3332,151 @@ pub const STO_RISCV_VARIANT_CC : Byte = 0x80
 pub const DT_RISCV_VARIANT_CC : Int64 = 0x70000001L
 
 ///|
-pub const R_RISCV_NONE : UInt = 0U
+pub const R_RISCV_NONE : UInt32 = 0U
 
 ///|
-pub const R_RISCV_32 : UInt = 1U
+pub const R_RISCV_32 : UInt32 = 1U
 
 ///|
-pub const R_RISCV_64 : UInt = 2U
+pub const R_RISCV_64 : UInt32 = 2U
 
 ///|
-pub const R_RISCV_RELATIVE : UInt = 3U
+pub const R_RISCV_RELATIVE : UInt32 = 3U
 
 ///|
-pub const R_RISCV_COPY : UInt = 4U
+pub const R_RISCV_COPY : UInt32 = 4U
 
 ///|
-pub const R_RISCV_JUMP_SLOT : UInt = 5U
+pub const R_RISCV_JUMP_SLOT : UInt32 = 5U
 
 ///|
-pub const R_RISCV_TLS_DTPMOD32 : UInt = 6U
+pub const R_RISCV_TLS_DTPMOD32 : UInt32 = 6U
 
 ///|
-pub const R_RISCV_TLS_DTPMOD64 : UInt = 7U
+pub const R_RISCV_TLS_DTPMOD64 : UInt32 = 7U
 
 ///|
-pub const R_RISCV_TLS_DTPREL32 : UInt = 8U
+pub const R_RISCV_TLS_DTPREL32 : UInt32 = 8U
 
 ///|
-pub const R_RISCV_TLS_DTPREL64 : UInt = 9U
+pub const R_RISCV_TLS_DTPREL64 : UInt32 = 9U
 
 ///|
-pub const R_RISCV_TLS_TPREL32 : UInt = 10U
+pub const R_RISCV_TLS_TPREL32 : UInt32 = 10U
 
 ///|
-pub const R_RISCV_TLS_TPREL64 : UInt = 11U
+pub const R_RISCV_TLS_TPREL64 : UInt32 = 11U
 
 ///|
-pub const R_RISCV_BRANCH : UInt = 16U
+pub const R_RISCV_BRANCH : UInt32 = 16U
 
 ///|
-pub const R_RISCV_JAL : UInt = 17U
+pub const R_RISCV_JAL : UInt32 = 17U
 
 ///|
-pub const R_RISCV_CALL : UInt = 18U
+pub const R_RISCV_CALL : UInt32 = 18U
 
 ///|
-pub const R_RISCV_CALL_PLT : UInt = 19U
+pub const R_RISCV_CALL_PLT : UInt32 = 19U
 
 ///|
-pub const R_RISCV_GOT_HI20 : UInt = 20U
+pub const R_RISCV_GOT_HI20 : UInt32 = 20U
 
 ///|
-pub const R_RISCV_TLS_GOT_HI20 : UInt = 21U
+pub const R_RISCV_TLS_GOT_HI20 : UInt32 = 21U
 
 ///|
-pub const R_RISCV_TLS_GD_HI20 : UInt = 22U
+pub const R_RISCV_TLS_GD_HI20 : UInt32 = 22U
 
 ///|
-pub const R_RISCV_PCREL_HI20 : UInt = 23U
+pub const R_RISCV_PCREL_HI20 : UInt32 = 23U
 
 ///|
-pub const R_RISCV_PCREL_LO12_I : UInt = 24U
+pub const R_RISCV_PCREL_LO12_I : UInt32 = 24U
 
 ///|
-pub const R_RISCV_PCREL_LO12_S : UInt = 25U
+pub const R_RISCV_PCREL_LO12_S : UInt32 = 25U
 
 ///|
-pub const R_RISCV_HI20 : UInt = 26U
+pub const R_RISCV_HI20 : UInt32 = 26U
 
 ///|
-pub const R_RISCV_LO12_I : UInt = 27U
+pub const R_RISCV_LO12_I : UInt32 = 27U
 
 ///|
-pub const R_RISCV_LO12_S : UInt = 28U
+pub const R_RISCV_LO12_S : UInt32 = 28U
 
 ///|
-pub const R_RISCV_TPREL_HI20 : UInt = 29U
+pub const R_RISCV_TPREL_HI20 : UInt32 = 29U
 
 ///|
-pub const R_RISCV_TPREL_LO12_I : UInt = 30U
+pub const R_RISCV_TPREL_LO12_I : UInt32 = 30U
 
 ///|
-pub const R_RISCV_TPREL_LO12_S : UInt = 31U
+pub const R_RISCV_TPREL_LO12_S : UInt32 = 31U
 
 ///|
-pub const R_RISCV_TPREL_ADD : UInt = 32U
+pub const R_RISCV_TPREL_ADD : UInt32 = 32U
 
 ///|
-pub const R_RISCV_ADD8 : UInt = 33U
+pub const R_RISCV_ADD8 : UInt32 = 33U
 
 ///|
-pub const R_RISCV_ADD16 : UInt = 34U
+pub const R_RISCV_ADD16 : UInt32 = 34U
 
 ///|
-pub const R_RISCV_ADD32 : UInt = 35U
+pub const R_RISCV_ADD32 : UInt32 = 35U
 
 ///|
-pub const R_RISCV_ADD64 : UInt = 36U
+pub const R_RISCV_ADD64 : UInt32 = 36U
 
 ///|
-pub const R_RISCV_SUB8 : UInt = 37U
+pub const R_RISCV_SUB8 : UInt32 = 37U
 
 ///|
-pub const R_RISCV_SUB16 : UInt = 38U
+pub const R_RISCV_SUB16 : UInt32 = 38U
 
 ///|
-pub const R_RISCV_SUB32 : UInt = 39U
+pub const R_RISCV_SUB32 : UInt32 = 39U
 
 ///|
-pub const R_RISCV_SUB64 : UInt = 40U
+pub const R_RISCV_SUB64 : UInt32 = 40U
 
 ///|
-pub const R_RISCV_ALIGN : UInt = 43U
+pub const R_RISCV_ALIGN : UInt32 = 43U
 
 ///|
-pub const R_RISCV_RVC_BRANCH : UInt = 44U
+pub const R_RISCV_RVC_BRANCH : UInt32 = 44U
 
 ///|
-pub const R_RISCV_RVC_JUMP : UInt = 45U
+pub const R_RISCV_RVC_JUMP : UInt32 = 45U
 
 ///|
-pub const R_RISCV_RVC_LUI : UInt = 46U
+pub const R_RISCV_RVC_LUI : UInt32 = 46U
 
 ///|
-pub const R_RISCV_RELAX : UInt = 51U
+pub const R_RISCV_RELAX : UInt32 = 51U
 
 ///|
-pub const R_RISCV_SUB6 : UInt = 52U
+pub const R_RISCV_SUB6 : UInt32 = 52U
 
 ///|
-pub const R_RISCV_SET6 : UInt = 53U
+pub const R_RISCV_SET6 : UInt32 = 53U
 
 ///|
-pub const R_RISCV_SET8 : UInt = 54U
+pub const R_RISCV_SET8 : UInt32 = 54U
 
 ///|
-pub const R_RISCV_SET16 : UInt = 55U
+pub const R_RISCV_SET16 : UInt32 = 55U
 
 ///|
-pub const R_RISCV_SET32 : UInt = 56U
+pub const R_RISCV_SET32 : UInt32 = 56U
 
 ///|
-pub const R_RISCV_32_PCREL : UInt = 57U
+pub const R_RISCV_32_PCREL : UInt32 = 57U
 
 ///|
-pub const R_RISCV_IRELATIVE : UInt = 58U
+pub const R_RISCV_IRELATIVE : UInt32 = 58U
 
 // x86-64 section flags and relocation values.
 
@@ -3484,327 +3484,327 @@ pub const R_RISCV_IRELATIVE : UInt = 58U
 pub const SHF_X86_64_LARGE : UInt64 = 0x10000000UL
 
 ///|
-pub const SHT_X86_64_UNWIND : UInt = 0x70000001U // SHT_LOPROC + 1U
+pub const SHT_X86_64_UNWIND : UInt32 = 0x70000001U // SHT_LOPROC + 1U
 
 ///|
-pub const R_X86_64_NONE : UInt = 0U
+pub const R_X86_64_NONE : UInt32 = 0U
 
 ///|
-pub const R_X86_64_64 : UInt = 1U
+pub const R_X86_64_64 : UInt32 = 1U
 
 ///|
-pub const R_X86_64_PC32 : UInt = 2U
+pub const R_X86_64_PC32 : UInt32 = 2U
 
 ///|
-pub const R_X86_64_GOT32 : UInt = 3U
+pub const R_X86_64_GOT32 : UInt32 = 3U
 
 ///|
-pub const R_X86_64_PLT32 : UInt = 4U
+pub const R_X86_64_PLT32 : UInt32 = 4U
 
 ///|
-pub const R_X86_64_COPY : UInt = 5U
+pub const R_X86_64_COPY : UInt32 = 5U
 
 ///|
-pub const R_X86_64_GLOB_DAT : UInt = 6U
+pub const R_X86_64_GLOB_DAT : UInt32 = 6U
 
 ///|
-pub const R_X86_64_JUMP_SLOT : UInt = 7U
+pub const R_X86_64_JUMP_SLOT : UInt32 = 7U
 
 ///|
-pub const R_X86_64_RELATIVE : UInt = 8U
+pub const R_X86_64_RELATIVE : UInt32 = 8U
 
 ///|
-pub const R_X86_64_GOTPCREL : UInt = 9U
+pub const R_X86_64_GOTPCREL : UInt32 = 9U
 
 ///|
-pub const R_X86_64_32 : UInt = 10U
+pub const R_X86_64_32 : UInt32 = 10U
 
 ///|
-pub const R_X86_64_32S : UInt = 11U
+pub const R_X86_64_32S : UInt32 = 11U
 
 ///|
-pub const R_X86_64_16 : UInt = 12U
+pub const R_X86_64_16 : UInt32 = 12U
 
 ///|
-pub const R_X86_64_PC16 : UInt = 13U
+pub const R_X86_64_PC16 : UInt32 = 13U
 
 ///|
-pub const R_X86_64_8 : UInt = 14U
+pub const R_X86_64_8 : UInt32 = 14U
 
 ///|
-pub const R_X86_64_PC8 : UInt = 15U
+pub const R_X86_64_PC8 : UInt32 = 15U
 
 ///|
-pub const R_X86_64_DTPMOD64 : UInt = 16U
+pub const R_X86_64_DTPMOD64 : UInt32 = 16U
 
 ///|
-pub const R_X86_64_DTPOFF64 : UInt = 17U
+pub const R_X86_64_DTPOFF64 : UInt32 = 17U
 
 ///|
-pub const R_X86_64_TPOFF64 : UInt = 18U
+pub const R_X86_64_TPOFF64 : UInt32 = 18U
 
 ///|
-pub const R_X86_64_TLSGD : UInt = 19U
+pub const R_X86_64_TLSGD : UInt32 = 19U
 
 ///|
-pub const R_X86_64_TLSLD : UInt = 20U
+pub const R_X86_64_TLSLD : UInt32 = 20U
 
 ///|
-pub const R_X86_64_DTPOFF32 : UInt = 21U
+pub const R_X86_64_DTPOFF32 : UInt32 = 21U
 
 ///|
-pub const R_X86_64_GOTTPOFF : UInt = 22U
+pub const R_X86_64_GOTTPOFF : UInt32 = 22U
 
 ///|
-pub const R_X86_64_TPOFF32 : UInt = 23U
+pub const R_X86_64_TPOFF32 : UInt32 = 23U
 
 ///|
-pub const R_X86_64_PC64 : UInt = 24U
+pub const R_X86_64_PC64 : UInt32 = 24U
 
 ///|
-pub const R_X86_64_GOTOFF64 : UInt = 25U
+pub const R_X86_64_GOTOFF64 : UInt32 = 25U
 
 ///|
-pub const R_X86_64_GOTPC32 : UInt = 26U
+pub const R_X86_64_GOTPC32 : UInt32 = 26U
 
 ///|
-pub const R_X86_64_GOT64 : UInt = 27U
+pub const R_X86_64_GOT64 : UInt32 = 27U
 
 ///|
-pub const R_X86_64_GOTPCREL64 : UInt = 28U
+pub const R_X86_64_GOTPCREL64 : UInt32 = 28U
 
 ///|
-pub const R_X86_64_GOTPC64 : UInt = 29U
+pub const R_X86_64_GOTPC64 : UInt32 = 29U
 
 ///|
-pub const R_X86_64_PLTOFF64 : UInt = 31U
+pub const R_X86_64_PLTOFF64 : UInt32 = 31U
 
 ///|
-pub const R_X86_64_SIZE32 : UInt = 32U
+pub const R_X86_64_SIZE32 : UInt32 = 32U
 
 ///|
-pub const R_X86_64_SIZE64 : UInt = 33U
+pub const R_X86_64_SIZE64 : UInt32 = 33U
 
 ///|
-pub const R_X86_64_GOTPC32_TLSDESC : UInt = 34U
+pub const R_X86_64_GOTPC32_TLSDESC : UInt32 = 34U
 
 ///|
-pub const R_X86_64_TLSDESC_CALL : UInt = 35U
+pub const R_X86_64_TLSDESC_CALL : UInt32 = 35U
 
 ///|
-pub const R_X86_64_TLSDESC : UInt = 36U
+pub const R_X86_64_TLSDESC : UInt32 = 36U
 
 ///|
-pub const R_X86_64_IRELATIVE : UInt = 37U
+pub const R_X86_64_IRELATIVE : UInt32 = 37U
 
 ///|
-pub const R_X86_64_RELATIVE64 : UInt = 38U
+pub const R_X86_64_RELATIVE64 : UInt32 = 38U
 
 ///|
-pub const R_X86_64_GOTPCRELX : UInt = 41U
+pub const R_X86_64_GOTPCRELX : UInt32 = 41U
 
 ///|
-pub const R_X86_64_REX_GOTPCRELX : UInt = 42U
+pub const R_X86_64_REX_GOTPCRELX : UInt32 = 42U
 
 // MIPS file flags, ABI extension constants, dynamic tags, and relocations.
 
 ///|
-pub const EF_MIPS_NOREORDER : UInt = 0x00000001U
+pub const EF_MIPS_NOREORDER : UInt32 = 0x00000001U
 
 ///|
-pub const EF_MIPS_PIC : UInt = 0x00000002U
+pub const EF_MIPS_PIC : UInt32 = 0x00000002U
 
 ///|
-pub const EF_MIPS_CPIC : UInt = 0x00000004U
+pub const EF_MIPS_CPIC : UInt32 = 0x00000004U
 
 ///|
-pub const EF_MIPS_XGOT : UInt = 0x00000008U
+pub const EF_MIPS_XGOT : UInt32 = 0x00000008U
 
 ///|
-pub const EF_MIPS_64BIT_WHIRL : UInt = 0x00000010U
+pub const EF_MIPS_64BIT_WHIRL : UInt32 = 0x00000010U
 
 ///|
-pub const EF_MIPS_ABI2 : UInt = 0x00000020U
+pub const EF_MIPS_ABI2 : UInt32 = 0x00000020U
 
 ///|
-pub const EF_MIPS_ABI_ON32 : UInt = 0x00000040U
+pub const EF_MIPS_ABI_ON32 : UInt32 = 0x00000040U
 
 ///|
-pub const EF_MIPS_OPTIONS_FIRST : UInt = 0x00000080U
+pub const EF_MIPS_OPTIONS_FIRST : UInt32 = 0x00000080U
 
 ///|
-pub const EF_MIPS_32BITMODE : UInt = 0x00000100U
+pub const EF_MIPS_32BITMODE : UInt32 = 0x00000100U
 
 ///|
-pub const EF_MIPS_FP64 : UInt = 0x00000200U
+pub const EF_MIPS_FP64 : UInt32 = 0x00000200U
 
 ///|
-pub const EF_MIPS_NAN2008 : UInt = 0x00000400U
+pub const EF_MIPS_NAN2008 : UInt32 = 0x00000400U
 
 ///|
-pub const EF_MIPS_ABI_EABI32 : UInt = 0x00003000U
+pub const EF_MIPS_ABI_EABI32 : UInt32 = 0x00003000U
 
 ///|
-pub const EF_MIPS_ABI_EABI64 : UInt = 0x00004000U
+pub const EF_MIPS_ABI_EABI64 : UInt32 = 0x00004000U
 
 ///|
-pub const EF_MIPS_MACH : UInt = 0x00FF0000U
+pub const EF_MIPS_MACH : UInt32 = 0x00FF0000U
 
 ///|
-pub const EF_MIPS_ARCH_ASE_MICROMIPS : UInt = 0x02000000U
+pub const EF_MIPS_ARCH_ASE_MICROMIPS : UInt32 = 0x02000000U
 
 ///|
-pub const EF_MIPS_ARCH_ASE : UInt = 0x0f000000U
+pub const EF_MIPS_ARCH_ASE : UInt32 = 0x0f000000U
 
 ///|
-pub const EF_MIPS_ARCH_ASE_MDMX : UInt = 0x08000000U
+pub const EF_MIPS_ARCH_ASE_MDMX : UInt32 = 0x08000000U
 
 ///|
-pub const EF_MIPS_ARCH_ASE_M16 : UInt = 0x04000000U
+pub const EF_MIPS_ARCH_ASE_M16 : UInt32 = 0x04000000U
 
 ///|
-pub const EF_MIPS_ARCH : UInt = 0xf0000000U
+pub const EF_MIPS_ARCH : UInt32 = 0xf0000000U
 
 ///|
-pub const EF_MIPS_ARCH_1 : UInt = 0x00000000U
+pub const EF_MIPS_ARCH_1 : UInt32 = 0x00000000U
 
 ///|
-pub const EF_MIPS_ARCH_2 : UInt = 0x10000000U
+pub const EF_MIPS_ARCH_2 : UInt32 = 0x10000000U
 
 ///|
-pub const EF_MIPS_ARCH_3 : UInt = 0x20000000U
+pub const EF_MIPS_ARCH_3 : UInt32 = 0x20000000U
 
 ///|
-pub const EF_MIPS_ARCH_4 : UInt = 0x30000000U
+pub const EF_MIPS_ARCH_4 : UInt32 = 0x30000000U
 
 ///|
-pub const EF_MIPS_ARCH_5 : UInt = 0x40000000U
+pub const EF_MIPS_ARCH_5 : UInt32 = 0x40000000U
 
 ///|
-pub const EF_MIPS_ARCH_32 : UInt = 0x50000000U
+pub const EF_MIPS_ARCH_32 : UInt32 = 0x50000000U
 
 ///|
-pub const EF_MIPS_ARCH_64 : UInt = 0x60000000U
+pub const EF_MIPS_ARCH_64 : UInt32 = 0x60000000U
 
 ///|
-pub const EF_MIPS_ARCH_32R2 : UInt = 0x70000000U
+pub const EF_MIPS_ARCH_32R2 : UInt32 = 0x70000000U
 
 ///|
-pub const EF_MIPS_ARCH_64R2 : UInt = 0x80000000U
+pub const EF_MIPS_ARCH_64R2 : UInt32 = 0x80000000U
 
 ///|
-pub const EF_MIPS_ARCH_32R6 : UInt = 0x90000000U
+pub const EF_MIPS_ARCH_32R6 : UInt32 = 0x90000000U
 
 ///|
-pub const EF_MIPS_ARCH_64R6 : UInt = 0xa0000000U
+pub const EF_MIPS_ARCH_64R6 : UInt32 = 0xa0000000U
 
 ///|
-pub const SHT_MIPS_LIBLIST : UInt = 0x70000000U
+pub const SHT_MIPS_LIBLIST : UInt32 = 0x70000000U
 
 ///|
-pub const SHT_MIPS_MSYM : UInt = 0x70000001U
+pub const SHT_MIPS_MSYM : UInt32 = 0x70000001U
 
 ///|
-pub const SHT_MIPS_CONFLICT : UInt = 0x70000002U
+pub const SHT_MIPS_CONFLICT : UInt32 = 0x70000002U
 
 ///|
-pub const SHT_MIPS_GPTAB : UInt = 0x70000003U
+pub const SHT_MIPS_GPTAB : UInt32 = 0x70000003U
 
 ///|
-pub const SHT_MIPS_UCODE : UInt = 0x70000004U
+pub const SHT_MIPS_UCODE : UInt32 = 0x70000004U
 
 ///|
-pub const SHT_MIPS_DEBUG : UInt = 0x70000005U
+pub const SHT_MIPS_DEBUG : UInt32 = 0x70000005U
 
 ///|
-pub const SHT_MIPS_REGINFO : UInt = 0x70000006U
+pub const SHT_MIPS_REGINFO : UInt32 = 0x70000006U
 
 ///|
-pub const SHT_MIPS_PACKAGE : UInt = 0x70000007U
+pub const SHT_MIPS_PACKAGE : UInt32 = 0x70000007U
 
 ///|
-pub const SHT_MIPS_PACKSYM : UInt = 0x70000008U
+pub const SHT_MIPS_PACKSYM : UInt32 = 0x70000008U
 
 ///|
-pub const SHT_MIPS_RELD : UInt = 0x70000009U
+pub const SHT_MIPS_RELD : UInt32 = 0x70000009U
 
 ///|
-pub const SHT_MIPS_IFACE : UInt = 0x7000000bU
+pub const SHT_MIPS_IFACE : UInt32 = 0x7000000bU
 
 ///|
-pub const SHT_MIPS_CONTENT : UInt = 0x7000000cU
+pub const SHT_MIPS_CONTENT : UInt32 = 0x7000000cU
 
 ///|
-pub const SHT_MIPS_OPTIONS : UInt = 0x7000000dU
+pub const SHT_MIPS_OPTIONS : UInt32 = 0x7000000dU
 
 ///|
-pub const SHT_MIPS_DELTASYM : UInt = 0x7000001bU
+pub const SHT_MIPS_DELTASYM : UInt32 = 0x7000001bU
 
 ///|
-pub const SHT_MIPS_DELTAINST : UInt = 0x7000001cU
+pub const SHT_MIPS_DELTAINST : UInt32 = 0x7000001cU
 
 ///|
-pub const SHT_MIPS_DELTACLASS : UInt = 0x7000001dU
+pub const SHT_MIPS_DELTACLASS : UInt32 = 0x7000001dU
 
 ///|
-pub const SHT_MIPS_DWARF : UInt = 0x7000001eU
+pub const SHT_MIPS_DWARF : UInt32 = 0x7000001eU
 
 ///|
-pub const SHT_MIPS_DELTADECL : UInt = 0x7000001fU
+pub const SHT_MIPS_DELTADECL : UInt32 = 0x7000001fU
 
 ///|
-pub const SHT_MIPS_SYMBOL_LIB : UInt = 0x70000020U
+pub const SHT_MIPS_SYMBOL_LIB : UInt32 = 0x70000020U
 
 ///|
-pub const SHT_MIPS_EVENTS : UInt = 0x70000021U
+pub const SHT_MIPS_EVENTS : UInt32 = 0x70000021U
 
 ///|
-pub const SHT_MIPS_TRANSLATE : UInt = 0x70000022U
+pub const SHT_MIPS_TRANSLATE : UInt32 = 0x70000022U
 
 ///|
-pub const SHT_MIPS_PIXIE : UInt = 0x70000023U
+pub const SHT_MIPS_PIXIE : UInt32 = 0x70000023U
 
 ///|
-pub const SHT_MIPS_XLATE : UInt = 0x70000024U
+pub const SHT_MIPS_XLATE : UInt32 = 0x70000024U
 
 ///|
-pub const SHT_MIPS_XLATE_DEBUG : UInt = 0x70000025U
+pub const SHT_MIPS_XLATE_DEBUG : UInt32 = 0x70000025U
 
 ///|
-pub const SHT_MIPS_WHIRL : UInt = 0x70000026U
+pub const SHT_MIPS_WHIRL : UInt32 = 0x70000026U
 
 ///|
-pub const SHT_MIPS_EH_REGION : UInt = 0x70000027U
+pub const SHT_MIPS_EH_REGION : UInt32 = 0x70000027U
 
 ///|
-pub const SHT_MIPS_XLATE_OLD : UInt = 0x70000028U
+pub const SHT_MIPS_XLATE_OLD : UInt32 = 0x70000028U
 
 ///|
-pub const SHT_MIPS_PDR_EXCEPTION : UInt = 0x70000029U
+pub const SHT_MIPS_PDR_EXCEPTION : UInt32 = 0x70000029U
 
 ///|
-pub const SHF_MIPS_GPREL : UInt = 0x10000000U
+pub const SHF_MIPS_GPREL : UInt32 = 0x10000000U
 
 ///|
-pub const SHF_MIPS_MERGE : UInt = 0x20000000U
+pub const SHF_MIPS_MERGE : UInt32 = 0x20000000U
 
 ///|
-pub const SHF_MIPS_ADDR : UInt = 0x40000000U
+pub const SHF_MIPS_ADDR : UInt32 = 0x40000000U
 
 ///|
-pub const SHF_MIPS_STRING : UInt = 0x80000000U
+pub const SHF_MIPS_STRING : UInt32 = 0x80000000U
 
 ///|
-pub const SHF_MIPS_NOSTRIP : UInt = 0x08000000U
+pub const SHF_MIPS_NOSTRIP : UInt32 = 0x08000000U
 
 ///|
-pub const SHF_MIPS_LOCAL : UInt = 0x04000000U
+pub const SHF_MIPS_LOCAL : UInt32 = 0x04000000U
 
 ///|
-pub const SHF_MIPS_NAMES : UInt = 0x02000000U
+pub const SHF_MIPS_NAMES : UInt32 = 0x02000000U
 
 ///|
-pub const SHF_MIPS_NODUPE : UInt = 0x01000000U
+pub const SHF_MIPS_NODUPE : UInt32 = 0x01000000U
 
 ///|
 pub const STO_EXPORT : Byte = 3
@@ -3900,82 +3900,82 @@ pub const ODK_IDEN : Byte = 10
 pub const ODK_PAGESIZ : Byte = 11
 
 ///|
-pub const OEX_FPU_MIN : UInt = 0x0000001fU
+pub const OEX_FPU_MIN : UInt32 = 0x0000001fU
 
 ///|
-pub const OEX_FPU_MAX : UInt = 0x00001f00U
+pub const OEX_FPU_MAX : UInt32 = 0x00001f00U
 
 ///|
-pub const OEX_PAGE0 : UInt = 0x00010000U
+pub const OEX_PAGE0 : UInt32 = 0x00010000U
 
 ///|
-pub const OEX_SMM : UInt = 0x00020000U
+pub const OEX_SMM : UInt32 = 0x00020000U
 
 ///|
-pub const OEX_PRECISEFP : UInt = 0x00040000U
+pub const OEX_PRECISEFP : UInt32 = 0x00040000U
 
 ///|
-pub const OEX_DISMISS : UInt = 0x00080000U
+pub const OEX_DISMISS : UInt32 = 0x00080000U
 
 ///|
-pub const OEX_FPU_INEX : UInt = 0x01U
+pub const OEX_FPU_INEX : UInt32 = 0x01U
 
 ///|
-pub const OEX_FPU_UFLO : UInt = 0x02U
+pub const OEX_FPU_UFLO : UInt32 = 0x02U
 
 ///|
-pub const OEX_FPU_OFLO : UInt = 0x04U
+pub const OEX_FPU_OFLO : UInt32 = 0x04U
 
 ///|
-pub const OEX_FPU_DIV0 : UInt = 0x08U
+pub const OEX_FPU_DIV0 : UInt32 = 0x08U
 
 ///|
-pub const OEX_FPU_INVAL : UInt = 0x10U
+pub const OEX_FPU_INVAL : UInt32 = 0x10U
 
 ///|
-pub const OHW_R4KEOP : UInt = 0x00000001U
+pub const OHW_R4KEOP : UInt32 = 0x00000001U
 
 ///|
-pub const OHW_R8KPFETCH : UInt = 0x00000002U
+pub const OHW_R8KPFETCH : UInt32 = 0x00000002U
 
 ///|
-pub const OHW_R5KEOP : UInt = 0x00000004U
+pub const OHW_R5KEOP : UInt32 = 0x00000004U
 
 ///|
-pub const OHW_R5KCVTL : UInt = 0x00000008U
+pub const OHW_R5KCVTL : UInt32 = 0x00000008U
 
 ///|
-pub const OHW_R10KLDL : UInt = 0x00000010U
+pub const OHW_R10KLDL : UInt32 = 0x00000010U
 
 ///|
-pub const OPAD_PREFIX : UInt = 0x1U
+pub const OPAD_PREFIX : UInt32 = 0x1U
 
 ///|
-pub const OPAD_POSTFIX : UInt = 0x2U
+pub const OPAD_POSTFIX : UInt32 = 0x2U
 
 ///|
-pub const OPAD_SYMBOL : UInt = 0x4U
+pub const OPAD_SYMBOL : UInt32 = 0x4U
 
 ///|
-pub const OHWA0_R4KEOP_CHECKED : UInt = 0x00000001U
+pub const OHWA0_R4KEOP_CHECKED : UInt32 = 0x00000001U
 
 ///|
-pub const OHWA0_R4KEOP_CLEAN : UInt = 0x00000002U
+pub const OHWA0_R4KEOP_CLEAN : UInt32 = 0x00000002U
 
 ///|
-pub const OHWO0_FIXADE : UInt = 0x00000001U
+pub const OHWO0_FIXADE : UInt32 = 0x00000001U
 
 ///|
-pub const RSS_UNDEF : UInt = 0U
+pub const RSS_UNDEF : UInt32 = 0U
 
 ///|
-pub const RSS_GP : UInt = 1U
+pub const RSS_GP : UInt32 = 1U
 
 ///|
-pub const RSS_GP0 : UInt = 2U
+pub const RSS_GP0 : UInt32 = 2U
 
 ///|
-pub const RSS_LOC : UInt = 3U
+pub const RSS_LOC : UInt32 = 3U
 
 ///|
 pub const R_MIPS_NONE : Byte = 0
@@ -4146,190 +4146,190 @@ pub const R_MIPS_COPY : Byte = 126
 pub const R_MIPS_JUMP_SLOT : Byte = 127
 
 ///|
-pub const DT_MIPS_RLD_VERSION : UInt = 0x70000001U
+pub const DT_MIPS_RLD_VERSION : UInt32 = 0x70000001U
 
 ///|
-pub const DT_MIPS_TIME_STAMP : UInt = 0x70000002U
+pub const DT_MIPS_TIME_STAMP : UInt32 = 0x70000002U
 
 ///|
-pub const DT_MIPS_ICHECKSUM : UInt = 0x70000003U
+pub const DT_MIPS_ICHECKSUM : UInt32 = 0x70000003U
 
 ///|
-pub const DT_MIPS_IVERSION : UInt = 0x70000004U
+pub const DT_MIPS_IVERSION : UInt32 = 0x70000004U
 
 ///|
-pub const DT_MIPS_FLAG : UInt = 0x70000005U
+pub const DT_MIPS_FLAG : UInt32 = 0x70000005U
 
 ///|
-pub const DT_MIPS_BASE_ADDRESS : UInt = 0x70000006U
+pub const DT_MIPS_BASE_ADDRESS : UInt32 = 0x70000006U
 
 ///|
-pub const DT_MIPS_MSYM : UInt = 0x70000007U
+pub const DT_MIPS_MSYM : UInt32 = 0x70000007U
 
 ///|
-pub const DT_MIPS_CONFLICT : UInt = 0x70000008U
+pub const DT_MIPS_CONFLICT : UInt32 = 0x70000008U
 
 ///|
-pub const DT_MIPS_LIBLIST : UInt = 0x70000009U
+pub const DT_MIPS_LIBLIST : UInt32 = 0x70000009U
 
 ///|
-pub const DT_MIPS_LOCAL_GOTNO : UInt = 0x7000000aU
+pub const DT_MIPS_LOCAL_GOTNO : UInt32 = 0x7000000aU
 
 ///|
-pub const DT_MIPS_CONFLICTNO : UInt = 0x7000000bU
+pub const DT_MIPS_CONFLICTNO : UInt32 = 0x7000000bU
 
 ///|
-pub const DT_MIPS_LIBLISTNO : UInt = 0x70000010U
+pub const DT_MIPS_LIBLISTNO : UInt32 = 0x70000010U
 
 ///|
-pub const DT_MIPS_SYMTABNO : UInt = 0x70000011U
+pub const DT_MIPS_SYMTABNO : UInt32 = 0x70000011U
 
 ///|
-pub const DT_MIPS_UNREFEXTNO : UInt = 0x70000012U
+pub const DT_MIPS_UNREFEXTNO : UInt32 = 0x70000012U
 
 ///|
-pub const DT_MIPS_GOTSYM : UInt = 0x70000013U
+pub const DT_MIPS_GOTSYM : UInt32 = 0x70000013U
 
 ///|
-pub const DT_MIPS_HIPAGENO : UInt = 0x70000014U
+pub const DT_MIPS_HIPAGENO : UInt32 = 0x70000014U
 
 ///|
-pub const DT_MIPS_RLD_MAP : UInt = 0x70000016U
+pub const DT_MIPS_RLD_MAP : UInt32 = 0x70000016U
 
 ///|
-pub const DT_MIPS_DELTA_CLASS : UInt = 0x70000017U
+pub const DT_MIPS_DELTA_CLASS : UInt32 = 0x70000017U
 
 ///|
-pub const DT_MIPS_DELTA_CLASS_NO : UInt = 0x70000018U
+pub const DT_MIPS_DELTA_CLASS_NO : UInt32 = 0x70000018U
 
 ///|
-pub const DT_MIPS_DELTA_INSTANCE : UInt = 0x70000019U
+pub const DT_MIPS_DELTA_INSTANCE : UInt32 = 0x70000019U
 
 ///|
-pub const DT_MIPS_DELTA_INSTANCE_NO : UInt = 0x7000001aU
+pub const DT_MIPS_DELTA_INSTANCE_NO : UInt32 = 0x7000001aU
 
 ///|
-pub const DT_MIPS_DELTA_RELOC : UInt = 0x7000001bU
+pub const DT_MIPS_DELTA_RELOC : UInt32 = 0x7000001bU
 
 ///|
-pub const DT_MIPS_DELTA_RELOC_NO : UInt = 0x7000001cU
+pub const DT_MIPS_DELTA_RELOC_NO : UInt32 = 0x7000001cU
 
 ///|
-pub const DT_MIPS_DELTA_SYM : UInt = 0x7000001dU
+pub const DT_MIPS_DELTA_SYM : UInt32 = 0x7000001dU
 
 ///|
-pub const DT_MIPS_DELTA_SYM_NO : UInt = 0x7000001eU
+pub const DT_MIPS_DELTA_SYM_NO : UInt32 = 0x7000001eU
 
 ///|
-pub const DT_MIPS_DELTA_CLASSSYM : UInt = 0x70000020U
+pub const DT_MIPS_DELTA_CLASSSYM : UInt32 = 0x70000020U
 
 ///|
-pub const DT_MIPS_DELTA_CLASSSYM_NO : UInt = 0x70000021U
+pub const DT_MIPS_DELTA_CLASSSYM_NO : UInt32 = 0x70000021U
 
 ///|
-pub const DT_MIPS_CXX_FLAGS : UInt = 0x70000022U
+pub const DT_MIPS_CXX_FLAGS : UInt32 = 0x70000022U
 
 ///|
-pub const DT_MIPS_PIXIE_INIT : UInt = 0x70000023U
+pub const DT_MIPS_PIXIE_INIT : UInt32 = 0x70000023U
 
 ///|
-pub const DT_MIPS_SYMBOL_LIB : UInt = 0x70000024U
+pub const DT_MIPS_SYMBOL_LIB : UInt32 = 0x70000024U
 
 ///|
-pub const DT_MIPS_LOCALPAGE_GOTIDX : UInt = 0x70000025U
+pub const DT_MIPS_LOCALPAGE_GOTIDX : UInt32 = 0x70000025U
 
 ///|
-pub const DT_MIPS_LOCAL_GOTIDX : UInt = 0x70000026U
+pub const DT_MIPS_LOCAL_GOTIDX : UInt32 = 0x70000026U
 
 ///|
-pub const DT_MIPS_HIDDEN_GOTIDX : UInt = 0x70000027U
+pub const DT_MIPS_HIDDEN_GOTIDX : UInt32 = 0x70000027U
 
 ///|
-pub const DT_MIPS_PROTECTED_GOTIDX : UInt = 0x70000028U
+pub const DT_MIPS_PROTECTED_GOTIDX : UInt32 = 0x70000028U
 
 ///|
-pub const DT_MIPS_OPTIONS : UInt = 0x70000029U
+pub const DT_MIPS_OPTIONS : UInt32 = 0x70000029U
 
 ///|
-pub const DT_MIPS_INTERFACE : UInt = 0x7000002aU
+pub const DT_MIPS_INTERFACE : UInt32 = 0x7000002aU
 
 ///|
-pub const DT_MIPS_DYNSTR_ALIGN : UInt = 0x7000002bU
+pub const DT_MIPS_DYNSTR_ALIGN : UInt32 = 0x7000002bU
 
 ///|
-pub const DT_MIPS_INTERFACE_SIZE : UInt = 0x7000002cU
+pub const DT_MIPS_INTERFACE_SIZE : UInt32 = 0x7000002cU
 
 ///|
-pub const DT_MIPS_RLD_TEXT_RESOLVE_ADDR : UInt = 0x7000002dU
+pub const DT_MIPS_RLD_TEXT_RESOLVE_ADDR : UInt32 = 0x7000002dU
 
 ///|
-pub const DT_MIPS_PERF_SUFFIX : UInt = 0x7000002eU
+pub const DT_MIPS_PERF_SUFFIX : UInt32 = 0x7000002eU
 
 ///|
-pub const DT_MIPS_COMPACT_SIZE : UInt = 0x7000002fU
+pub const DT_MIPS_COMPACT_SIZE : UInt32 = 0x7000002fU
 
 ///|
-pub const DT_MIPS_GP_VALUE : UInt = 0x70000030U
+pub const DT_MIPS_GP_VALUE : UInt32 = 0x70000030U
 
 ///|
-pub const DT_MIPS_AUX_DYNAMIC : UInt = 0x70000031U
+pub const DT_MIPS_AUX_DYNAMIC : UInt32 = 0x70000031U
 
 ///|
-pub const DT_MIPS_DIRECT : UInt = 0x70000032U
+pub const DT_MIPS_DIRECT : UInt32 = 0x70000032U
 
 ///|
-pub const DT_MIPS_RLD_OBJ_UPDATE : UInt = 0x70000033U
+pub const DT_MIPS_RLD_OBJ_UPDATE : UInt32 = 0x70000033U
 
 ///|
-pub const RHF_NONE : UInt = 0x00000000U
+pub const RHF_NONE : UInt32 = 0x00000000U
 
 ///|
-pub const RHF_QUICKSTART : UInt = 0x00000001U
+pub const RHF_QUICKSTART : UInt32 = 0x00000001U
 
 ///|
-pub const RHF_NOTPOT : UInt = 0x00000002U
+pub const RHF_NOTPOT : UInt32 = 0x00000002U
 
 ///|
-pub const RHF_NO_LIBRARY_REPLACEMENT : UInt = 0x00000004U
+pub const RHF_NO_LIBRARY_REPLACEMENT : UInt32 = 0x00000004U
 
 ///|
-pub const RHF_NO_MOVE : UInt = 0x00000008U
+pub const RHF_NO_MOVE : UInt32 = 0x00000008U
 
 ///|
-pub const RHF_SGI_ONLY : UInt = 0x00000010U
+pub const RHF_SGI_ONLY : UInt32 = 0x00000010U
 
 ///|
-pub const RHF_GUARANTEE_INIT : UInt = 0x00000020U
+pub const RHF_GUARANTEE_INIT : UInt32 = 0x00000020U
 
 ///|
-pub const RHF_DELTA_C_PLUS_PLUS : UInt = 0x00000040U
+pub const RHF_DELTA_C_PLUS_PLUS : UInt32 = 0x00000040U
 
 ///|
-pub const RHF_GUARANTEE_START_INIT : UInt = 0x00000080U
+pub const RHF_GUARANTEE_START_INIT : UInt32 = 0x00000080U
 
 ///|
-pub const RHF_PIXIE : UInt = 0x00000100U
+pub const RHF_PIXIE : UInt32 = 0x00000100U
 
 ///|
-pub const RHF_DEFAULT_DELAY_LOAD : UInt = 0x00000200U
+pub const RHF_DEFAULT_DELAY_LOAD : UInt32 = 0x00000200U
 
 ///|
-pub const RHF_REQUICKSTART : UInt = 0x00000400U
+pub const RHF_REQUICKSTART : UInt32 = 0x00000400U
 
 ///|
-pub const RHF_REQUICKSTARTED : UInt = 0x00000800U
+pub const RHF_REQUICKSTARTED : UInt32 = 0x00000800U
 
 ///|
-pub const RHF_CORD : UInt = 0x00001000U
+pub const RHF_CORD : UInt32 = 0x00001000U
 
 ///|
-pub const RHF_NO_UNRES_UNDEF : UInt = 0x00002000U
+pub const RHF_NO_UNRES_UNDEF : UInt32 = 0x00002000U
 
 ///|
-pub const RHF_RLD_ORDER_SAFE : UInt = 0x00004000U
+pub const RHF_RLD_ORDER_SAFE : UInt32 = 0x00004000U
 
 ///|
-pub const ELF32_EHDR_TAILSIZE : Int = 36
+pub const ELF32_EHDR_TAILSIZE : Int32 = 36
 
 ///|
-pub const ELF64_EHDR_TAILSIZE : Int = 48
+pub const ELF64_EHDR_TAILSIZE : Int32 = 48

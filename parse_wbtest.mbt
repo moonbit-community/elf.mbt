@@ -1,5 +1,5 @@
 ///|
-fn append_zeroes(out : Array[Byte], count : Int) -> Unit {
+fn append_zeroes(out : Array[Byte], count : Int32) -> Unit {
   let mut i = 0
   while i < count {
     out.push(0)
@@ -15,7 +15,7 @@ fn append_u16le(out : Array[Byte], value : UInt16) -> Unit {
 }
 
 ///|
-fn append_u32le(out : Array[Byte], value : UInt) -> Unit {
+fn append_u32le(out : Array[Byte], value : UInt32) -> Unit {
   out.push((value & 0xffU).to_byte())
   out.push(((value >> 8) & 0xffU).to_byte())
   out.push(((value >> 16) & 0xffU).to_byte())
@@ -37,19 +37,19 @@ fn append_ident(out : Array[Byte], class_byte : Byte) -> Unit {
 }
 
 ///|
-fn zeroes(count : Int) -> Bytes {
+fn zeroes(count : Int32) -> Bytes {
   let out : Array[Byte] = []
   append_zeroes(out, count)
   Bytes::from_array(out)
 }
 
 ///|
-fn truncated_record(size : Int) -> Bytes {
+fn truncated_record(size : Int32) -> Bytes {
   zeroes(size - 1)
 }
 
 ///|
-fn truncated_versioned_record(size : Int, version : UInt16) -> Bytes {
+fn truncated_versioned_record(size : Int32, version : UInt16) -> Bytes {
   let out : Array[Byte] = []
   append_u16le(out, version)
   append_zeroes(out, size - 3)
@@ -70,7 +70,7 @@ fn truncated_header_tail(class : Class) -> Bytes {
 }
 
 ///|
-fn truncated_elf(class_byte : Byte, tail_size : Int) -> Bytes {
+fn truncated_elf(class_byte : Byte, tail_size : Int32) -> Bytes {
   let out : Array[Byte] = []
   append_ident(out, class_byte)
   append_zeroes(out, tail_size - 1)
@@ -89,9 +89,9 @@ fn expect_slice_read_error(parse : () -> Unit raise ParseError) -> Unit raise {
 
 ///|
 fn[T] expect_parse_at_truncated(
-  size : Int,
+  size : Int32,
   class : Class,
-  parser : (Endian, Class, Int, BytesView) -> (T, Int) raise ParseError,
+  parser : (Endian, Class, Int32, BytesView) -> (T, Int32) raise ParseError,
 ) -> Unit raise {
   let data = truncated_record(size)
   expect_slice_read_error(fn() raise ParseError {

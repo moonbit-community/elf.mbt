@@ -3,7 +3,7 @@
 // Run `moon test` to execute and `moon test --update` to refresh snapshots.
 
 ///|
-fn append_zeroes(out : Array[Byte], count : Int) -> Unit {
+fn append_zeroes(out : Array[Byte], count : Int32) -> Unit {
   let mut i = 0
   while i < count {
     out.push(0)
@@ -26,7 +26,7 @@ fn append_u16le(out : Array[Byte], value : UInt16) -> Unit {
 }
 
 ///|
-fn append_u32le(out : Array[Byte], value : UInt) -> Unit {
+fn append_u32le(out : Array[Byte], value : UInt32) -> Unit {
   out.push((value & 0xffU).to_byte())
   out.push(((value >> 8) & 0xffU).to_byte())
   out.push(((value >> 16) & 0xffU).to_byte())
@@ -85,14 +85,14 @@ fn append_elf64_header(
 ///|
 fn append_shdr64le(
   out : Array[Byte],
-  name : UInt,
-  sh_type : UInt,
+  name : UInt32,
+  sh_type : UInt32,
   flags : UInt64,
   addr : UInt64,
   offset : UInt64,
   size : UInt64,
-  link : UInt,
-  info : UInt,
+  link : UInt32,
+  info : UInt32,
   align : UInt64,
   entsize : UInt64,
 ) -> Unit {

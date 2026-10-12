@@ -46,7 +46,7 @@ fn RelaIterator::RelaIterator(
 
 ///|
 /// Number of `Rel` entries.
-pub fn RelIterator::len(self : RelIterator) -> Int {
+pub fn RelIterator::len(self : RelIterator) -> Int32 {
   self.table.len()
 }
 
@@ -60,7 +60,7 @@ pub fn RelIterator::is_empty(self : RelIterator) -> Bool {
 /// Parse the `Rel` entry at `index`.
 pub fn RelIterator::get(
   self : RelIterator,
-  index : Int,
+  index : Int32,
 ) -> Rel raise ParseError {
   self.table.get(index)
 }
@@ -73,7 +73,7 @@ pub fn RelIterator::iter(self : RelIterator) -> Iter[Rel] {
 
 ///|
 /// Number of `Rela` entries.
-pub fn RelaIterator::len(self : RelaIterator) -> Int {
+pub fn RelaIterator::len(self : RelaIterator) -> Int32 {
   self.table.len()
 }
 
@@ -87,7 +87,7 @@ pub fn RelaIterator::is_empty(self : RelaIterator) -> Bool {
 /// Parse the `Rela` entry at `index`.
 pub fn RelaIterator::get(
   self : RelaIterator,
-  index : Int,
+  index : Int32,
 ) -> Rela raise ParseError {
   self.table.get(index)
 }
@@ -107,9 +107,9 @@ pub(all) struct Rel {
   /// Location to relocate. Interpretation depends on file type and architecture.
   r_offset : UInt64
   /// Symbol table index referenced by this relocation.
-  r_sym : UInt
+  r_sym : UInt32
   /// Processor-specific relocation type.
-  r_type : UInt
+  r_type : UInt32
 } derive(Debug, Eq)
 
 ///|
@@ -163,7 +163,7 @@ impl ParseAt for Rel with fn parse_at(endian, class, offset, data) {
 
 ///|
 /// Size in bytes of one no-addend relocation for the given ELF class.
-pub fn Rel::size_for(class : Class) -> Int {
+pub fn Rel::size_for(class : Class) -> Int32 {
   match class {
     ELF32 => 8
     ELF64 => 16
@@ -178,9 +178,9 @@ pub(all) struct Rela {
   /// Location to relocate. Interpretation depends on file type and architecture.
   r_offset : UInt64
   /// Symbol table index referenced by this relocation.
-  r_sym : UInt
+  r_sym : UInt32
   /// Processor-specific relocation type.
-  r_type : UInt
+  r_type : UInt32
   /// Explicit addend supplied by the relocation entry.
   r_addend : Int64
 } derive(Debug, Eq)
@@ -240,7 +240,7 @@ impl ParseAt for Rela with fn parse_at(endian, class, offset, data) {
 
 ///|
 /// Size in bytes of one addend relocation for the given ELF class.
-pub fn Rela::size_for(class : Class) -> Int {
+pub fn Rela::size_for(class : Class) -> Int32 {
   match class {
     ELF32 => 12
     ELF64 => 24

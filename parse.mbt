@@ -5,15 +5,15 @@ let max_int_u64 : UInt64 = 0x7fffffffUL
 
 ///|
 // Maximum `UInt` value that can be reinterpreted safely as a non-negative `Int`.
-let max_int_uint : UInt = 0x7fffffffU
+let max_int_uint : UInt32 = 0x7fffffffU
 
 ///|
 // Keep the limit explicit so checked math does not depend on backend details.
-let max_int_value : Int = 0x7fffffff
+let max_int_value : Int32 = 0x7fffffff
 
 ///|
 // Checked byte-offset addition used before every slice boundary calculation.
-fn checked_add(a : Int, b : Int) -> Int raise ParseError {
+fn checked_add(a : Int32, b : Int32) -> Int32 raise ParseError {
   if a < 0 || b < 0 || a > max_int_value - b {
     raise IntegerOverflow
   }
@@ -22,7 +22,7 @@ fn checked_add(a : Int, b : Int) -> Int raise ParseError {
 
 ///|
 // Checked byte-size multiplication used for table-length calculations.
-fn checked_mul(a : Int, b : Int) -> Int raise ParseError {
+fn checked_mul(a : Int32, b : Int32) -> Int32 raise ParseError {
   if a < 0 || b < 0 {
     raise IntegerOverflow
   }
@@ -34,7 +34,7 @@ fn checked_mul(a : Int, b : Int) -> Int raise ParseError {
 
 ///|
 // Convert a parsed ELF64 offset or size into a MoonBit slice index.
-fn u64_to_int_checked(value : UInt64) -> Int raise ParseError {
+fn u64_to_int_checked(value : UInt64) -> Int32 raise ParseError {
   if value > max_int_u64 {
     raise IntegerOverflow
   }
@@ -43,7 +43,7 @@ fn u64_to_int_checked(value : UInt64) -> Int raise ParseError {
 
 ///|
 // Convert a parsed ELF32 count or index into a MoonBit slice index.
-fn uint_to_int_checked(value : UInt) -> Int raise ParseError {
+fn uint_to_int_checked(value : UInt32) -> Int32 raise ParseError {
   if value > max_int_uint {
     raise IntegerOverflow
   }
@@ -54,8 +54,8 @@ fn uint_to_int_checked(value : UInt) -> Int raise ParseError {
 // Bounds-checked slicing wrapper that normalizes failures to ParseError.
 fn slice_checked(
   data : BytesView,
-  start : Int,
-  end : Int,
+  start : Int32,
+  end : Int32,
 ) -> BytesView raise ParseError {
   if start < 0 || end < start || end > data.length() {
     raise SliceReadError(start, end)
@@ -65,7 +65,7 @@ fn slice_checked(
 
 ///|
 // Return `data[start:]` after checking the start offset.
-fn tail_checked(data : BytesView, start : Int) -> BytesView raise ParseError {
+fn tail_checked(data : BytesView, start : Int32) -> BytesView raise ParseError {
   if start < 0 || start > data.length() {
     raise SliceReadError(start, data.length())
   }
@@ -80,12 +80,15 @@ fn tail_checked(data : BytesView, start : Int) -> BytesView raise ParseError {
 /// the small abstraction used by every lazy table wrapper in the package.
 pub(open) trait ParseAt {
   /// Parse one value at `offset` from `BytesView`, using the supplied class and endian.
-  fn parse_at(Endian, Class, Int, BytesView) -> (Self, Int) raise ParseError
+  fn parse_at(Endian, Class, Int32, BytesView) -> (Self, Int32) raise ParseError
 }
 
 ///|
 // Ensure that an on-disk table entry size matches the parser's expected size.
-fn validate_entsize(entsize : Int, expected : Int) -> Int raise ParseError {
+fn validate_entsize(
+  entsize : Int32,
+  expected : Int32,
+) -> Int32 raise ParseError {
   if entsize != expected {
     raise BadEntsize(entsize.to_uint64(), expected.to_uint64())
   }
@@ -106,9 +109,9 @@ pub struct ParsingTable[T] {
   /// Raw byte range containing the table.
   data : BytesView
   /// Size in bytes of one table entry.
-  entry_size : Int
+  entry_size : Int32
   /// Parser function for one entry.
-  parser : (Endian, Class, Int, BytesView) -> (T, Int) raise ParseError
+  parser : (Endian, Class, Int32, BytesView) -> (T, Int32) raise ParseError
   /// Type witness used only to retain the generic parameter.
   phantom : T?
 }
@@ -118,8 +121,8 @@ fn[T] ParsingTable::ParsingTable(
   endian : Endian,
   class : Class,
   data : BytesView,
-  entry_size : Int,
-  parser : (Endian, Class, Int, BytesView) -> (T, Int) raise ParseError,
+  entry_size : Int32,
+  parser : (Endian, Class, Int32, BytesView) -> (T, Int32) raise ParseError,
 ) -> ParsingTable[T] {
   { endian, class, data, entry_size, parser, phantom: None, }
 }
@@ -129,7 +132,7 @@ fn[T] ParsingTable::ParsingTable(
 ///
 /// A non-positive entry size is treated as an empty table to avoid division by
 /// zero on malformed internal construction.
-pub fn[T] ParsingTable::len(self : ParsingTable[T]) -> Int {
+pub fn[T] ParsingTable::len(self : ParsingTable[T]) -> Int32 {
   if self.entry_size <= 0 {
     0
   } else {
@@ -150,7 +153,7 @@ pub fn[T] ParsingTable::is_empty(self : ParsingTable[T]) -> Bool {
 /// parse error produced by the entry parser.
 pub fn[T] ParsingTable::get(
   self : ParsingTable[T],
-  index : Int,
+  index : Int32,
 ) -> T raise ParseError {
   if index < 0 {
     raise BadOffset(0UL)

@@ -26,7 +26,7 @@ fn SegmentTable::SegmentTable(
 
 ///|
 /// Number of program headers in the table.
-pub fn SegmentTable::len(self : SegmentTable) -> Int {
+pub fn SegmentTable::len(self : SegmentTable) -> Int32 {
   self.table.len()
 }
 
@@ -40,7 +40,7 @@ pub fn SegmentTable::is_empty(self : SegmentTable) -> Bool {
 /// Parse the program header at `index`.
 pub fn SegmentTable::get(
   self : SegmentTable,
-  index : Int,
+  index : Int32,
 ) -> ProgramHeader raise ParseError {
   self.table.get(index)
 }
@@ -58,7 +58,7 @@ pub fn SegmentTable::iter(self : SegmentTable) -> Iter[ProgramHeader] {
 /// runtime loader. Width-dependent ELF32 fields are widened to `UInt64`.
 pub(all) struct ProgramHeader {
   /// Segment type such as `PT_LOAD`, `PT_DYNAMIC`, or `PT_NOTE`.
-  p_type : UInt
+  p_type : UInt32
   /// File offset where this segment starts.
   p_offset : UInt64
   /// Virtual address where the segment should be loaded.
@@ -70,7 +70,7 @@ pub(all) struct ProgramHeader {
   /// Number of bytes occupied by this segment in memory.
   p_memsz : UInt64
   /// Segment permission and processor flags (`PF_*`).
-  p_flags : UInt
+  p_flags : UInt32
   /// File and memory alignment requirement.
   p_align : UInt64
 } derive(Debug, Eq)
@@ -182,7 +182,7 @@ impl ParseAt for ProgramHeader with fn parse_at(endian, class, offset, data) {
 
 ///|
 /// Size in bytes of one program header for the given ELF class.
-pub fn ProgramHeader::size_for(class : Class) -> Int {
+pub fn ProgramHeader::size_for(class : Class) -> Int32 {
   match class {
     ELF32 => 32
     ELF64 => 56
@@ -193,7 +193,7 @@ pub fn ProgramHeader::size_for(class : Class) -> Int {
 // Convert this segment's `(p_offset, p_filesz)` pair to a checked file range.
 fn ProgramHeader::get_file_data_range(
   self : ProgramHeader,
-) -> (Int, Int) raise ParseError {
+) -> (Int32, Int32) raise ParseError {
   let start = u64_to_int_checked(self.p_offset)
   let size = u64_to_int_checked(self.p_filesz)
   let end = checked_add(start, size)

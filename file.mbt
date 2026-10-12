@@ -23,7 +23,7 @@ pub(all) struct FileHeader {
   /// Byte order used by multi-byte integer fields.
   endianness : Endian
   /// ELF object version, normally `EV_CURRENT`.
-  version : UInt
+  version : UInt32
   /// Operating-system ABI identifier from `e_ident[EI_OSABI]`.
   osabi : Byte
   /// ABI version byte from `e_ident[EI_ABIVERSION]`.
@@ -39,7 +39,7 @@ pub(all) struct FileHeader {
   /// File offset of the section header table, or zero if absent.
   e_shoff : UInt64
   /// Processor-specific file flags.
-  e_flags : UInt
+  e_flags : UInt32
   /// Size of this ELF header in bytes.
   e_ehsize : UInt16
   /// Size of one program header table entry in bytes.

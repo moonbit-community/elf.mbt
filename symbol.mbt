@@ -26,7 +26,7 @@ fn SymbolTable::SymbolTable(
 
 ///|
 /// Number of symbols in the table.
-pub fn SymbolTable::len(self : SymbolTable) -> Int {
+pub fn SymbolTable::len(self : SymbolTable) -> Int32 {
   self.table.len()
 }
 
@@ -40,7 +40,7 @@ pub fn SymbolTable::is_empty(self : SymbolTable) -> Bool {
 /// Parse the symbol at `index`.
 pub fn SymbolTable::get(
   self : SymbolTable,
-  index : Int,
+  index : Int32,
 ) -> Symbol raise ParseError {
   self.table.get(index)
 }
@@ -58,7 +58,7 @@ pub fn SymbolTable::iter(self : SymbolTable) -> Iter[Symbol] {
 /// table. `st_info` packs binding and type, and `st_other` packs visibility.
 pub(all) struct Symbol {
   /// Offset of the symbol name in the linked string table.
-  st_name : UInt
+  st_name : UInt32
   /// Section index that defines this symbol, or a special `SHN_*` value.
   st_shndx : UInt16
   /// Packed symbol binding and symbol type.
@@ -189,7 +189,7 @@ impl ParseAt for Symbol with fn parse_at(endian, class, offset, data) {
 
 ///|
 /// Size in bytes of one symbol entry for the given ELF class.
-pub fn Symbol::size_for(class : Class) -> Int {
+pub fn Symbol::size_for(class : Class) -> Int32 {
   match class {
     ELF32 => 16
     ELF64 => 24

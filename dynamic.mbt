@@ -26,7 +26,7 @@ fn DynamicTable::DynamicTable(
 
 ///|
 /// Number of dynamic entries in the table.
-pub fn DynamicTable::len(self : DynamicTable) -> Int {
+pub fn DynamicTable::len(self : DynamicTable) -> Int32 {
   self.table.len()
 }
 
@@ -40,7 +40,7 @@ pub fn DynamicTable::is_empty(self : DynamicTable) -> Bool {
 /// Parse the dynamic entry at `index`.
 pub fn DynamicTable::get(
   self : DynamicTable,
-  index : Int,
+  index : Int32,
 ) -> Dyn raise ParseError {
   self.table.get(index)
 }
@@ -116,7 +116,7 @@ impl ParseAt for Dyn with fn parse_at(endian, class, offset, data) {
 
 ///|
 /// Size in bytes of one dynamic entry for the given ELF class.
-pub fn Dyn::size_for(class : Class) -> Int {
+pub fn Dyn::size_for(class : Class) -> Int32 {
   match class {
     ELF32 => 8
     ELF64 => 16
