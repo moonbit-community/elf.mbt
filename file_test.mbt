@@ -13,15 +13,15 @@ fn[T] unwrap_some(value : T?, message : String) -> T raise {
 }
 
 ///|
-fn uint_to_int(value : UInt) -> Int {
+fn uint_to_int(value : UInt32) -> Int32 {
   value.reinterpret_as_int()
 }
 
 ///|
 fn assert_unexpected_section_type(
   result : () -> Unit raise @elf.ParseError,
-  actual : UInt,
-  expected : UInt,
+  actual : UInt32,
+  expected : UInt32,
 ) -> Unit raise {
   try result() catch {
     UnexpectedSectionType(got, want) => {
@@ -37,7 +37,7 @@ fn assert_unexpected_section_type(
 ///|
 fn assert_gnu_abi_tag(
   note : @elf.Note?,
-  expected_subminor : UInt,
+  expected_subminor : UInt32,
 ) -> Unit raise {
   match note {
     Some(GnuAbiTag(tag)) => {

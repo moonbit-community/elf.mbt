@@ -20,13 +20,13 @@ pub(all) enum Note {
 /// example, `major = 2`, `minor = 6`, `subminor = 32` means Linux 2.6.32.
 pub(all) struct NoteGnuAbiTag {
   /// Operating-system code, such as `ELF_NOTE_GNU_ABI_TAG_OS_LINUX`.
-  os : UInt
+  os : UInt32
   /// Major kernel ABI version.
-  major : UInt
+  major : UInt32
   /// Minor kernel ABI version.
-  minor : UInt
+  minor : UInt32
   /// Patch/subminor kernel ABI version.
-  subminor : UInt
+  subminor : UInt32
 } derive(Debug, Eq)
 
 ///|
@@ -132,7 +132,7 @@ impl ParseAt for NoteGnuAbiTag with fn parse_at(endian, _class, offset, data) {
 }
 
 ///|
-fn align_offset(offset : Int, align : Int) -> Int raise ParseError {
+fn align_offset(offset : Int32, align : Int32) -> Int32 raise ParseError {
   if align <= 1 {
     offset
   } else {
@@ -149,10 +149,10 @@ fn align_offset(offset : Int, align : Int) -> Int raise ParseError {
 fn Note::parse_at(
   endian : Endian,
   class : Class,
-  align : Int,
-  offset : Int,
+  align : Int32,
+  offset : Int32,
   data : BytesView,
-) -> (Note, Int) raise ParseError {
+) -> (Note, Int32) raise ParseError {
   let align = if align == 0 { 4 } else { align }
   // ELF notes are commonly encoded with 32-bit note headers even in 64-bit objects
   let (nhdr, next) = NoteHeader::parse_at(endian, ELF32, offset, data)
@@ -191,11 +191,11 @@ pub struct NoteIterator {
   /// ELF class of the owning file.
   class : Class
   /// Alignment used between note name and descriptor payloads.
-  align : Int
+  align : Int32
   /// Raw note section or segment bytes.
   data : BytesView
   /// Current byte offset in `data`.
-  mut offset : Int
+  mut offset : Int32
 }
 
 ///|
@@ -206,7 +206,7 @@ pub struct NoteIterator {
 pub fn NoteIterator::new(
   endian : Endian,
   class : Class,
-  align : Int,
+  align : Int32,
   data : BytesView,
 ) -> NoteIterator {
   { endian, class, align, data, offset: 0, }

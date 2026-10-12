@@ -3,7 +3,7 @@ name = "moonbit-community/elf"
 version = "0.0.1"
 
 import {
-  "moonbitlang/x@0.4.43",
+  "moonbitlang/x@0.5.5",
 }
 
 readme = "README.mbt.md"

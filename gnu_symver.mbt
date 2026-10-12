@@ -27,7 +27,7 @@ fn VersionIndexTable::VersionIndexTable(
 
 ///|
 /// Number of version-index entries.
-pub fn VersionIndexTable::len(self : VersionIndexTable) -> Int {
+pub fn VersionIndexTable::len(self : VersionIndexTable) -> Int32 {
   self.table.len()
 }
 
@@ -41,7 +41,7 @@ pub fn VersionIndexTable::is_empty(self : VersionIndexTable) -> Bool {
 /// Parse the version index for dynamic symbol `index`.
 pub fn VersionIndexTable::get(
   self : VersionIndexTable,
-  index : Int,
+  index : Int32,
 ) -> VersionIndex raise ParseError {
   self.table.get(index)
 }
@@ -63,7 +63,7 @@ pub(all) struct SymbolRequirement {
   /// Required version name, such as `GLIBC_2.2.5`.
   name : String
   /// SysV ELF hash of the version name.
-  hash : UInt
+  hash : UInt32
   /// Version requirement flags (`VER_FLG_*`).
   flags : UInt16
   /// Whether the version index has the `VER_NDX_HIDDEN` bit set.
@@ -77,7 +77,7 @@ pub(all) struct SymbolRequirement {
 /// names may be associated with one definition through auxiliary entries.
 pub(all) struct SymbolDefinition {
   /// SysV ELF hash of the primary version name.
-  hash : UInt
+  hash : UInt32
   /// Version definition flags (`VER_FLG_*`).
   flags : UInt16
   /// Version or dependency names from linked auxiliary entries.
@@ -143,7 +143,7 @@ pub fn SymbolVersionTable::new(
 /// object has no `.gnu.version_r` section.
 pub fn SymbolVersionTable::get_requirement(
   self : SymbolVersionTable,
-  sym_idx : Int,
+  sym_idx : Int32,
 ) -> SymbolRequirement? raise ParseError {
   let data = match self.verneeds {
     Some(data) => data
@@ -176,7 +176,7 @@ pub fn SymbolVersionTable::get_requirement(
 /// object has no `.gnu.version_d` section.
 pub fn SymbolVersionTable::get_definition(
   self : SymbolVersionTable,
-  sym_idx : Int,
+  sym_idx : Int32,
 ) -> SymbolDefinition? raise ParseError {
   let data = match self.verdefs {
     Some(data) => data
@@ -256,7 +256,7 @@ impl ParseAt for VersionIndex with fn parse_at(endian, _class, offset, data) {
 
 ///|
 /// Size in bytes of one `.gnu.version` entry.
-pub fn VersionIndex::size_for(_class : Class) -> Int {
+pub fn VersionIndex::size_for(_class : Class) -> Int32 {
   2
 }
 
@@ -273,11 +273,11 @@ pub(all) struct VerDef {
   /// Number of associated `VerDefAux` records.
   vd_cnt : UInt16
   /// SysV ELF hash of the version name.
-  vd_hash : UInt
+  vd_hash : UInt32
   /// Offset from this record to the first `VerDefAux`.
-  vd_aux : UInt
+  vd_aux : UInt32
   /// Offset from this record to the next `VerDef`, or zero to stop.
-  vd_next : UInt
+  vd_next : UInt32
 } derive(Debug, Eq)
 
 ///|
@@ -345,7 +345,7 @@ impl ParseAt for VerDef with fn parse_at(endian, _class, offset, data) {
 
 ///|
 /// Size in bytes of one version-definition record.
-pub fn VerDef::size_for(_class : Class) -> Int {
+pub fn VerDef::size_for(_class : Class) -> Int32 {
   20
 }
 
@@ -361,7 +361,7 @@ pub struct VerDefIterator {
   /// Raw `.gnu.version_d` bytes.
   data : BytesView
   /// Current offset in `data`.
-  mut offset : Int
+  mut offset : Int32
 }
 
 ///|
@@ -370,7 +370,7 @@ pub fn VerDefIterator::new(
   endian : Endian,
   class : Class,
   count : UInt64,
-  starting_offset : Int,
+  starting_offset : Int32,
   data : BytesView,
 ) -> VerDefIterator {
   { endian, class, count, data, offset: starting_offset, }
@@ -452,9 +452,9 @@ pub fn VerDefIterator::iter(
 /// the section header.
 pub(all) struct VerDefAux {
   /// Offset to the version/dependency name in the linked string table.
-  vda_name : UInt
+  vda_name : UInt32
   /// Offset from this auxiliary entry to the next one, or zero to stop.
-  vda_next : UInt
+  vda_next : UInt32
 } derive(Debug, Eq)
 
 ///|
@@ -478,7 +478,7 @@ impl ParseAt for VerDefAux with fn parse_at(endian, _class, offset, data) {
 
 ///|
 /// Size in bytes of one version-definition auxiliary record.
-pub fn VerDefAux::size_for(_class : Class) -> Int {
+pub fn VerDefAux::size_for(_class : Class) -> Int32 {
   8
 }
 
@@ -494,7 +494,7 @@ pub struct VerDefAuxIterator {
   /// Raw `.gnu.version_d` bytes.
   data : BytesView
   /// Current offset in `data`.
-  mut offset : Int
+  mut offset : Int32
 }
 
 ///|
@@ -503,7 +503,7 @@ pub fn VerDefAuxIterator::new(
   endian : Endian,
   class : Class,
   count : UInt16,
-  starting_offset : Int,
+  starting_offset : Int32,
   data : BytesView,
 ) -> VerDefAuxIterator {
   { endian, class, count, data, offset: starting_offset, }
@@ -557,11 +557,11 @@ pub(all) struct VerNeed {
   /// Number of associated `VerNeedAux` records.
   vn_cnt : UInt16
   /// Offset to the required shared object file name in the linked string table.
-  vn_file : UInt
+  vn_file : UInt32
   /// Offset from this record to the first `VerNeedAux`.
-  vn_aux : UInt
+  vn_aux : UInt32
   /// Offset from this record to the next `VerNeed`, or zero to stop.
-  vn_next : UInt
+  vn_next : UInt32
 } derive(Debug, Eq)
 
 ///|
@@ -611,7 +611,7 @@ impl ParseAt for VerNeed with fn parse_at(endian, _class, offset, data) {
 
 ///|
 /// Size in bytes of one version-requirement record.
-pub fn VerNeed::size_for(_class : Class) -> Int {
+pub fn VerNeed::size_for(_class : Class) -> Int32 {
   16
 }
 
@@ -627,7 +627,7 @@ pub struct VerNeedIterator {
   /// Raw `.gnu.version_r` bytes.
   data : BytesView
   /// Current offset in `data`.
-  mut offset : Int
+  mut offset : Int32
 }
 
 ///|
@@ -636,7 +636,7 @@ pub fn VerNeedIterator::new(
   endian : Endian,
   class : Class,
   count : UInt64,
-  starting_offset : Int,
+  starting_offset : Int32,
   data : BytesView,
 ) -> VerNeedIterator {
   { endian, class, count, data, offset: starting_offset, }
@@ -714,15 +714,15 @@ pub fn VerNeedIterator::iter(
 /// Auxiliary version requirement entry from `.gnu.version_r`.
 pub(all) struct VerNeedAux {
   /// SysV ELF hash of the required version name.
-  vna_hash : UInt
+  vna_hash : UInt32
   /// Version requirement flags.
   vna_flags : UInt16
   /// Version index used in `.gnu.version`.
   vna_other : UInt16
   /// Offset to the required version name in the linked string table.
-  vna_name : UInt
+  vna_name : UInt32
   /// Offset from this auxiliary entry to the next one, or zero to stop.
-  vna_next : UInt
+  vna_next : UInt32
 } derive(Debug, Eq)
 
 ///|
@@ -772,7 +772,7 @@ impl ParseAt for VerNeedAux with fn parse_at(endian, _class, offset, data) {
 
 ///|
 /// Size in bytes of one version-requirement auxiliary record.
-pub fn VerNeedAux::size_for(_class : Class) -> Int {
+pub fn VerNeedAux::size_for(_class : Class) -> Int32 {
   16
 }
 
@@ -788,7 +788,7 @@ pub struct VerNeedAuxIterator {
   /// Raw `.gnu.version_r` bytes.
   data : BytesView
   /// Current offset in `data`.
-  mut offset : Int
+  mut offset : Int32
 }
 
 ///|
@@ -797,7 +797,7 @@ pub fn VerNeedAuxIterator::new(
   endian : Endian,
   class : Class,
   count : UInt16,
-  starting_offset : Int,
+  starting_offset : Int32,
   data : BytesView,
 ) -> VerNeedAuxIterator {
   { endian, class, count, data, offset: starting_offset, }

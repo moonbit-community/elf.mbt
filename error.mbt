@@ -20,13 +20,13 @@ pub(all) suberror ParseError {
   /// A table declared `(found, expected)` entry size bytes.
   BadEntsize(UInt64, UInt64)
   /// A section helper was called on `(found, expected)` section types.
-  UnexpectedSectionType(UInt, UInt)
+  UnexpectedSectionType(UInt32, UInt32)
   /// A segment helper was called on `(found, expected)` segment types.
-  UnexpectedSegmentType(UInt, UInt)
+  UnexpectedSegmentType(UInt32, UInt32)
   /// A note or other structured payload declared an unsupported alignment.
-  UnexpectedAlignment(Int)
+  UnexpectedAlignment(Int32)
   /// A byte slice `[start, end)` could not be read from the source buffer.
-  SliceReadError(Int, Int)
+  SliceReadError(Int32, Int32)
   /// Checked offset or size arithmetic overflowed MoonBit's `Int` range.
   IntegerOverflow
   /// A string table or note name could not be decoded as UTF-8.

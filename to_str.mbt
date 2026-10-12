@@ -472,7 +472,7 @@ pub fn e_machine_to_string(e_machine : UInt16) -> String {
 
 ///|
 /// Return the symbolic `SHT_*` name for a known section-header type.
-pub fn sh_type_to_str(sh_type : UInt) -> String? {
+pub fn sh_type_to_str(sh_type : UInt32) -> String? {
   match sh_type {
     SHT_NULL => Some("SHT_NULL")
     SHT_PROGBITS => Some("SHT_PROGBITS")
@@ -503,7 +503,7 @@ pub fn sh_type_to_str(sh_type : UInt) -> String? {
 
 ///|
 /// Return a symbolic section type name, or a hexadecimal fallback for unknown values.
-pub fn sh_type_to_string(sh_type : UInt) -> String {
+pub fn sh_type_to_string(sh_type : UInt32) -> String {
   match sh_type_to_str(sh_type) {
     Some(s) => s
     None => "sh_type(0x" + sh_type.to_string(radix=16) + ")"
@@ -512,7 +512,7 @@ pub fn sh_type_to_string(sh_type : UInt) -> String {
 
 ///|
 /// Return a compact `RWE` permission string for simple `p_flags` values.
-pub fn p_flags_to_string(p_flags : UInt) -> String {
+pub fn p_flags_to_string(p_flags : UInt32) -> String {
   if p_flags < 8U {
     let r = if (p_flags & PF_R) != 0U { "R" } else { " " }
     let w = if (p_flags & PF_W) != 0U { "W" } else { " " }
@@ -525,7 +525,7 @@ pub fn p_flags_to_string(p_flags : UInt) -> String {
 
 ///|
 /// Return the symbolic `PT_*` name for a known program-header type.
-pub fn p_type_to_str(p_type : UInt) -> String? {
+pub fn p_type_to_str(p_type : UInt32) -> String? {
   match p_type {
     PT_NULL => Some("PT_NULL")
     PT_LOAD => Some("PT_LOAD")
@@ -545,7 +545,7 @@ pub fn p_type_to_str(p_type : UInt) -> String? {
 
 ///|
 /// Return a symbolic program-header type name, or a hexadecimal fallback for unknown values.
-pub fn p_type_to_string(p_type : UInt) -> String {
+pub fn p_type_to_string(p_type : UInt32) -> String {
   match p_type_to_str(p_type) {
     Some(s) => s
     None => "p_type(0x" + p_type.to_string(radix=16) + ")"
@@ -621,7 +621,7 @@ pub fn st_vis_to_string(st_vis : Byte) -> String {
 
 ///|
 /// Return the symbolic `ELFCOMPRESS_*` name for a known compression type.
-pub fn ch_type_to_str(ch_type : UInt) -> String? {
+pub fn ch_type_to_str(ch_type : UInt32) -> String? {
   match ch_type {
     ELFCOMPRESS_ZLIB => Some("ELFCOMPRESS_ZLIB")
     ELFCOMPRESS_ZSTD => Some("ELFCOMPRESS_ZSTD ")
@@ -631,7 +631,7 @@ pub fn ch_type_to_str(ch_type : UInt) -> String? {
 
 ///|
 /// Return the GNU ABI-tag OS name for a known ABI-tag descriptor value.
-pub fn note_abi_tag_os_to_str(os : UInt) -> String? {
+pub fn note_abi_tag_os_to_str(os : UInt32) -> String? {
   match os {
     ELF_NOTE_GNU_ABI_TAG_OS_LINUX => Some("Linux")
     ELF_NOTE_GNU_ABI_TAG_OS_GNU => Some("GNU")

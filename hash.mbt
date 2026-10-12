@@ -1,7 +1,7 @@
 ///|
 // Private lazy table for 32-bit hash-section words.
 struct U32Table {
-  table : ParsingTable[UInt]
+  table : ParsingTable[UInt32]
 }
 
 ///|
@@ -14,9 +14,9 @@ priv struct U64Table {
 fn parse_uint_table_at(
   endian : Endian,
   _class : Class,
-  offset : Int,
+  offset : Int32,
   data : BytesView,
-) -> (UInt, Int) raise ParseError {
+) -> (UInt32, Int32) raise ParseError {
   let end = checked_add(offset, 4)
   let record = slice_checked(data, offset, end)
   let value = match endian {
@@ -38,9 +38,9 @@ fn parse_uint_table_at(
 fn parse_uint64_table_at(
   endian : Endian,
   _class : Class,
-  offset : Int,
+  offset : Int32,
   data : BytesView,
-) -> (UInt64, Int) raise ParseError {
+) -> (UInt64, Int32) raise ParseError {
   let end = checked_add(offset, 8)
   let record = slice_checked(data, offset, end)
   let value = match endian {
@@ -77,7 +77,7 @@ fn U64Table::U64Table(
 }
 
 ///|
-fn U32Table::len(self : U32Table) -> Int {
+fn U32Table::len(self : U32Table) -> Int32 {
   self.table.len()
 }
 
@@ -87,12 +87,12 @@ fn U32Table::is_empty(self : U32Table) -> Bool {
 }
 
 ///|
-fn U32Table::get(self : U32Table, index : Int) -> UInt raise ParseError {
+fn U32Table::get(self : U32Table, index : Int32) -> UInt32 raise ParseError {
   self.table.get(index)
 }
 
 ///|
-fn U64Table::get(self : U64Table, index : Int) -> UInt64 raise ParseError {
+fn U64Table::get(self : U64Table, index : Int32) -> UInt64 raise ParseError {
   self.table.get(index)
 }
 
@@ -100,9 +100,9 @@ fn U64Table::get(self : U64Table, index : Int) -> UInt64 raise ParseError {
 /// Header at the start of a SysV `.hash` section (`SHT_HASH`).
 pub(all) struct SysVHashHeader {
   /// Number of bucket entries following the header.
-  nbucket : UInt
+  nbucket : UInt32
   /// Number of chain entries following the bucket array.
-  nchain : UInt
+  nchain : UInt32
 } derive(Debug, Eq)
 
 ///|
@@ -129,7 +129,7 @@ impl ParseAt for SysVHashHeader with fn parse_at(endian, _class, offset, data) {
 ///
 /// The input is the raw symbol name bytes without a trailing NUL. This helper is
 /// useful when matching a manually chosen name against a `.hash` section.
-pub fn sysv_hash(name : BytesView) -> UInt {
+pub fn sysv_hash(name : BytesView) -> UInt32 {
   let mut hash = 0U
   for byte in name {
     hash = hash * 16U + byte.to_uint()
@@ -189,7 +189,7 @@ pub fn SysVHashTable::find(
   name : BytesView,
   symtab : SymbolTable,
   strtab : StringTable,
-) -> (Int, Symbol)? raise ParseError {
+) -> (Int32, Symbol)? raise ParseError {
   if self.buckets.is_empty() {
     return None
   }
@@ -215,7 +215,7 @@ pub fn SysVHashTable::find(
 /// Compute the GNU ELF hash value for a symbol name.
 ///
 /// The input is the raw symbol name bytes without a trailing NUL.
-pub fn gnu_hash(name : BytesView) -> UInt {
+pub fn gnu_hash(name : BytesView) -> UInt32 {
   let mut hash = 5381U
   for byte in name {
     hash = hash * 33U + byte.to_uint()
@@ -227,13 +227,13 @@ pub fn gnu_hash(name : BytesView) -> UInt {
 /// Header at the start of a GNU `.gnu.hash` section (`SHT_GNU_HASH`).
 pub(all) struct GnuHashHeader {
   /// Number of bucket entries.
-  nbucket : UInt
+  nbucket : UInt32
   /// First dynamic-symbol-table index represented by the chain array.
-  table_start_idx : UInt
+  table_start_idx : UInt32
   /// Number of bloom-filter words.
-  nbloom : UInt
+  nbloom : UInt32
   /// Shift count used for the second bloom-filter probe.
-  nshift : UInt
+  nshift : UInt32
 } derive(Debug, Eq)
 
 ///|
@@ -321,7 +321,7 @@ pub fn GnuHashTable::find(
   name : BytesView,
   symtab : SymbolTable,
   strtab : StringTable,
-) -> (Int, Symbol)? raise ParseError {
+) -> (Int32, Symbol)? raise ParseError {
   if self.buckets.is_empty() || self.hdr.nbloom == 0U {
     return None
   }

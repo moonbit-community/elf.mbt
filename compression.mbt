@@ -7,7 +7,7 @@
 /// `ELFCOMPRESS_ZSTD`.
 pub(all) struct CompressionHeader {
   /// Compression algorithm identifier (`ELFCOMPRESS_*`).
-  ch_type : UInt
+  ch_type : UInt32
   /// Uncompressed section size in bytes.
   ch_size : UInt64
   /// Required alignment of the uncompressed data.
@@ -57,7 +57,7 @@ impl ParseAt for CompressionHeader with fn parse_at(endian, class, offset, data)
 
 ///|
 /// Size in bytes of an ELF compression header for the given class.
-pub fn CompressionHeader::size_for(class : Class) -> Int {
+pub fn CompressionHeader::size_for(class : Class) -> Int32 {
   match class {
     ELF32 => 12
     ELF64 => 24

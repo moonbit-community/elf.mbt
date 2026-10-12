@@ -26,7 +26,7 @@ fn SectionHeaderTable::SectionHeaderTable(
 
 ///|
 /// Number of section headers in the table.
-pub fn SectionHeaderTable::len(self : SectionHeaderTable) -> Int {
+pub fn SectionHeaderTable::len(self : SectionHeaderTable) -> Int32 {
   self.table.len()
 }
 
@@ -40,7 +40,7 @@ pub fn SectionHeaderTable::is_empty(self : SectionHeaderTable) -> Bool {
 /// Parse the section header at `index`.
 pub fn SectionHeaderTable::get(
   self : SectionHeaderTable,
-  index : Int,
+  index : Int32,
 ) -> SectionHeader raise ParseError {
   self.table.get(index)
 }
@@ -60,9 +60,9 @@ pub fn SectionHeaderTable::iter(
 /// widened to `UInt64` where the ELF64 form uses 64 bits.
 pub(all) struct SectionHeader {
   /// Offset into the section-name string table.
-  sh_name : UInt
+  sh_name : UInt32
   /// Section type such as `SHT_PROGBITS`, `SHT_STRTAB`, or `SHT_DYNSYM`.
-  sh_type : UInt
+  sh_type : UInt32
   /// Section flags bitmask (`SHF_*`).
   sh_flags : UInt64
   /// Virtual address where the section appears in memory, if loaded.
@@ -72,9 +72,9 @@ pub(all) struct SectionHeader {
   /// Size of this section's file data in bytes.
   sh_size : UInt64
   /// Section-type-specific link field, often another section index.
-  sh_link : UInt
+  sh_link : UInt32
   /// Section-type-specific info field.
-  sh_info : UInt
+  sh_info : UInt32
   /// Required section alignment.
   sh_addralign : UInt64
   /// Entry size when the section data is a table, or zero otherwise.
@@ -204,7 +204,7 @@ impl ParseAt for SectionHeader with fn parse_at(endian, class, offset, data) {
 
 ///|
 /// Size in bytes of one section header for the given ELF class.
-pub fn SectionHeader::size_for(class : Class) -> Int {
+pub fn SectionHeader::size_for(class : Class) -> Int32 {
   match class {
     ELF32 => 40
     ELF64 => 64
@@ -215,7 +215,7 @@ pub fn SectionHeader::size_for(class : Class) -> Int {
 // Convert this section's `(sh_offset, sh_size)` pair to a checked byte range.
 fn SectionHeader::get_data_range(
   self : SectionHeader,
-) -> (Int, Int) raise ParseError {
+) -> (Int32, Int32) raise ParseError {
   let start = u64_to_int_checked(self.sh_offset)
   let size = u64_to_int_checked(self.sh_size)
   let end = checked_add(start, size)
